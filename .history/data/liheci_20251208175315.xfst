@@ -1,0 +1,64 @@
+! FST 规则和路径定义文件 (HFST/XFST 格式)
+! 目标: 1. 识别合词 (WholeEntry) 2. 识别离词 (SplitEntry) 3. 禁止在插入物中出现标点符号。
+
+! === 1. 加载词库 ===
+read lexc liheci.lexc
+
+! === 2. 定义符号集 (用于约束插入物) ===
+! 定义中文标点符号集 (Punctuation)
+define Punctuation [， 。 ！ ？ ： ； （ ） 【 】 《 》 “ ” ‘ ’ : " ' , . ! ?]; 
+
+! 定义所有合法字符集 (Char, 简化为 Latin/Numeric/Chinese characters)
+define Latin [a-z A-Z 0-9];
+define Chinese [\u4E00-\u9FFF];
+define AllChar [ Latin | Chinese | '_' | '-']; ! 假设所有非标点字符都是合法字符
+
+! 插入物中允许出现的字符 (AllChar 减去 Punctuation)
+define LegalInsertion AllChar - Punctuation; 
+
+! 插入物序列: 0个或多个合法插入物
+! 这是 FST 用来模型 Head 和 Tail 之间任意非标点内容的机制
+define InsertionSequence LegalInsertion* ;
+
+
+! === 3. 合词 (WholeEntry) 路径定义 (用于识别融合和冗余形式) ===
+
+! Path 1a: 简单融合 (Head + Tail) -> Surface: HeadTail
+! LiheciAnalyzer 负责将词汇层 (睡觉+Lemma+VTypeA) 切分为 (睡 + Head), (觉 + Tail)
+! WholePath_Simple 将这些切分后的词素简单地连接在表层。
+define WholePath_Simple 
+    [ ?* +Lemma ] .o. 
+    [ 0:0 +Head 0:0 +Tail ] ;
+
+! Path 1b: AA(B/一A)B 冗余/短语化 (例如: 聊聊天, 见一见面)
+! FST 的替换规则将词汇层的 Head+Tail 结构映射为表层的 Reduplication 形式。
+define WholePath_Redup
+    [ ?* +Lemma ] .o.
+    [ %1.l %1.l %2.l : %1.l %2.l || _ %2.l ] |  ! 匹配 AAB (聊聊天)
+    [ %1.l 一 %1.l %2.l : %1.l %2.l || _ %2.l ] ! 匹配 A一AB (见一见面)
+    ;
+
+! === 4. 离词 (SplitEntry) 路径定义 (用于识别分裂形式) ===
+
+! Path 2: Split Entry (Head ... Insertion ... Tail)
+! FST 在字符流上直接匹配 Head 字符 + (无标点插入物) + Tail 字符。
+
+define SplitPath
+    [ ?* +Lemma ] .o.       ! 1. 从 Lexicon 启动分析
+    [ 0:0 +Head ] .o.       ! 2. 匹配 Head 字符，标记 +Head
+    [ InsertionSequence : 0 ] .o. ! 3. 匹配中间的 InsertionSequence，将它们映射到 0 (无标签/词素)
+    [ 0:0 +Tail ]           ! 4. 匹配 Tail 字符，标记 +Tail
+    ;
+
+! === 5. 最终分析器 (Final Analyzer) ===
+! 将所有有效的路径合并，并添加词尾 (#)
+define LiheciAnalyzer
+    [ WholePath_Simple | WholePath_Redup | SplitPath ] .o. [ # ] ;
+
+! === 6. 词性约束 (Flag Diacritics) ===
+! FST 需要 Two-Level Rules 来强制执行词性约束 (+VTypeA, +VTypeB, +VTypeC)，
+! 以便在 Python 验证阶段使用。此处仅定义宏，实际约束需要在外部工具中实现。
+
+! FST 输出的分析结果现在将包含 Liheci 的结构和类型标志 (例如: 睡觉+Lemma+VTypeA)。
+
+regex LiheciAnalyzer ;

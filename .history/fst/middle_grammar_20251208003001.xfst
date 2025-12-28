@@ -1,0 +1,35 @@
+# middle_grammar.xfst
+# Grade 5 Version: Normalized Input Support
+
+# 1. 定义字符类 (和 Python 里的列表对应)
+define Asp     "了" | "着" | "过" ;
+define De      "的" | "之" ;
+define Comp    "完" | "好" | "到" | "见" | "错" | "坏" | "死" | "透" | "上" | "下" | "起" | "出" | "回" | "开" ;
+define Poten   "得" | "不" ;
+define Cl      "个" | "次" | "顿" | "把" | "天" | "年" | "回" | "场" | "根" | "面" | "句" | "通" | "声" | "瓶" | "支" | "首" | "张" | "口" | "大" | "小" | "点" | "节" | "些" | "位" | "辈" | "手" | "阵" | "段" | "会儿" | "分钟" | "小时" | "半天" ;
+define Num     "一" | "二" | "两" | "三" | "四" | "五" | "六" | "七" | "八" | "九" | "十" | "半" | "几" | "百" | "千" | "万" ;
+define Pron    "他" | "你" | "我" | "她" | "它" | "谁" | "自己" | "大家" | "人家" ;
+define Forbidden "都" | "也" | "又" | "还" | "在" | "从" | "对" | "向" | "往" | "跟" | "和" | "与" | "被" | "把" | "给" | "让" | "吗" | "呢" | "吧" | "啊" | "，" | "。" | "？" | "！" ;
+
+# 2. [关键改动] 定义通用修饰字符
+# 以前是 [? - Forbidden]，现在我们只接受 Python 传来的占位符 "_M_"
+# 这代表 "任何未知的内容实词" (热水, 赛博, 漂亮...)
+define ModChar "某" ;
+
+# 3. 结构模板 (Patterns)
+define PComp   [ Poten? [Comp|Asp] ];
+define PQuant  [ Num? Cl ];
+# 修饰结构：接受归一化后的 _M_
+define PMod    [ ModChar^{1,6} De? ];
+define PPoss   [ Pron De? ];
+
+# 4. 总装
+define Components [ PComp | PQuant | PPoss | PMod ];
+
+# 5. 最终规则
+# 允许任意组合，过滤掉含有 Forbidden 词的路径
+define MiddleField [ Components+ ] .o. [ ?^{0,8} ];
+# 注意：因为我们已经把非 Forbidden 的字都变成了 _M_，所以这里的 Forbidden 过滤主要是为了双重保险
+# 或者防止 Python 端漏过滤
+
+regex MiddleField ;

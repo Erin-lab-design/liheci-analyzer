@@ -1,0 +1,20 @@
+Multichar_Symbols
+    +Lemma +VTypeA +Head +Tail +WHOLE
+
+LEXICON Root
+
+! lemma: 谈恋爱（整词）
+谈恋爱+Lemma+VTypeA+WHOLE : 谈恋爱 #;
+
+! 从 Root 也能走到 Head / Tail 词库
+0:0 Liheci_Head;
+0:0 Liheci_Tail;
+
+LEXICON Liheci_Head
+谈+Head : 谈 #;
+
+LEXICON Liheci_Tail
+恋爱+Tail : 恋爱 #;
+0:0 #;
+
+END

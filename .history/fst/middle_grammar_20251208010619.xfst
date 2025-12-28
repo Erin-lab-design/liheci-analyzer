@@ -1,0 +1,48 @@
+# --- 1. 基础组件 ---
+define Asp     "了" | "着" | "过" ;
+define De      "的" | "之" ;
+define Comp    "完" | "好" | "到" | "透" | "死" | "坏" | "错" | "起" | "上" | "下" ;
+define Poten   "得" | "不" ;
+define Cl      "个" | "次" | "顿" | "把" | "天" | "年" | "回" | "场" | "根" | "面" | "句" | "通" | "声" | "瓶" | "首" | "张" | "口" | "大" | "小" | "点" | "些" | "位" | "辈" | "手" | "阵" | "段" | "会儿" | "分钟" | "小时" | "半天" | "军" | "默" | "发" ;
+define Num     "一" | "二" | "两" | "三" | "四" | "五" | "六" | "七" | "八" | "九" | "十" | "半" | "几" | "百" | "千" | "万" ;
+define Pron    "他" | "你" | "我" | "她" | "它" | "谁" | "自己" | "大家" | "人家" ;
+define Forbidden "都" | "也" | "又" | "还" | "在" | "从" | "对" | "向" | "往" | "跟" | "和" | "与" | "被" | "把" | "给" | "让" | "吗" | "呢" | "吧" | "，" | "。" | "？" | "！" ;
+define DegreeAdv "很" | "非常" | "太" | "特" | "特别" | "挺" ;
+define ModChar [ ? - Forbidden - DegreeAdv ];
+
+# --- 2. 结构单元 (Structural Units) ---
+define U_AspComp [ Poten? Comp | Asp ];       # 补语/动态助词 (完, 了, 不了)
+define U_Quant   [ Num? Cl ];                 # 数量短语 (一个)
+define U_Mod     [ DegreeAdv? ModChar^{1,4} De? ]; # 形容词短语 (很大的, 热水)
+define U_Poss    [ Pron De ];                 # 领属代词 (他的)
+define U_Direct  Pron;                        # 直接代词 (他)
+
+# --- 3. 赛道定义 (The Tracks) ---
+
+! Track LOOSE and POSS use the same core set, requiring U_Poss for pronoun insertion.
+define T_Loose_Core [ U_AspComp | U_Quant | U_Poss | U_Mod ];
+
+! [Track 1: LOOSE] Standard VO (e.g., 睡觉)
+define T_Loose [ T_Loose_Core ]+ ;
+
+! [Track 2: OBJECT] 允许直宾 (e.g., 帮忙)
+! 区别：允许 U_Direct 插入
+define T_Object [ U_AspComp | U_Quant | U_Direct | U_Poss | U_Mod ]+ ;
+
+! [Track 3: POSSESSIVE] 强制领属 (e.g., 生气, 捣乱)
+! 和 Loose 核心相同，但作为单独赛道，便于调试和报告
+define T_Poss [ T_Loose_Core ]+ ;
+
+! [Track 4: IDIOM] 僵化/特例 (e.g., 幽默, 慷慨)
+! 严格限制：只允许 Aspect, Comp, 数量, 以及古文结构
+define T_Idiom  [ U_AspComp | U_Quant | [ModChar^{1,3} "之"] ]+ ;
+
+# --- 4. 路由分发 (总成) ---
+define Grammar [ 
+    {LOOSE:} T_Loose | 
+    {OBJECT:} T_Object | 
+    {POSS:} T_Poss | 
+    {IDIOM:} T_Idiom 
+] .o. [ ?^{0,8} ] - [?* Forbidden ?*];
+
+regex Grammar;

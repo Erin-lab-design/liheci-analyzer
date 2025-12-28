@@ -1,0 +1,5 @@
+read lexc liheci_mini.lexc
+save stack liheci_mini.generator.hfst
+invert net
+save stack liheci_mini.analyser.hfst
+quit

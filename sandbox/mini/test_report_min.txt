@@ -1,0 +1,840 @@
+TEST REPORT | Liheci Minimal Analyzer
+======================================
+
+--------------------------------------------------
+Target Lemma: [睡觉]
+Sentence: 昨天晚上我睡了一个好觉。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [洗澡]
+Sentence: 运动完必须洗个热水澡。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [吃饭]
+Sentence: 如果你还没吃完饭，就等一会儿。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [刷牙]
+Sentence: 医生建议每天至少刷两分钟牙。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [洗脸]
+Sentence: 早上匆匆忙忙洗了一把脸就出门了。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [走路]
+Sentence: 今天如果不通车，只能走着路去。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [跑步]
+Sentence: 他在公园里跑了一会儿步。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [散步]
+Sentence: 晚饭后我们去河边散散步。
+Detected Lemmas: ['散步']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [上网]
+Sentence: 为了查资料，我上了两个小时网。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [理发]
+Sentence: 过年前要去理一次发。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [搬家]
+Sentence: 这几年如果不搬三次家就不算北漂。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [起床]
+Sentence: 生病了，难受得起不了床。
+Detected Lemmas: ['生病']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [看书]
+Sentence: 他在图书馆安静地看了半天书。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [写字]
+Sentence: 练习了十年，终于写了一手好字。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [开门]
+Sentence: 有人敲门，快去开一下门。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [关灯]
+Sentence: 记得关了灯再睡觉。
+Detected Lemmas: ['睡觉']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [做饭]
+Sentence: 今天妈妈做了一顿丰盛的晚饭。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [打球]
+Sentence: 周末约朋友去打了一场球。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [抽烟]
+Sentence: 压力大的时候他抽了一根烟。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [见面]
+Sentence: 我们虽然同城，但也只见过一面。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [帮忙]
+Sentence: 你真是帮了我一个大忙。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [聊天]
+Sentence: 和老朋友见面，聊了一整天。
+Detected Lemmas: ['见面']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [说话]
+Sentence: 请你帮我说两句好话。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [吵架]
+Sentence: 因为一点小事，他们吵了一架。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [打架]
+Sentence: 两只猫在屋顶上打了一架。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [打仗]
+Sentence: 那个年代，整天都在打仗。
+Detected Lemmas: ['打仗']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [生气]
+Sentence: 别再生他的气了。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [发火]
+Sentence: 领导在会上发了一通火。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [道歉]
+Sentence: 做错事就该给人家道一个歉。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [道谢]
+Sentence: 临走时，他特意向主人道了一声谢。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [拜年]
+Sentence: 大年初一去给长辈拜个年。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [握手]
+Sentence: 大家见面互相握了一下手。
+Detected Lemmas: ['见面']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [鼓掌]
+Sentence: 观众为精彩的表演鼓了鼓掌。
+Detected Lemmas: ['鼓掌']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [捣乱]
+Sentence: 别在他工作的时候捣他的乱。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [开玩笑]
+Sentence: 我只是跟你开了一个玩笑。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [撒谎]
+Sentence: 他脸红了，显然是撒了一个谎。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [吹牛]
+Sentence: 别听他瞎说，他又在吹牛。
+Detected Lemmas: ['吹牛']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [告状]
+Sentence: 他去老师那里告了你一状。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [请客]
+Sentence: 为了庆祝升职，他请了一次客。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [结婚]
+Sentence: 不知道他结没结婚。
+Detected Lemmas: ['结婚']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [离婚]
+Sentence: 听说邻居离了两次婚。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [订婚]
+Sentence: 他们刚刚订完婚。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [谈恋爱]
+Sentence: 大学期间谈了一场轰轰烈烈的恋爱。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [分手]
+Sentence: 因为性格不合，他们分了一次手。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [吃醋]
+Sentence: 看到男朋友和别人说话，她吃谁的醋？
+Detected Lemmas: ['说话']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [伤心]
+Sentence: 这件事真是让他伤透了心。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [放心]
+Sentence: 你就放一百个心吧。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [担心]
+Sentence: 为了孩子的学习，父母担了一份心。
+Detected Lemmas: ['学习']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [灰心]
+Sentence: 失败了不要紧，千万别灰了心。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [操心]
+Sentence: 为了这个家，由于操碎了心。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [动心]
+Sentence: 面对诱惑，很难不动凡心。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [上班]
+Sentence: 即使生病了，她还是上了一天班。
+Detected Lemmas: ['生病']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [下班]
+Sentence: 还没下班，老板就走了。
+Detected Lemmas: ['下班']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [上学]
+Sentence: 他在这个城市上了六年学。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [上课]
+Sentence: 今天上午上了两节课。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [下课]
+Sentence: 下了课我们就去食堂。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [请假]
+Sentence: 身体不舒服，请了三天假。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [放假]
+Sentence: 五一劳动节放了三天假。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [考试]
+Sentence: 为了准备考这场试，他通宵复习。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [毕业]
+Sentence: 毕了业以后打算去哪里？
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [留学]
+Sentence: 他在英国留了三年学。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [报名]
+Sentence: 想参加比赛，得先报一个名。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [辞职]
+Sentence: 受不了老板的脾气，他辞了职。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [开会]
+Sentence: 下午在公司开了一个长会。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [发言]
+Sentence: 作为代表，他在会上发了一次言。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [值班]
+Sentence: 昨天晚上轮到我值了一个夜班。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [加班]
+Sentence: 项目上线前，大家加了三个小时班。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [出差]
+Sentence: 下周要去上海出了一趟差。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [生病]
+Sentence: 去年冬天生了一场大病。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [看病]
+Sentence: 去医院挂号看个病真难。
+Detected Lemmas: ['挂号']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [住院]
+Sentence: 因为骨折，他在医院住了半个月院。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [出院]
+Sentence: 办完出院手续就可以回家了。
+Detected Lemmas: ['出院', '回家']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [打针]
+Sentence: 护士轻轻地给他打了一针。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [输液]
+Sentence: 发烧不退，只能去输了两瓶液。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [挂号]
+Sentence: 好不容易挂了一个专家号。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [把脉]
+Sentence: 老中医给他把了把脉。
+Detected Lemmas: ['把脉']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [减肥]
+Sentence: 坚持运动，终于减了十斤肥。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [鞠躬]
+Sentence: 表演结束，演员向观众鞠了一个躬。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [敬礼]
+Sentence: 士兵向国旗敬了一个礼。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [站岗]
+Sentence: 无论风雨，都要站好这一班岗。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [吃苦]
+Sentence: 年轻的时候多吃一点苦没关系。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [吃亏]
+Sentence: 虽然吃了个大亏，但也长了记性。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [受罪]
+Sentence: 这趟旅行简直是花钱受了老大的罪。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [跳舞]
+Sentence: 她在晚会上跳了一支优美的舞。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [唱歌]
+Sentence: 高兴的时候就唱了一首歌。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [游泳]
+Sentence: 夏天去海边游了一次泳。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [划船]
+Sentence: 我们在湖上划了一会儿船。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [钓鱼]
+Sentence: 周末去水库钓了一天鱼。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [滑冰]
+Sentence: 冬天去什刹海滑了一次冰。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [签名]
+Sentence: 明星给粉丝签了一个名。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [排队]
+Sentence: 买网红奶茶排了半天队。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [打工]
+Sentence: 辛苦打了一辈子工，终于退休了。
+Detected Lemmas: ['退休']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [戒烟]
+Sentence: 为了健康，他彻底戒了烟。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [回家]
+Sentence: 春节一定要回了一趟家。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [死心]
+Sentence: 既然不可能，你就死了这条心吧。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [挑水]
+Sentence: 和尚下山挑了一担水。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [受伤]
+Sentence: 他在比赛中受了很重的伤。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [散心]
+Sentence: 心情不好，出去散散心。
+Detected Lemmas: ['散心']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [扫兴]
+Sentence: 突然下雨，真是扫了大家的兴。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [领情]
+Sentence: 我好心帮你，你却不领我的情。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [送礼]
+Sentence: 过节去亲戚家送了一份厚礼。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [拌嘴]
+Sentence: 小两口经常拌几句嘴，床头吵架床尾和。
+Detected Lemmas: ['吵架']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [叹气]
+Sentence: 遇到困难，他无奈地叹了一口气。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [丢脸]
+Sentence: 在这么多人面前摔倒，真是丢尽了脸。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [接吻]
+Sentence: 由于太激动，他们当街接了个吻。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [受骗]
+Sentence: 因为贪小便宜，老人受了一次骗。
+Detected Lemmas: ['小便']
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [挨批]
+Sentence: 工作没做好，挨了一顿批。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [干杯]
+Sentence: 为了我们的友谊，干了这杯！
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [革命]
+Sentence: 如果再不改革，就是革自己的命。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [造反]
+Sentence: 孩子不听话，简直是要造谁的反？
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [退休]
+Sentence: 还没到年纪，他就退了休。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [出事]
+Sentence: 如果不小心，很容易出了点事。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [把关]
+Sentence: 质量问题一定要把好关。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [施肥]
+Sentence: 春天到了，给庄稼施了一遍肥。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [倒霉]
+Sentence: 出门踩到泥，真是倒了大霉。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [提醒]
+Sentence: 谢谢你，真是给我提了个醒。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [出恭]
+Sentence: 古人把上厕所雅称为出了一次恭。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [将军]
+Sentence: 这一步棋真是将了他一军。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [学习]
+Sentence: 周末在家学个习，考个试。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [慷慨]
+Sentence: 这些贪官都是在慷国家之慨。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [幽默]
+Sentence: 赵本山如果不幽他一默，观众都不答应。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [滑稽]
+Sentence: 这种说法简直是滑天下之大稽。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [小便]
+Sentence: 刚刚去厕所小了一次便。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [大便]
+Sentence: 如果不舒服，可能大不出来便。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [军训]
+Sentence: 大一新生刚军完了训。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [体检]
+Sentence: 入职前要体了个检。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [同学]
+Sentence: 我和他虽然同过三年学，但不熟。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [暂停]
+Sentence: 裁判示意比赛暂了个停。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [散步]
+Sentence: 晚饭后我们去散散步。
+Detected Lemmas: ['散步']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [见面]
+Sentence: 好久不见，咱们见一见面吧。
+Detected Lemmas: ['见面']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [聊天]
+Sentence: 周末找个咖啡馆聊聊天。
+Detected Lemmas: ['聊天']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [睡觉]
+Sentence: 困了就去睡睡觉。
+Detected Lemmas: ['睡觉']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [把脉]
+Sentence: 医生给他把把脉。
+Detected Lemmas: ['把脉']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [洗澡]
+Sentence: 身上脏了，去洗洗澡。
+Detected Lemmas: ['洗澡']
+Expected: True | Actual: True | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [休息]
+Sentence: 累了就休息休息。
+Detected Lemmas: []
+Expected: True | Actual: False | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [帮忙]
+Sentence: 丐帮的人都很忙。
+Detected Lemmas: []
+Expected: False | Actual: False | Status: PASS
+
+--------------------------------------------------
+Target Lemma: [大便]
+Sentence: 贪小便宜吃大亏，这次大便宜没占到。
+Detected Lemmas: ['大便', '小便']
+Expected: False | Actual: True | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [将军]
+Sentence: 我们要将军法从事，严惩不贷。
+Detected Lemmas: ['将军']
+Expected: False | Actual: True | Status: FAIL
+
+--------------------------------------------------
+Target Lemma: [告状]
+Sentence: 他详细报告了目前的状况。
+Detected Lemmas: []
+Expected: False | Actual: False | Status: PASS
+
+
+==================================================
+SUMMARY: 17/139 passed (12.23%)

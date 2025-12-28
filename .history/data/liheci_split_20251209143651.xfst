@@ -1,0 +1,73 @@
+! liheci_split.xfst
+! 目标：字符级句子 FST，检测 SplitEntry：
+!   谈……恋爱  → 谈恋爱+Lemma+VTypeA+SPLIT
+!   吃……饭    → 吃饭+Lemma+VTypeA+SPLIT
+!
+! 使用方式（编译生成 generator+analyser）：
+!   /Users/mac/Downloads/hfst-bin-mac-64/hfst-xfst < liheci_split.xfst
+!
+! 生成的文件：
+!   liheci_split.generator.hfst   (lemma → 句子模式)
+!   liheci_split.analyser.hfst    (句子 → lemma + 标签)
+!
+! 使用方式（查询 analyser）：
+!   echo "大学期间谈了一场轰轰烈烈的恋爱。" \
+!     | /Users/mac/Downloads/hfst-bin-mac-64/hfst-lookup liheci_split.analyser.hfst
+
+! -----------------------------
+! 1) 定义符号集合
+! -----------------------------
+
+! 标点符号（你可以根据需要继续加）
+define Punct [， | 。 | 、 | ！ | ？ | ： | ； | "，" | "。" | "," | "." | "!" | "?"];
+
+! 任意字符（表层）
+define AnyChar [?];
+
+! 插入成分允许的字符 = 非标点
+define LegalIns [AnyChar - Punct];
+
+! -----------------------------
+! 2) 定义 lexical 侧的 lemma 标签（当成长字符串）
+! -----------------------------
+
+define LemmaTanLianAi "谈恋爱+Lemma+VTypeA+SPLIT";
+define LemmaChiFan    "吃饭+Lemma+VTypeA+SPLIT";
+
+! -----------------------------
+! 3) 为每个 lemma 定义 Split 模式（generator 方向）
+! -----------------------------
+! 规则语义（generator）：
+!   lexical:  LemmaTanLianAi
+!   surface:  任意* 谈 非标点* 恋 爱 任意*
+!
+! 注意：这里用的是 transducer 对，即：
+!   LemmaTanLianAi : ( ?* 谈 LegalIns* 恋 爱 ?* )
+
+define SplitTanLianAi
+  LemmaTanLianAi : ( ?* 谈 LegalIns* 恋 爱 ?* ) ;
+
+define SplitChiFan
+  LemmaChiFan : ( ?* 吃 LegalIns* 饭 ?* ) ;
+
+! -----------------------------
+! 4) 组合所有 Split 规则，构造总 FST
+! -----------------------------
+
+regex SplitTanLianAi | SplitChiFan ;
+
+! 现在栈顶是：
+!   lexical: lemma 标签（两个中的一个）
+!   surface: 含有“谈…恋爱”或“吃…饭”的整句字符串
+
+! -----------------------------
+! 5) 保存 generator & 反转成 analyser
+! -----------------------------
+
+save stack liheci_split.generator.hfst
+
+invert net
+
+save stack liheci_split.analyser.hfst
+
+quit

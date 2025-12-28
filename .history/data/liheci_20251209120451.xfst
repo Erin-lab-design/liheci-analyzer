@@ -1,0 +1,13 @@
+! 1. 读 lexc 词典，得到生成器 FST
+read lexc liheci.lexc
+
+! 可选：保存生成器（lexical → surface）
+save stack liheci.generator.hfst
+
+! 2. 反转得到分析器 FST（surface → lexical）
+invert net
+
+! 保存分析器
+save stack liheci.analyser.hfst
+
+quit

@@ -1,0 +1,155 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Liheci HFST Test Runner
+
+功能：
+- 读取 test_sentences.txt
+- 对每个句子的「句子部分」调用 HFST（liheci_split.analyser.hfst）
+- 完全不把前面的 target stem 当输入，只用整句做分析
+- 打印 HFST 的分析结果，以及（可选）是否命中该行的 target stem
+"""
+
+import os
+import sys
+import subprocess
+
+# ========= 配置区 =========
+
+TEST_FILE = "test_sentences.txt"
+
+# hfst-lookup 可执行文件路径：
+#   - 如果你有环境变量 HFST_LOOKUP_BIN，就用那个
+#   - 否则默认 "hfst-lookup"
+HFST_LOOKUP_BIN = os.environ.get("HFST_LOOKUP_BIN", "hfst-lookup")
+
+# 句子级分析器 FST 路径：
+#   - 可用环境变量 LIHECI_SPLIT_FST 覆盖
+HFST_FST_PATH = os.environ.get("LIHECI_SPLIT_FST", "liheci_split.analyser.hfst")
+
+
+# ========= 核心函数：调用 HFST 分析一句话 =========
+
+def hfst_analyze_sentence(sentence: str):
+    """
+    用 liheci_split.analyser.hfst 对整句做分析，返回所有包含 +Lemma 的 analysis 字符串列表。
+    只用 sentence，当成一个整体输入，不看 target stem。
+    """
+    if not os.path.exists(HFST_FST_PATH):
+        print(f"[Error] HFST FST file not found: {HFST_FST_PATH}", file=sys.stderr)
+        return []
+
+    # 你在命令行上通常会这样跑：
+    #   echo "句子" | hfst-lookup liheci_split.analyser.hfst
+    # 这里就直接用同样的参数形式
+    cmd = [HFST_LOOKUP_BIN, HFST_FST_PATH]
+
+    try:
+        result = subprocess.run(
+            cmd,
+            input=sentence + "\n",
+            capture_output=True,
+            text=True,
+            check=False,   # 不因为非零退出码直接抛异常
+        )
+    except FileNotFoundError:
+        print(f"[Error] hfst-lookup not found: {HFST_LOOKUP_BIN}", file=sys.stderr)
+        return []
+
+    out = result.stdout
+    err = result.stderr.strip()
+    if err:
+        # 有 stderr 就顺手打印一下，方便 debug
+        print(f"[HFST STDERR] {err}", file=sys.stderr)
+
+    analyses = []
+
+    # 典型 hfst-lookup 输出格式类似：
+    # > 昨天晚上我睡了一个好觉。
+    # 昨天晚上我睡了一个好觉。   睡觉+Lemma+Verb-Object+SPLIT   0
+    # 我们只要第二列（analysis），并且只保留带 +Lemma 的
+    for line in out.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith(">"):
+            # 这是 query 行："> 句子"
+            continue
+
+        parts = line.split()
+        if len(parts) < 2:
+            continue
+
+        surface = parts[0]
+        analysis = parts[1]
+
+        if "+Lemma" in analysis:
+            analyses.append(analysis)
+
+    # 去重，方便看
+    analyses = sorted(set(analyses))
+    return analyses
+
+
+def extract_lemmas_from_analyses(analyses):
+    """
+    从类似 '睡觉+Lemma+Verb-Object+SPLIT' 的字符串里抽出 lemma 部分。
+    """
+    lemmas = []
+    for ana in analyses:
+        lemma = ana.split("+", 1)[0]
+        lemmas.append(lemma)
+    return sorted(set(lemmas))
+
+
+# ========= 读取 test_sentences.txt 并逐句跑 HFST =========
+
+def run_test_file():
+    print(f"[Init] Using HFST binary: {HFST_LOOKUP_BIN}")
+    print(f"[Init] Using FST file:    {HFST_FST_PATH}")
+
+    try:
+        fin = open(TEST_FILE, "r", encoding="utf-8")
+    except OSError as e:
+        print(f"[Error] Cannot open test file '{TEST_FILE}': {e}", file=sys.stderr)
+        sys.exit(1)
+
+    total = 0
+    for line in fin:
+        raw = line.rstrip("\n")
+        line = raw.strip()
+
+        # 跳过注释和空行
+        if not line or line.startswith("#"):
+            continue
+
+        parts = [p.strip() for p in line.split("|")]
+        if len(parts) != 3:
+            # 非法行就跳过
+            continue
+
+        target_stem, sentence, flag = parts
+        expect_true = flag.lower() == "true"
+
+        total += 1
+
+        print("\n" + "=" * 60)
+        print(f"[Case {total}]")
+        print(f"Target stem : [{target_stem}]  (只用来对比，不参与 HFST 输入)")
+        print(f"Sentence    : {sentence}")
+        print(f"Gold label  : {expect_true}")
+
+        # ★★ 核心：只把 sentence 丢给 HFST ★★
+        analyses = hfst_analyze_sentence(sentence)
+        print(f"[HFST Analyses]: {analyses if analyses else 'None'}")
+
+        lemmas = extract_lemmas_from_analyses(analyses)
+        print(f"[Detected Lemmas]: {lemmas if lemmas else 'None'}")
+
+        # 可选的小评估：看看 HFST 识别出的 lemmas 里有没有这个 target stem
+        actual = target_stem in lemmas
+        print(f"[RESULT] HFST says sentence contains [{target_stem}]? {actual}")
+
+    fin.close()
+    print(f"\n[Done] Processed

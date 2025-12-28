@@ -1,0 +1,49 @@
+! liheci_split_transducer.xfst
+! 目标：句子 → lemma-ID 的 transducer：
+!   输入：整句字符串
+!   输出：LEMMA_TAN_LIAN_AI_SPLIT / LEMMA_CHI_FAN_SPLIT 等
+
+! -----------------------------
+! 1) 符号集合
+! -----------------------------
+define Punct   [， | 。 | 、 | ！ | ？ | ： | ； | "，" | "。" | "," | "." | "!" | "?"];
+define AnyChar [?];
+define LegalIns [AnyChar - Punct];
+
+! -----------------------------
+! 2) 每个 lemma 的 sentence pattern（下层）
+! -----------------------------
+define SentTanLianAi  ?* 谈 LegalIns* 恋 爱 ?* ;
+define SentChiFan     ?* 吃 LegalIns* 饭 ?* ;
+
+! 如果也想接受整词 "谈恋爱"/"吃饭"：
+! define SentTanLianAi  (?* 谈 LegalIns* 恋 爱 ?* | ?* 谈恋爱 ?* );
+! define SentChiFan     (?* 吃 LegalIns* 饭 ?* | ?* 吃饭 ?* );
+
+! -----------------------------
+! 3) 为每个 lemma 建一个 transducer
+!    上层是 ASCII ID，下层是句子 pattern
+!    注意：这里的名字不用下划线，避免 regex 解析成 CENTER_MARKER
+! -----------------------------
+define TTanLianAi  "LEMMA_TAN_LIAN_AI_SPLIT" : SentTanLianAi ;
+define TChiFan     "LEMMA_CHI_FAN_SPLIT"     : SentChiFan ;
+
+! -----------------------------
+! 4) 组合成一个总网络
+! -----------------------------
+regex TTanLianAi | TChiFan ;
+
+! 此时栈顶是 generator：
+!   上层：LEMMA_... ID
+!   下层：满足对应 Split 模式的整句
+
+! -----------------------------
+! 5) 保存 generator，反转成 analyser
+! -----------------------------
+save stack liheci_split.generator.hfst
+
+invert net
+
+save stack liheci_split.analyser.hfst
+
+quit

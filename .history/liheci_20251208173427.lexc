@@ -1,0 +1,83 @@
+! FST 词库定义文件 (HFST/XFST 格式)
+
+Multichar_Symbols
++VTypeA +VTypeB +VTypeC ! 词性约束标志: VV, VA, NN, AD, JJ...
++Lemma +Head +Tail     ! 形态标签
+<SPLIT> <WHOLE>        ! 分裂路径和融合路径的边界标志
+
+! === ROOT LEXICON (根词库) ===
+LEXICON Root
+! 词条 + 词性标志 -> Head 成分的词库
+
+! --- TYPE A: VV Only (Head 必须是动词) ---
+睡觉+Lemma+VTypeA Liheci_A_Head;
+洗澡+Lemma+VTypeA Liheci_A_Head;
+吃饭+Lemma+VTypeA Liheci_A_Head;
+刷牙+Lemma+VTypeA Liheci_A_Head;
+看书+Lemma+VTypeA Liheci_A_Head;
+做饭+Lemma+VTypeA Liheci_A_Head;
+打球+Lemma+VTypeA Liheci_A_Head;
+抽烟+Lemma+VTypeA Liheci_A_Head;
+请客+Lemma+VTypeA Liheci_A_Head;
+结婚+Lemma+VTypeA Liheci_A_Head;
+... ! (这里应包含所有 Type A 的词条)
+
+! --- TYPE B: Looser Constraints (VV, VA, NN) ---
+帮忙+Lemma+VTypeB Liheci_A_Head; 
+将军+Lemma+VTypeB Liheci_A_Head;
+学习+Lemma+VTypeB Liheci_A_Head;
+提醒+Lemma+VTypeB Liheci_A_Head;
+出恭+Lemma+VTypeB Liheci_A_Head;
+慷慨+Lemma+VTypeB Liheci_A_Head;
+幽默+Lemma+VTypeB Liheci_A_Head;
+... ! (这里应包含所有 Type B 的词条)
+
+! --- TYPE C: Modifier-Head (NN, AD, JJ) ---
+小便+Lemma+VTypeC Liheci_A_Head;
+大便+Lemma+VTypeC Liheci_A_Head;
+军训+Lemma+VTypeC Liheci_A_Head;
+体检+Lemma+VTypeC Liheci_A_Head;
+同学+Lemma+VTypeC Liheci_A_Head;
+暂停+Lemma+VTypeC Liheci_A_Head;
+... ! (这里应包含所有 Type C 的词条)
+
+! === LEXICON: LIHECI HEAD (A) ===
+LEXICON Liheci_A_Head
+! Head 成分，后面接 Tail 词库
+睡 +Head Liheci_B_Tail;
+洗 +Head Liheci_B_Tail;
+吃 +Head Liheci_B_Tail;
+刷 +Head Liheci_B_Tail;
+帮 +Head Liheci_B_Tail;
+将 +Head Liheci_B_Tail;
+学 +Head Liheci_B_Tail;
+提 +Head Liheci_B_Tail;
+小 +Head Liheci_B_Tail;
+大 +Head Liheci_B_Tail;
+军 +Head Liheci_B_Tail;
+体 +Head Liheci_B_Tail;
+同 +Head Liheci_B_Tail;
+暂 +Head Liheci_B_Tail;
+慷 +Head Liheci_B_Tail;
+幽 +Head Liheci_B_Tail;
+... ! (这里应包含所有 Head 成分)
+
+! === LEXICON: LIHECI TAIL (B) ===
+LEXICON Liheci_B_Tail
+! Tail 成分，后面接词尾结束符 (#)
+觉 +Tail #;
+澡 +Tail #;
+饭 +Tail #;
+牙 +Tail #;
+忙 +Tail #;
+军 +Tail #;
+习 +Tail #;
+醒 +Tail #;
+便 +Tail #;
+训 +Tail #;
+检 +Tail #;
+学 +Tail #;
+停 +Tail #;
+慨 +Tail #;
+默 +Tail #;
+... ! (这里应包含所有 Tail 成分)

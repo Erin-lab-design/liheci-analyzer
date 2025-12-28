@@ -1,0 +1,200 @@
+Multichar_Symbols
++VTypeA +VTypeB +VTypeC
+    +Lemma +Head +Tail
+    <SPLIT> <WHOLE>
+    ! 其他可能需要的符号，如果用到:
+    ! +Nom +Gen +Ade +Abl +All +Ine +Ela +Tra +Ess
+
+! === ROOT LEXICON (根词库 - 92 词条) ===
+LEXICON Root
+! 词条 + 词性标志 -> Head 成分的词库
+
+! --- TYPE A: Verb-Object (Head 默认为 VV) ---
+睡觉+Lemma+VTypeA Liheci_A_Head;
+洗澡+Lemma+VTypeA Liheci_A_Head;
+吃饭+Lemma+VTypeA Liheci_A_Head;
+刷牙+Lemma+VTypeA Liheci_A_Head;
+洗脸+Lemma+VTypeA Liheci_A_Head;
+走路+Lemma+VTypeA Liheci_A_Head;
+跑步+Lemma+VTypeA Liheci_A_Head;
+散步+Lemma+VTypeA Liheci_A_Head;
+上网+Lemma+VTypeA Liheci_A_Head;
+理发+Lemma+VTypeA Liheci_A_Head;
+搬家+Lemma+VTypeA Liheci_A_Head;
+起床+Lemma+VTypeA Liheci_A_Head;
+看书+Lemma+VTypeA Liheci_A_Head;
+写字+Lemma+VTypeA Liheci_A_Head;
+开门+Lemma+VTypeA Liheci_A_Head;
+关灯+Lemma+VTypeA Liheci_A_Head;
+做饭+Lemma+VTypeA Liheci_A_Head;
+打球+Lemma+VTypeA Liheci_A_Head;
+抽烟+Lemma+VTypeA Liheci_A_Head;
+见面+Lemma+VTypeA Liheci_A_Head;
+帮忙+Lemma+VTypeA Liheci_A_Head;
+聊天+Lemma+VTypeA Liheci_A_Head;
+说话+Lemma+VTypeA Liheci_A_Head;
+吵架+Lemma+VTypeA Liheci_A_Head;
+打架+Lemma+VTypeA Liheci_A_Head;
+打仗+Lemma+VTypeA Liheci_A_Head;
+生气+Lemma+VTypeA Liheci_A_Head;
+发火+Lemma+VTypeA Liheci_A_Head;
+道歉+Lemma+VTypeA Liheci_A_Head;
+道谢+Lemma+VTypeA Liheci_A_Head;
+拜年+Lemma+VTypeA Liheci_A_Head;
+握手+Lemma+VTypeA Liheci_A_Head;
+鼓掌+Lemma+VTypeA Liheci_A_Head;
+捣乱+Lemma+VTypeA Liheci_A_Head;
+开玩笑+Lemma+VTypeA Liheci_A_Head;
+谈恋爱+Lemma+VTypeA Liheci_A_Head;
+撒谎+Lemma+VTypeA Liheci_A_Head;
+吹牛+Lemma+VTypeA Liheci_A_Head;
+告状+Lemma+VTypeA Liheci_A_Head;
+请客+Lemma+VTypeA Liheci_A_Head;
+结婚+Lemma+VTypeA Liheci_A_Head;
+离婚+Lemma+VTypeA Liheci_A_Head;
+订婚+Lemma+VTypeA Liheci_A_Head;
+分手+Lemma+VTypeA Liheci_A_Head;
+吃醋+Lemma+VTypeA Liheci_A_Head;
+伤心+Lemma+VTypeA Liheci_A_Head;
+放心+Lemma+VTypeA Liheci_A_Head;
+担心+Lemma+VTypeA Liheci_A_Head;
+灰心+Lemma+VTypeA Liheci_A_Head;
+操心+Lemma+VTypeA Liheci_A_Head;
+动心+Lemma+VTypeA Liheci_A_Head;
+上班+Lemma+VTypeA Liheci_A_Head;
+下班+Lemma+VTypeA Liheci_A_Head;
+上学+Lemma+VTypeA Liheci_A_Head;
+上课+Lemma+VTypeA Liheci_A_Head;
+下课+Lemma+VTypeA Liheci_A_Head;
+请假+Lemma+VTypeA Liheci_A_Head;
+放假+Lemma+VTypeA Liheci_A_Head;
+考试+Lemma+VTypeA Liheci_A_Head;
+毕业+Lemma+VTypeA Liheci_A_Head;
+留学+Lemma+VTypeA Liheci_A_Head;
+报名+Lemma+VTypeA Liheci_A_Head;
+辞职+Lemma+VTypeA Liheci_A_Head;
+开会+Lemma+VTypeA Liheci_A_Head;
+发言+Lemma+VTypeA Liheci_A_Head;
+值班+Lemma+VTypeA Liheci_A_Head;
+加班+Lemma+VTypeA Liheci_A_Head;
+出差+Lemma+VTypeA Liheci_A_Head;
+生病+Lemma+VTypeA Liheci_A_Head;
+看病+Lemma+VTypeA Liheci_A_Head;
+住院+Lemma+VTypeA Liheci_A_Head;
+出院+Lemma+VTypeA Liheci_A_Head;
+打针+Lemma+VTypeA Liheci_A_Head;
+输液+Lemma+VTypeA Liheci_A_Head;
+挂号+Lemma+VTypeA Liheci_A_Head;
+把脉+Lemma+VTypeA Liheci_A_Head;
+减肥+Lemma+VTypeA Liheci_A_Head;
+鞠躬+Lemma+VTypeA Liheci_A_Head;
+敬礼+Lemma+VTypeA Liheci_A_Head;
+站岗+Lemma+VTypeA Liheci_A_Head;
+吃苦+Lemma+VTypeA Liheci_A_Head;
+吃亏+Lemma+VTypeA Liheci_A_Head;
+受罪+Lemma+VTypeA Liheci_A_Head;
+跳舞+Lemma+VTypeA Liheci_A_Head;
+唱歌+Lemma+VTypeA Liheci_A_Head;
+游泳+Lemma+VTypeA Liheci_A_Head;
+划船+Lemma+VTypeA Liheci_A_Head;
+钓鱼+Lemma+VTypeA Liheci_A_Head;
+滑冰+Lemma+VTypeA Liheci_A_Head;
+签名+Lemma+VTypeA Liheci_A_Head;
+排队+Lemma+VTypeA Liheci_A_Head;
+打工+Lemma+VTypeA Liheci_A_Head;
+戒烟+Lemma+VTypeA Liheci_A_Head;
+回家+Lemma+VTypeA Liheci_A_Head;
+死心+Lemma+VTypeA Liheci_A_Head;
+挑水+Lemma+VTypeA Liheci_A_Head;
+受伤+Lemma+VTypeA Liheci_A_Head;
+散心+Lemma+VTypeA Liheci_A_Head;
+扫兴+Lemma+VTypeA Liheci_A_Head;
+领情+Lemma+VTypeA Liheci_A_Head;
+送礼+Lemma+VTypeA Liheci_A_Head;
+拌嘴+Lemma+VTypeA Liheci_A_Head;
+叹气+Lemma+VTypeA Liheci_A_Head;
+丢脸+Lemma+VTypeA Liheci_A_Head;
+接吻+Lemma+VTypeA Liheci_A_Head;
+受骗+Lemma+VTypeA Liheci_A_Head;
+挨批+Lemma+VTypeA Liheci_A_Head;
+干杯+Lemma+VTypeA Liheci_A_Head;
+革命+Lemma+VTypeA Liheci_A_Head;
+造反+Lemma+VTypeA Liheci_A_Head;
+退休+Lemma+VTypeA Liheci_A_Head;
+出事+Lemma+VTypeA Liheci_A_Head;
+把关+Lemma+VTypeA Liheci_A_Head;
+施肥+Lemma+VTypeA Liheci_A_Head;
+倒霉+Lemma+VTypeA Liheci_A_Head;
+
+! --- TYPE B: Pseudo V-O & Simplex Word (Head 倾向于 VV, VA, NN) ---
+提醒+Lemma+VTypeB Liheci_A_Head;
+出恭+Lemma+VTypeB Liheci_A_Head;
+将军+Lemma+VTypeB Liheci_A_Head;
+学习+Lemma+VTypeB Liheci_A_Head;
+慷慨+Lemma+VTypeB Liheci_A_Head;
+幽默+Lemma+VTypeB Liheci_A_Head;
+滑稽+Lemma+VTypeB Liheci_A_Head;
+
+! --- TYPE C: Modifier-Head (Head 倾向于 NN, AD, JJ) ---
+小便+Lemma+VTypeC Liheci_A_Head;
+大便+Lemma+VTypeC Liheci_A_Head;
+军训+Lemma+VTypeC Liheci_A_Head;
+体检+Lemma+VTypeC Liheci_A_Head;
+同学+Lemma+VTypeC Liheci_A_Head;
+暂停+Lemma+VTypeC Liheci_A_Head;
+
+
+! === LEXICON: LIHECI HEAD (A) - 76 Unique Heads ===
+LEXICON Liheci_A_Head
+! Head 成分，后面接 Liheci_B_Tail 词库
+睡 +Head Liheci_B_Tail; 洗 +Head Liheci_B_Tail; 吃 +Head Liheci_B_Tail; 刷 +Head Liheci_B_Tail;
+洗 +Head Liheci_B_Tail; 走 +Head Liheci_B_Tail; 跑 +Head Liheci_B_Tail; 散 +Head Liheci_B_Tail;
+上 +Head Liheci_B_Tail; 理 +Head Liheci_B_Tail; 搬 +Head Liheci_B_Tail; 起 +Head Liheci_B_Tail;
+看 +Head Liheci_B_Tail; 写 +Head Liheci_B_Tail; 开 +Head Liheci_B_Tail; 关 +Head Liheci_B_Tail;
+做 +Head Liheci_B_Tail; 打 +Head Liheci_B_Tail; 抽 +Head Liheci_B_Tail; 见 +Head Liheci_B_Tail;
+帮 +Head Liheci_B_Tail; 聊 +Head Liheci_B_Tail; 说 +Head Liheci_B_Tail; 吵 +Head Liheci_B_Tail;
+打 +Head Liheci_B_Tail; 生 +Head Liheci_B_Tail; 发 +Head Liheci_B_Tail; 道 +Head Liheci_B_Tail;
+拜 +Head Liheci_B_Tail; 握 +Head Liheci_B_Tail; 鼓 +Head Liheci_B_Tail; 捣 +Head Liheci_B_Tail;
+开 +Head Liheci_B_Tail; 谈 +Head Liheci_B_Tail; 撒 +Head Liheci_B_Tail; 吹 +Head Liheci_B_Tail;
+告 +Head Liheci_B_Tail; 请 +Head Liheci_B_Tail; 结 +Head Liheci_B_Tail; 离 +Head Liheci_B_Tail;
+订 +Head Liheci_B_Tail; 分 +Head Liheci_B_Tail; 吃 +Head Liheci_B_Tail; 伤 +Head Liheci_B_Tail;
+放 +Head Liheci_B_Tail; 担 +Head Liheci_B_Tail; 灰 +Head Liheci_B_Tail; 操 +Head Liheci_B_Tail;
+动 +Head Liheci_B_Tail; 下 +Head Liheci_B_Tail; 请 +Head Liheci_B_Tail; 放 +Head Liheci_B_Tail;
+考 +Head Liheci_B_Tail; 毕 +Head Liheci_B_Tail; 留 +Head Liheci_B_Tail; 报 +Head Liheci_B_Tail;
+辞 +Head Liheci_B_Tail; 值 +Head Liheci_B_Tail; 加 +Head Liheci_B_Tail; 出 +Head Liheci_B_Tail;
+输 +Head Liheci_B_Tail; 挂 +Head Liheci_B_Tail; 把 +Head Liheci_B_Tail; 减 +Head Liheci_B_Tail;
+鞠 +Head Liheci_B_Tail; 敬 +Head Liheci_B_Tail; 站 +Head Liheci_B_Tail; 受 +Head Liheci_B_Tail;
+跳 +Head Liheci_B_Tail; 唱 +Head Liheci_B_Tail; 游 +Head Liheci_B_Tail; 划 +Head Liheci_B_Tail;
+钓 +Head Liheci_B_Tail; 滑 +Head Liheci_B_Tail; 签 +Head Liheci_B_Tail; 排 +Head Liheci_B_Tail;
+戒 +Head Liheci_B_Tail; 回 +Head Liheci_B_Tail; 死 +Head Liheci_B_Tail; 挑 +Head Liheci_B_Tail;
+领 +Head Liheci_B_Tail; 送 +Head Liheci_B_Tail; 拌 +Head Liheci_B_Tail; 叹 +Head Liheci_B_Tail;
+丢 +Head Liheci_B_Tail; 接 +Head Liheci_B_Tail; 受 +Head Liheci_B_Tail; 挨 +Head Liheci_B_Tail;
+干 +Head Liheci_B_Tail; 革 +Head Liheci_B_Tail; 造 +Head Liheci_B_Tail; 退 +Head Liheci_B_Tail;
+施 +Head Liheci_B_Tail; 倒 +Head Liheci_B_Tail; 提 +Head Liheci_B_Tail; 出 +Head Liheci_B_Tail;
+将 +Head Liheci_B_Tail; 学 +Head Liheci_B_Tail; 小 +Head Liheci_B_Tail; 大 +Head Liheci_B_Tail;
+军 +Head Liheci_B_Tail; 体 +Head Liheci_B_Tail; 同 +Head Liheci_B_Tail; 暂 +Head Liheci_B_Tail;
+慷 +Head Liheci_B_Tail; 幽 +Head Liheci_B_Tail; 滑 +Head Liheci_B_Tail;
+
+
+! === LEXICON: LIHECI TAIL (B) - 49 Unique Tails ===
+LEXICON Liheci_B_Tail
+! Tail 成分，后面接词尾结束符 (#)
+觉 +Tail #; 澡 +Tail #; 饭 +Tail #; 牙 +Tail #; 脸 +Tail #; 路 +Tail #;
+步 +Tail #; 网 +Tail #; 发 +Tail #; 家 +Tail #; 床 +Tail #; 书 +Tail #;
+字 +Tail #; 门 +Tail #; 灯 +Tail #; 球 +Tail #; 烟 +Tail #; 面 +Tail #;
+忙 +Tail #; 天 +Tail #; 话 +Tail #; 架 +Tail #; 仗 +Tail #; 气 +Tail #;
+火 +Tail #; 歉 +Tail #; 谢 +Tail #; 年 +Tail #; 手 +Tail #; 掌 +Tail #;
+乱 +Tail #; 玩笑 +Tail #; 恋爱 +Tail #; 谎 +Tail #; 牛 +Tail #; 状 +Tail #;
+客 +Tail #; 婚 +Tail #; 醋 +Tail #; 心 +Tail #; 班 +Tail #; 学 +Tail #;
+课 +Tail #; 假 +Tail #; 试 +Tail #; 业 +Tail #; 名 +Tail #; 职 +Tail #;
+会 +Tail #; 言 +Tail #; 差 +Tail #; 病 +Tail #; 院 +Tail #; 针 +Tail #;
+液 +Tail #; 号 +Tail #; 脉 +Tail #; 肥 +Tail #; 躬 +Tail #; 礼 +Tail #;
+岗 +Tail #; 苦 +Tail #; 亏 +Tail #; 罪 +Tail #; 舞 +Tail #; 歌 +Tail #;
+泳 +Tail #; 船 +Tail #; 鱼 +Tail #; 冰 +Tail #; 队 +Tail #; 工 +Tail #;
+家 +Tail #; 水 +Tail #; 伤 +Tail #; 兴 +Tail #; 情 +Tail #; 礼 +Tail #;
+嘴 +Tail #; 吻 +Tail #; 骗 +Tail #; 批 +Tail #; 杯 +Tail #; 命 +Tail #;
+反 +Tail #; 休 +Tail #; 事 +Tail #; 关 +Tail #; 霉 +Tail #; 醒 +Tail #;
+恭 +Tail #; 军 +Tail #; 习 +Tail #; 便 +Tail #; 训 +Tail #; 检 +Tail #;
+停 +Tail #; 慨 +Tail #; 默 +Tail #; 稽 +Tail #;
+
+END

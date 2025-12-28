@@ -1,0 +1,22 @@
+fst % hfst-xfst -e "source middle_grammar.xfst" -e "save stack middle.hfst" -e "quit"
+Opening file 'middle_grammar.xfst'.
+Defined 'Asp'
+Defined 'De'
+Defined 'Comp'
+Defined 'Poten'
+Defined 'Cl'
+Defined 'Num'
+Defined 'Pron'
+Defined 'Forbidden'
+Defined 'ModChar'
+Defined 'PComp'
+Defined 'PQuant'
+Defined 'PMod'
+Defined 'PPoss'
+Defined 'Components'
+Defined 'MiddleField'
+? bytes. 44 states, 3189 arcs, ? paths
+.
+(hfst-env) mac@macdeMacBook-Air-2 fst % ls -l middle.hfst
+-rw-r--r--@ 1 mac  staff  53245 Dec  7 23:10 middle.hfst
+

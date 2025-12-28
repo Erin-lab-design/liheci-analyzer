@@ -1,0 +1,80 @@
+! liheci_split.xfst
+! 目标：字符级句子 FST，检测 SplitEntry：
+!   谈……恋爱  → 谈恋爱+Lemma+VTypeA+SPLIT
+!   吃……饭    → 吃饭+Lemma+VTypeA+SPLIT
+!
+! 使用方式（编译）：
+!   /Users/mac/Downloads/hfst-bin-mac-64/hfst-xfst < liheci_split.xfst
+! 会在当前目录生成：liheci_split.hfst
+!
+! 使用方式（查询）：
+!   echo "大学期间谈了一场轰轰烈烈的恋爱。" | hfst-lookup liheci_split.hfst
+
+! -----------------------------
+! 1) 定义符号集合
+! -----------------------------
+
+! 标点符号（你可以按需要再加）
+define Punct [， | 。 | 、 | ！ | ？ | ： | ； | "，" | "。" | "," | "." | "!" | "?"];
+
+! 任意字符（表层）
+define AnyChar [?];
+
+! 插入成分允许的字符 = 非标点
+define LegalIns [AnyChar - Punct];
+
+! -----------------------------
+! 2) 定义 lexical 侧的 lemma 标签
+! -----------------------------
+! 注意：这里我们不强求在 FST 里编码 +Lemma/+VTypeA，
+! 直接把整个分析标签当作一个“长字符串”，输出给 Python，
+! Python 再去 CSV 里查类型等元信息。
+! 例如："谈恋爱+Lemma+VTypeA+SPLIT"
+
+define LemmaTanLianAi "谈恋爱+Lemma+VTypeA+SPLIT";
+define LemmaChiFan    "吃饭+Lemma+VTypeA+SPLIT";
+
+! -----------------------------
+! 3) 为每个 lemma 定义 Split 模式
+! -----------------------------
+! 规则思路：
+!   lexical: LemmaX
+!   surface: 句首任意字符* + Head + 中间非标点* + Tail + 句尾任意字符*
+
+! (1) 谈恋爱：   谈 …… 恋爱
+define SplitTanLianAi
+    LemmaTanLianAi :
+        (0:AnyChar)*      ! 句子前面随便是什么（标点也无所谓）
+        谈                ! Head：谈
+        (0:LegalIns)*     ! 中间插入：任意非标点字符
+        恋 爱             ! Tail：恋爱
+        (0:AnyChar)*      ! 句子后面随便是什么
+    ;
+
+! (2) 吃饭：     吃 …… 饭
+define SplitChiFan
+    LemmaChiFan :
+        (0:AnyChar)*
+        吃
+        (0:LegalIns)*
+        饭
+        (0:AnyChar)*
+    ;
+
+! -----------------------------
+! 4) 组合所有 Split 规则，构造总 FST
+! -----------------------------
+
+regex SplitTanLianAi | SplitChiFan ;
+
+! 此时栈顶是一个 transducer：
+!   input (lexical) : lemma 标签，例如 "谈恋爱+Lemma+VTypeA+SPLIT"
+!   output (surface): 满足 Head…Tail 模式的整句字符串
+
+! -----------------------------
+! 5) 保存为 HFST 格式
+! -----------------------------
+
+save stack liheci_split.hfst
+
+quit

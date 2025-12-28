@@ -1,0 +1,13 @@
+! liheci_split_demo.xfst
+
+! 标点
+define Punct [， | 。 | ！ | ？ | ： | ； | 、 | "，" | "。" | "," | "." | "!" | "?"];
+
+! 允许作为插入成分的字符 = 所有非标点
+define LegalIns [? - Punct];
+
+read lexc liheci_mini.lexc
+save stack liheci_mini.generator.hfst
+invert net
+save stack liheci_mini.analyser.hfst
+quit

@@ -1,0 +1,24 @@
+! 读 lexc 词典
+read lexc liheci_mini.lexc
+
+! --- 用 apply down 测生成器（lexical -> surface） ---
+"==== apply down (生成器方向) ===="
+apply down 谈恋爱+Lemma+VTypeA+WHOLE
+apply down 谈+Head
+apply down 恋爱+Tail
+
+! 保存生成器
+save stack liheci_mini.generator.hfst
+
+! --- 反转成为分析器（surface -> lexical） ---
+invert net
+
+"==== apply up (分析器方向) ===="
+apply up 谈恋爱
+apply up 谈
+apply up 恋爱
+
+! 保存分析器
+save stack liheci_mini.analyser.hfst
+
+quit

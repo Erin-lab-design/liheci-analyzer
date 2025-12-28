@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+hfst-env/
+env/
+ENV/
+
+# 日志文件
+*.log
+outputs/logs/
+
+# HFST 编译输出（这些文件很大，可选择性上传）
+*.hfst
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+
+# 临时文件
+*.tmp
+*.bak
+*~
+
+# 测试输出
+liheci_hfst_outputs*.tsv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 编译生成的 XFST 文件（如果需要可以上传源文件）
+# liheci_split.xfst
+# liheci_recognizer.xfst

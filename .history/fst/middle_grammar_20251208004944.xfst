@@ -1,0 +1,54 @@
+# middle_grammar.xfst (Final Grade 5 Version)
+
+# --- 1. 基础组件 (同前) ---
+define Asp     "了" | "着" | "过" ;
+define De      "的" | "之" ;
+define Comp    "完" | "好" | "到" | "透" | "死" | "坏" | "错" | "起" | "上" | "下" ;
+define Poten   "得" | "不" ;
+define Cl      "个" | "次" | "顿" | "把" | "下" | "天" | "年" | "回" | "场" | "根" | "面" | "句" | "通" | "声" | "瓶" | "首" | "张" | "口" | "大" | "小" | "点" | "些" | "位" | "辈" | "手" | "阵" | "段" | "会儿" | "分钟" | "小时" | "半天" | "军" | "默" | "发" ; # 补全量词
+define Num     "一" | "二" | "两" | "三" | "四" | "五" | "六" | "七" | "八" | "九" | "十" | "半" | "几" | "百" | "千" | "万" ;
+define Pron    "他" | "你" | "我" | "她" | "它" | "谁" | "自己" | "大家" | "人家" ;
+
+# 黑名单 (PPT 15: No Punctuation constraint) [cite: 172]
+define Forbidden "都" | "也" | "又" | "还" | "在" | "从" | "对" | "向" | "往" | "跟" | "和" | "与" | "被" | "把" | "给" | "让" | "吗" | "呢" | "吧" | "，" | "。" | "？" | "！" ;
+define ModChar [ ? - Forbidden ];
+
+# --- 2. 结构组件 ---
+define P_Asp    Asp;
+define P_Comp   [ Poten? Comp ];
+define P_Quant  [ Num? Cl ];
+define P_Mod    [ ModChar^{1,4} De? ]; 
+define P_Pron   Pron;             # 直接代词 (他)
+define P_Poss   [ Pron De ];      # 领属代词 (他的)
+
+# --- 3. 赛道定义 (The Tracks) ---
+
+# [Track 1: LOOSE] 标准 VO
+# 允许: 动态, 补语, 数量, 领属, 一般修饰 (但不允许直接代词作为宾语)
+# e.g. 洗了个热水澡, 睡了一大觉
+define T_Loose [ P_Asp | P_Comp | P_Quant | P_Poss | P_Mod ]+ ;
+
+# [Track 2: OBJECT] 允许直宾
+# 允许: 直接代词 (帮他忙)
+# e.g. 帮忙
+define T_Object [ P_Asp | P_Comp | P_Quant | P_Pron | P_Poss | P_Mod ]+ ;
+
+# [Track 3: POSSESSIVE] 强制领属
+# 允许: 必须带"的"才能接代词 (生他的气)
+# e.g. 生气, 伤心
+define T_Poss   [ P_Asp | P_Comp | P_Quant | P_Poss | P_Mod ]+ ;
+
+# [Track 4: IDIOM] 僵化/特例
+# 允许: 仅限动态和数量，或者特定的古文结构
+# e.g. 幽了一默, 将了一军, 慷他人之慨(需特殊放行"他人之")
+define T_Idiom  [ P_Asp | P_Comp | P_Quant | [ModChar^{1,3} "之"] ]+ ;
+
+# --- 4. 路由分发 ---
+define InputLoose  [ {LOOSE:}  T_Loose ];
+define InputObj    [ {OBJECT:} T_Object ];
+define InputPoss   [ {POSS:}   T_Poss ];
+define InputIdiom  [ {IDIOM:}  T_Idiom ];
+
+# 总成
+define Grammar [ [InputLoose | InputObj | InputPoss | InputIdiom] .o. [?^{0,8}] ] - [?* Forbidden ?*];
+regex Grammar;

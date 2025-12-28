@@ -1,0 +1,31 @@
+! 1. 定义所有 HanLP POS 标签
+define V_Tags [ /VV | /VA ];
+define N_Tags [ /NN | /NR ];
+define Insertion_Tags [ /AS | /CD | /M | /PN | /AD | /JJ ];
+
+! 2. 定义 Head (A) 约束：例如，标准连体词的 A 必须是 V
+define Head_VV_Constraint [ [ ?* .o. V_Tags ] ] ;
+define Head_NN_Constraint [ [ ?* .o. N_Tags ] ] ;
+
+! 3. 定义 Tail (B) 约束：例如，Tail 必须是 NN 或 VV
+define Tail_Constraint [ [ ?* .o. N_Tags | ?* .o. V_Tags ] ] ;
+
+! 4. A-B 插入路径规则 (核心形态学建模)
+! 目标：用实际的插入成分 (Insertion_Tags) 替换抽象的 ^SEP 符号
+! 规则：替换 ^SEP，但条件是前后必须符合词性约束 (Head_Tag)
+define InsertedPath [ ?* ] .o.
+    (
+        [
+            ! 替换规则：
+            [ ^SEP -> Insertion_Tags* ] 
+            
+            ! 形态句法约束 (C-Constraint):
+            || [ C_Left::Head_VV_Constraint ] _ [ C_Right::Tail_Constraint ]
+        ]
+    );
+
+! 5. 最终转换器：将词汇层和转换层链接起来
+! 使用 Python 生成的 @Vxx@ 标签来确保 A 和 B 之间正确对应（但此处简化，仅演示 FST 核心）
+define Lexicon [ read lexc liheci.lexc ]
+regex Lexicon .o. InsertedPath .o. Cleanup;
+save stack liheci.fst
