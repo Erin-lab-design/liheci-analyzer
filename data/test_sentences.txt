@@ -168,11 +168,157 @@ sent_id	gold_stem	gold_label	sentence
 
 # ------------------------------------------------------------
 # [PART 4] False Positives - need to be recognised as False
+# Error Types:
+# [COINCIDENCE] = Character coincidence (字形巧合非离合词)
+# [MISSING_DE] = Missing required 的 (必须加"的"但没加)
+# [PP_POS] = PP in wrong position (介词短语位置错误)
+# [INVALID_REDUP] = Invalid reduplication (无叠词形式却叠用)
+# [CROSS_CONST] = Cross-constituent (跨成分误识)
+# [REVERSED_ORDER] Tail part appeard before Head.
+# [missing tail]
+# [missing head]
+
 # ------------------------------------------------------------
-140	帮忙	False	丐帮的人都很忙。
-141	大便	False	贪小便宜吃大亏，这次大便宜没占到。
-142	将军	False	我们将军法处置，严惩不贷。
-143	告状	False	他详细报告了目前的状况。
-144	担心	False	为了孩子的学习，父母担他心。
-145	捣乱	False	别在他工作的时候捣他乱。
-146	见面	False	我就是专程赶回来见他面的。
+140	睡觉	False	[COINCIDENCE] 他睡在床上觉得很冷。
+141	洗澡	False	[CROSS_CONST] 她用洗衣机洗了好几澡盆的衣服。
+142	吃饭	False	[COINCIDENCE] 这些人真是吃软饭的。
+143	刷牙	False	[COINCIDENCE] 这把刷子是刷锅用的，牙刷在卫生间。
+144	洗脸	False	[CROSS_CONST] 护士给病人洗了洗手，擦了擦脸。
+145	走路	False	[COINCIDENCE] 我走在乡间的小路上。
+146	跑步	False	[CROSS_CONST] 他跑完了这一步棋。
+147	散步	False	[CROSS_CONST] 他急着把文件散发给大家，走快了几步。
+148	上网	False	[COINCIDENCE] 蜘蛛爬上了高高的网架。
+149	理发	False	[COINCIDENCE] 经理发现了问题。
+150	搬家	False	[CROSS_CONST] 搬运工把家具都搬走了。
+151	起床	False	[CROSS_CONST] 他从床上起来。
+152	看书	False	[CROSS_CONST] 他看了看周围，发现书包不见了。
+153	写字	False	[CROSS_CONST] 请在纸上写下你的名字。
+154	开门	False	[CROSS_CONST] 会议刚开了个头，门外就响起了敲门声。
+155	关灯	False	[COINCIDENCE] 这事关系重大，他们灯火通明地开会到深夜。
+156	做饭	False	[CROSS_CONST] 木匠做了一套家具，饭店老板很满意。
+157	打球	False	[CROSS_CONST] 昨天打了一场激烈的比赛，球队有人受伤了。
+158	抽烟	False	[CROSS_CONST] 蒸汽机抽风了，冒那么大烟。
+159	见面	False	[REVERSED_ORDER] 他们约定了在面包店门口相见。
+160	帮忙	False	[COINCIDENCE] 丐帮的人都很忙。
+161	聊天	False	[COINCIDENCE] 英国的人喜欢聊天气。
+162	说话	False	[CROSS_CONST] 他说了几句就走了，话筒还在桌上。
+163	吵架	False	[CROSS_CONST] 吵什么吵，把架子放好。
+164	打架	False	[CROSS_CONST] 她和项目组打了几个电话，谈论目前的架构设计。
+165	打仗	False	[COINCIDENCE] 他们开打了，好大的阵仗。
+166	生气	False	[CROSS_CONST] 他生了一场大病，气色很差。
+167	发火	False	[CROSS_CONST] 她给我发消息：火车就要开了。
+168	道歉	False	[PP_POS] 她最终道向我歉了。
+169	道谢	False	[PP_POS] 她道向老师谢。
+170	拜年	False	[COINCIDENCE] 礼拜天年轻人都在休息。
+171	握手	False	[CROSS_CONST] 他握着笔，手在发抖。
+172	鼓掌	False	[REVERSED_ORDER] 这是真正的掌声，不是鼓励性质的。
+173	捣乱	False	[MISSING_DE] 别在他工作的时候捣他乱。
+174	开玩笑	False	[REVERSED_ORDER] 他的玩笑话刚开了个头。
+175	谈恋爱	False	[CROSS_CONST] 他谈的是什么，恋爱心得吗？
+176	撒谎	False	[CROSS_CONST] 你撒了一地的纸，还谎称不是自己弄的。
+177	吹牛	False	[CROSS_CONST] 吹一口气，牛皮就破了。
+178	告状	False	[COINCIDENCE] 他详细报告了目前的状况。
+179	请客	False	[CROSS_CONST] 他没说“请”，客人很不满意。
+180	结婚	False	[INVALID_REDUP] 结结婚有什么难的。
+181	离婚	False	[INVALID_REDUP] 离离婚很简单。
+182	订婚	False	[INVALID_REDUP] 订订婚不就行了。
+183	分手	False	[INVALID_REDUP] 分分手也很正常。
+184	吃醋	False	[COINCIDENCE] 你吃饺子不配醋吗？
+185	伤心	False	[CROSS_CONST] 他伤了手臂，心里很难受。
+186	放心	False	[INVALID_REDUP] 你就放放心吧。
+187	担心	False	[INVALID_REDUP] 担担心也没用。
+188	灰心	False	[INVALID_REDUP] 别灰灰心了。
+189	操心	False	[INVALID_REDUP] 操操心是父母的责任。
+190	动心	False	[INVALID_REDUP] 动动心也可以理解。
+191	上班	False	[CROSS_CONST] 你上哪去了，怎么没在班上。
+192	下班	False	[CROSS_CONST] 他下了楼，看见班长还在等
+193	上学	False	[CROSS_CONST] 往上瞧就是学校建筑。
+194	上课	False	[COINCIDENCE] 桌上放着课本。
+195	下课	False	[INVALID_REDUP] 下下课就去玩。
+196	请假	False	[INVALID_REDUP] 请请假很容易。
+197	放假	False	[INVALID_REDUP] 放放假多开心。
+198	考试	False	[INVALID_REDUP] 考考试很紧张。
+199	毕业	False	[CROSS_CONST] 我毕竟已经工作了，业余时间很少。
+200	留学	False	[INVALID_REDUP] 留留学很贵。
+201	报名	False	[COINCIDENCE] 报纸上有他的名字。
+202	辞职	False	[INVALID_REDUP] 辞辞职很简单。
+203	开会	False	[INVALID_REDUP] 开开会很无聊。
+204	发言	False	[CROSS_CONST] 他头发很长，不擅言语。
+205	值班	False	[COINCIDENCE] 他值得全班的表扬。
+206	加班	False	[INVALID_REDUP] 加加班很辛苦。
+207	出差	False	[CROSS_CONST] 可惜出了问题，不然差点就成功了。
+208	生病	False	[INVALID_REDUP] 生生病很难受。
+209	住院	False	[INVALID_REDUP] 住住院很花钱。
+210	打针	False	[missing tail] 打没打孩子你自己心里清楚。
+211	输液	False	[INVALID_REDUP] 只是要输输液而已。
+212	挂号	False	[CROSS_CONST] 他挂了电话，问我是几号病人。
+213	把脉	False	[CROSS_CONST] 他把门关上，递给我一瓶脉动。
+214	减肥	False	[CROSS_CONST] 这样虽然减少了开支，但降低了肥料品质。
+215	鞠躬	False	[INVALID_REDUP] 鞠鞠躬表示尊敬。
+216	敬礼	False	[INVALID_REDUP] 敬敬礼很庄重。
+217	站岗	False	[INVALID_REDUP] 站站岗很辛苦。
+218	吃苦	False	[COINCIDENCE]他吃了一口苦瓜。
+219	吃亏	False	[CROSS_CONST] 吃自助光吃菜干嘛，不亏吗。
+220	受罪	False	[INVALID_REDUP] 受受罪也值得。
+221	看病	False	[INVALID_REDUP] 看看病就好了。
+222	跳舞	False	[REVERSED_ORDER] 她看舞蹈看得她兴奋地跳起来。
+223	唱歌	False	[missing head]这首曲子歌词很美。
+224	出院	False	[INVALID_REDUP] 出出院就能回家。
+225	回家	False	[INVALID_REDUP] 回回家就安全了。
+226	游泳	False	[INVALID_REDUP] 游游泳很凉快。
+227	划船	False	[CROSS_CONST] 船在海中划开波浪，片刻之后开走了。
+228	钓鱼	False	[CROSS_CONST] 钓了半天，鱼竿断了。
+229	滑冰	False	[COINCIDENCE] 她滑倒在冰面上。
+230	签名	False	[INVALID_REDUP] 签签名很酷。
+231	排队	False	[INVALID_REDUP] 排排队很无聊。
+232	打工	False	[COINCIDENCE] 你为什么打工地上的人？
+233	戒烟	False	[INVALID_REDUP] 戒戒烟很难。
+234	死心	False	[CROSS_CONST] 她养的鱼死了，心情不好。
+235	挑水	False	[CROSS_CONST] 别挑剔了，随便拿瓶水喝吧。
+236	受伤	False	[INVALID_REDUP] 受受伤很疼。
+237	散心	False	[CROSS_CONST] 他散发完了传单，心里感到很轻松。
+238	扫兴	False	[INVALID_REDUP] 这有点扫扫兴了。
+239	领情	False	[CROSS_CONST] 您就领了吧，这是代表对方情谊的礼物，
+240	送礼	False	[CROSS_CONS] 他送你东西，你也要还礼吧。
+241	拌嘴	False	[CROSS_CONST] 拌了沙拉，嘴巴很甜。
+242	叹气	False	[CROSS_CONST] 他哀叹道，真是气煞我也。
+243	丢脸	False	[MISSING_DE] 这次真是丢你脸了。
+244	接吻	False	[INVALID_REDUP] 接接吻很浪漫。
+245	开枪	False	[INVALID_REDUP] 开开枪很危险。
+246	受骗	False	[INVALID_REDUP] 受受骗很可怜。
+247	挨批	False	[INVALID_REDUP] 挨挨批是常事。
+248	干杯	False	[INVALID_REDUP] 干干杯很痛快。
+249	革命	False	[MISSING_DE] 他们这是要革你命啊。
+250	造反	False	[MISSING_DE] 造他反就是找死。
+251	退休	False	[INVALID_REDUP] 退退休就轻松了。
+252	出事	False	[INVALID_REDUP] 出出事很麻烦。
+253	把关	False	[COINCIDENCE] 他一把把门关上了。
+254	施肥	False	[REVERSED_ORDER] 她拖着肥胖的身子施施然走过来。
+255	倒霉	False	[CROSS_CONST] 她倒了一杯水进去，为了冲走发霉的部分。
+256	提醒	False	[INVALID_REDUP] 提提醒很必要。
+257	出恭	False	[INVALID_REDUP] 出出恭很着急。
+258	将军	False	[COINCIDENCE] 我们将军法处置，严惩不贷。
+259	学习	False	[COINCIDENCE] 我们这学期要学习近平思想。
+260	慷慨	False	[INVALID_REDUP] 你稍微慷慷慨嘛。
+261	幽默	False	[INVALID_REDUP] 别以为自己很幽幽默。
+262	滑稽	False	[INVALID_REDUP] 这有点滑滑稽了。
+263	小便	False	[CROSS_CONST] 贪小便宜吃大亏。
+264	大便	False	[COINCIDENCE] 父亲18岁大的时候便去广东打工了。
+265	军训	False	[INVALID_REDUP] 学生们开学要军军训。
+266	体检	False	[INVALID_REDUP] 医生给你体体检。
+267	同学	False	[INVALID_REDUP] 能和你同同学很开心。
+268	敲门	False	[CROSS_CONST] 他敲了敲桌子，发现门是开着的。
+269	见面	False	[PP_POS] 见跟他面很困难。
+270	吵架	False	[PP_POS] 吵跟她架没有意义。
+271	打架	False	[PP_POS] 打跟同学架是不好的。
+272	打仗	False	[PP_POS] 打与日军仗非常艰辛。
+273	道歉	False	[PP_POS] 道向她歉就能解决问题。
+274	道谢	False	[PP_POS] 道对他谢是应该的。
+275	拜年	False	[PP_POS] 拜给长辈年是传统习俗。
+276	开玩笑	False	[PP_POS] 开跟他玩笑只是为了逗他开心。
+277	下雨	False	[COINCIDENCE] 他在下午泪如雨下。
+278	撒谎	False	[CROSS_CONST] 你撒了一地的纸，还谎称不是自己弄的。
+279	吹牛	False	[CROSS_CONST] 看我吹的气球，牛不牛？
+280	告状	False	[INVALID_REDUP] 告告状很可耻。
+281	请客	False	[INVALID_REDUP] 该你请请客了。
+282	写作业	False	[CROSS_CONST] 写完了作文，作业还没交。

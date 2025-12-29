@@ -1,62 +1,34 @@
-输入句子
+Input Sentence
     ↓
-[阶段1] HFST 基础识别（分批加载）
-    ├─ liheci_batch1.hfst (L001-L033)  ← 34个词条，包含 Redup
-    ├─ liheci_batch2.hfst (L034-L066)  ← 33个词条
-    ├─ liheci_batch3.hfst (L067-L099)  ← 33个词条
-    └─ liheci_batch4.hfst (L100-L131)  ← 31个词条
+[Stage 1] HFST Basic Recognition (WHOLE/SPLIT/REDUP)
+    └─ liheci_split.analyser.hfst (all 131 lemmas)
+        ├─ WHOLE: contiguous form (睡觉)
+        ├─ SPLIT: inserted form (睡了觉, 睡个好觉)
+        └─ REDUP: reduplication form (散散步, 散一散步)
     ↓
-候选离合词列表
+Candidate liheci list with basic patterns
     ↓
-[阶段2] 插入语类型识别（独立 HFST）
+[Stage 2] HFST Insertion Type Recognition
     └─ insertion_classifier.hfst
-        ├─ 识别体标记（了、过、着）
-        ├─ 识别数量短语（一个、三次）
-        ├─ 识别代词（我、你、他）
-        ├─ 识别结果补语（完、好、到）
-        └─ 识别"的"标记
+        ├─ Aspect markers (了, 过, 着)
+        ├─ Quantifier phrases (一个, 三次)
+        ├─ Pronouns (我, 你, 他)
+        ├─ Result complements (完, 好, 到)
+        └─ "的" marker
     ↓
-带插入语标注的离合词
+Candidates with insertion type annotations
     ↓
-[阶段3] Python 后处理（规则验证）
-    ├─ 检查及物性约束
-    ├─ 检查介词短语要求
-    └─ 过滤误识别
+[Stage 3A] HFST Coarse-grained Filtering (Optional)
+    ├─ Filter obvious transitivity errors
+    ├─ Check required PP structures
+    └─ Filter obvious pronoun errors
     ↓
-最终结果
-
-
-输入句子
+Initially filtered candidates
     ↓
-[阶段1] HFST 基础识别（分批加载）
-    ├─ liheci_batch1.hfst (L001-L033)
-    ├─ liheci_batch2.hfst (L034-L066)
-    ├─ liheci_batch3.hfst (L067-L099)
-    └─ liheci_batch4.hfst (L100-L131)
+[Stage 3B] Python Fine-grained Validation
+    ├─ Semantic-level transitivity check
+    ├─ Context-dependent PP validation
+    ├─ Semantic role judgment for pronoun insertion
+    └─ Other complex rules
     ↓
-候选离合词列表（只有位置信息）
-    ↓
-[阶段2] HFST 插入语类型识别
-    └─ insertion_classifier.hfst
-        ├─ 识别体标记（了、过、着）
-        ├─ 识别数量短语（一个、三次）
-        ├─ 识别代词（我、你、他）
-        ├─ 识别结果补语（完、好、到）
-        └─ 识别"的"标记
-    ↓
-带插入语标注的候选
-    ↓
-[阶段3A] HFST 粗粒度过滤（可选）
-    ├─ 过滤明显的及物性错误
-    ├─ 检查必需的介词短语
-    └─ 过滤明显的代词错误
-    ↓
-初步过滤后的候选
-    ↓
-[阶段3B] Python 精细验证
-    ├─ 语义级别的及物性检查
-    ├─ 上下文相关的介词短语验证
-    ├─ 代词插入的语义角色判断
-    └─ 其他复杂规则
-    ↓
-最终结果
+Final Results

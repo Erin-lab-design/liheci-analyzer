@@ -29,16 +29,16 @@ TEST_FILE = "data/test_sentences.txt"
 # HFST 可执行文件
 HFST_LOOKUP_BIN = os.environ.get("HFST_LOOKUP_BIN", "hfst-lookup")
 
-# 句子级分析器 - 使用 12月9日成功编译的版本
-HFST_FST_PATH = os.environ.get("LIHECI_SPLIT_FST", "fst_result_12.9/liheci_split.analyser.hfst")
+# 句子级分析器
+HFST_FST_PATH = os.environ.get("LIHECI_SPLIT_FST", "scripts/liheci_split.analyser.hfst")
 
 # 只保留识别出离合词的句子的结构化输出
-OUTPUT_TSV = "liheci_hfst_outputs_retest.tsv"
+OUTPUT_TSV = "outputs/liheci_hfst_outputs.tsv"
 
 # 详细 log
-LOG_FILE = "liheci_hfst_run.log"
+LOG_FILE = "outputs/liheci_hfst_run.log"
 
-# 超时设置（秒）
+# Timeout setting (seconds)
 HFST_TIMEOUT = 30
 
 
@@ -50,6 +50,7 @@ def setup_logging():
         filemode="w",
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
+        encoding="utf-8",
     )
     logger = logging.getLogger(__name__)
     return logger
@@ -86,15 +87,8 @@ def parse_hfst_analysis(analysis: str):
 
 def hfst_analyze_sentence(sentence: str, logger):
     """
-    用 liheci_split.analyser.hfst 对整句做 HFST 分析，
-    返回一个 list[dict]，每个 dict 描述一个 analysis：
-        {
-            "raw": 原始字符串,
-            "lemma": lemma,
-            "type_tag": type_tag,
-            "shape": WHOLE/SPLIT/None,
-            "is_redup": True/False,
-        }
+    Use liheci_split.analyser.hfst to analyze a sentence.
+    Returns a list of analysis dicts.
     """
     if not os.path.exists(HFST_FST_PATH):
         msg = f"HFST FST file not found: {HFST_FST_PATH}"
@@ -112,11 +106,12 @@ def hfst_analyze_sentence(sentence: str, logger):
             input=sentence + "\n",
             capture_output=True,
             text=True,
+            encoding='utf-8',
             check=False,
-            timeout=HFST_TIMEOUT  # 添加超时
+            timeout=HFST_TIMEOUT
         )
     except subprocess.TimeoutExpired:
-        msg = f"HFST lookup timeout after {HFST_TIMEOUT}s for sentence: {sentence[:50]}..."
+        msg = f"HFST lookup timeout after {HFST_TIMEOUT}s"
         print("[Error]", msg, file=sys.stderr)
         logger.error(msg)
         return []
@@ -130,7 +125,6 @@ def hfst_analyze_sentence(sentence: str, logger):
     err = result.stderr.strip()
 
     if err:
-        # 把 warning/错误写进 log，但不一定中断
         logger.warning(f"HFST STDERR: {err}")
 
     logger.info("HFST RAW OUTPUT:\n" + out)
@@ -139,10 +133,7 @@ def hfst_analyze_sentence(sentence: str, logger):
 
     for line in out.splitlines():
         line = line.strip()
-        if not line:
-            continue
-        if line.startswith(">"):
-            # query 行，跳过
+        if not line or line.startswith(">"):
             continue
 
         parts = line.split()
@@ -165,15 +156,17 @@ def hfst_analyze_sentence(sentence: str, logger):
             "is_redup": is_redup,
         })
 
-    # 去重（按 raw 分析）
+    # Deduplicate by raw analysis
     unique_by_raw = {}
     for item in parsed:
         unique_by_raw[item["raw"]] = item
     parsed_unique = list(unique_by_raw.values())
 
-    logger.info(f"Parsed {len(parsed_unique)} liheci analyses for this sentence.")
+    logger.info(f"Parsed {len(parsed_unique)} liheci analyses.")
     for item in parsed_unique:
         logger.info(f"  - {item}")
+
+    return parsed_unique
 
     return parsed_unique
 
@@ -210,6 +203,7 @@ def run_export():
         "sent_id",
         "gold_stem",
         "gold_label",
+        "error_type",
         "sentence",
         "lemma",
         "type_tag",
@@ -227,7 +221,6 @@ def run_export():
         if not line or line.startswith("#"):
             continue
 
-        # 修改：使用 TAB 分隔符，并处理表头
         parts = [p.strip() for p in line.split("\t")]
         
         # 跳过表头行
@@ -240,6 +233,14 @@ def run_export():
 
         sent_id, gold_stem, gold_label_str, sentence = parts
         gold_label = gold_label_str.lower() == "true"
+        
+        # Extract error_type tag from sentence if present (only for False cases)
+        error_type = ""
+        if not gold_label and sentence.startswith("["):
+            end_bracket = sentence.find("]")
+            if end_bracket != -1:
+                error_type = sentence[1:end_bracket]
+                sentence = sentence[end_bracket + 1:].strip()
 
         total_cases += 1
 
@@ -248,6 +249,8 @@ def run_export():
         print(f"Gold stem   : [{gold_stem}]")
         print(f"Sentence    : {sentence}")
         print(f"Gold label  : {gold_label}")
+        if error_type:
+            print(f"Error type  : [{error_type}]")
 
         logger.info("=" * 60)
         logger.info(f"Case {sent_id}: stem=[{gold_stem}], gold_label={gold_label}")
@@ -274,6 +277,7 @@ def run_export():
                 sent_id,
                 gold_stem,
                 gold_label,
+                error_type,
                 sentence,
                 a["lemma"],
                 a["type_tag"],
