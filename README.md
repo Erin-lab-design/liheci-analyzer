@@ -10,9 +10,11 @@ Chinese separable verb (离合词) analyzer using HFST (Helsinki Finite-State Te
 - 散步 → 散散步 (REDUP)
 - 见面 → 跟朋友见面 (with PP)
 
-本项目采用**两阶段HFST分析流程**：
+本项目采用**多阶段HFST分析流程**：
 - **Stage 1**: 识别 WHOLE/SPLIT 形式（所有131个词条）
 - **Stage 2**: 验证 REDUP 重叠形式的有效性（55个AAB词条）
+- **Stage 3**: 使用加权FST (WFST)分析插入语类型并计算置信度
+- **Stage 4+**: 语义层面验证（规划中）
 
 ## 项目结构
 
@@ -24,23 +26,32 @@ liheci-analyzer/
 │   └── test_sentences.txt                    # 测试句子（325条）
 │
 ├── scripts/                                   # Python 脚本
+│   ├── hfst_files/                           # HFST相关文件目录
+│   │   ├── liheci_split.xfst                # [Stage 1] XFST规则
+│   │   ├── liheci_split.analyser.hfst       # [Stage 1] 编译的分析器
+│   │   ├── liheci_split.generator.hfst      # [Stage 1] 编译的生成器
+│   │   ├── liheci_redup.xfst                # [Stage 2] XFST规则
+│   │   ├── liheci_redup.analyser.hfst       # [Stage 2] 编译的分析器
+│   │   ├── liheci_redup.generator.hfst      # [Stage 2] 编译的生成器
+│   │   ├── liheci_insertion_classifier.xfst # [Stage 3] 加权XFST规则
+│   │   └── liheci_insertion_classifier.analyser.hfst # [Stage 3] WFST分析器
+│   │
 │   ├── 01.generate_liheci_split_xfst.py     # [Stage 1] 生成 WHOLE/SPLIT XFST
-│   ├── liheci_split.xfst                     # [Stage 1] 生成的 XFST 规则
-│   ├── liheci_split.analyser.hfst            # [Stage 1] 编译的分析器 (7MB)
-│   ├── liheci_split.generator.hfst           # [Stage 1] 编译的生成器 (7MB)
-│   ├── 03.liheci_run_hfst.py                # [Stage 1] 运行 Stage 1 分析
+│   ├── 03.stage1_split_whole_recognition.py # [Stage 1] 运行 Stage 1 分析
 │   │
 │   ├── 02.generate_liheci_redup_xfst.py     # [Stage 2] 生成 REDUP XFST
-│   ├── liheci_redup.xfst                     # [Stage 2] 生成的 XFST 规则
-│   ├── liheci_redup.analyser.hfst            # [Stage 2] 编译的分析器 (7MB)
-│   ├── liheci_redup.generator.hfst           # [Stage 2] 编译的生成器 (7MB)
-│   └── 04.liheci_validate_redup_hfst.py     # [Stage 2] 验证 REDUP 有效性
+│   ├── 04.stage2_redup_recognition.py       # [Stage 2] 验证 REDUP 有效性
+│   │
+│   ├── 03_generate_insertion_wfst.py        # [Stage 3] 生成插入语分类WFST
+│   ├── 05.stage3_insertion_analysis.py      # [Stage 3] 运行插入语分析
+│   └── 成分分析.md                           # 插入语成分分析文档
 │
 ├── outputs/                                   # 输出结果
-│   ├── liheci_hfst_outputs.tsv              # Stage 1 输出 (325 rows)
-│   ├── liheci_hfst_outputs_filtered.tsv     # Stage 2 最终输出 (206 rows)
+│   ├── liheci_hfst_outputs.tsv              # Stage 1+2 输出 (208 rows)
 │   ├── liheci_hfst_run.log                  # Stage 1 运行日志
-│   └── liheci_redup_validation.log          # Stage 2 验证日志
+│   ├── liheci_redup_validation.log          # Stage 2 验证日志
+│   ├── liheci_with_insertion_analysis.tsv   # Stage 3 输出（含置信度）
+│   └── liheci_insertion_analysis.log        # Stage 3 分析日志
 │
 ├── hfst-3.16.2/                              # HFST 工具包 (Windows)
 ├── pipeline.md                                # 流程说明文档
@@ -51,10 +62,12 @@ liheci-analyzer/
 
 - ✅ **Stage 1**: 识别离合词的 **WHOLE** 形式（连用）：睡觉
 - ✅ **Stage 1**: 识别离合词的 **SPLIT** 形式（插入）：睡了一觉
-- ✅ **Stage 2**: 验证 **REDUP** 重叠形式的有效性：散散步 ✓ / 结婚结婚婚 ✗
-- ✅ 支持多种插入成分：体标记、数量短语、结果补语等
+- ✅ **Stage 2**: 验证 **REDUP** 重叠形式的有效性：散散步 ✓ / 结结婚 ✗
+- ✅ **Stage 3**: 使用加权FST（WFST）分析插入语类型并计算置信度
+- ✅ 支持多种插入成分：体标记、数量短语、代词、结果补语等
+- ✅ 基于Tropical semiring的置信度评分（0.0-1.0）
 - ✅ 句子级别分析，自动定位离合词位置
-- ✅ 双阶段验证，过滤无效重叠形式
+- ✅ 多阶段验证，逐步过滤低置信度结果
 
 ## 环境要求
 
@@ -102,18 +115,20 @@ source hfst-env/bin/activate  # macOS/Linux
 
 ### 完整流程（推荐）
 
-运行两阶段分析流程：
+运行三阶段分析流程：
 
 ```bash
 # Stage 1: 识别 WHOLE/SPLIT 形式
-python scripts/03.liheci_run_hfst.py
-
-# 输出: outputs/liheci_hfst_outputs.tsv (325 rows)
+python scripts/03.stage1_split_whole_recognition.py
+# 输出: outputs/liheci_hfst_outputs.tsv (328 rows)
 
 # Stage 2: 验证 REDUP 有效性
-python scripts/04.liheci_validate_redup_hfst.py
+python scripts/04.stage2_redup_recognition.py
+# 输出: 更新 outputs/liheci_hfst_outputs.tsv (208 rows)
 
-# 输出: outputs/liheci_hfst_outputs_filtered.tsv (206 rows)
+# Stage 3: 插入语分析与置信度评分
+python scripts/05.stage3_insertion_analysis.py
+# 输出: outputs/liheci_with_insertion_analysis.tsv (208 rows + scores)
 ```
 
 ### 从源码重新生成 XFST 文件
@@ -140,16 +155,33 @@ python scripts/03.liheci_run_hfst.py
 ```bash
 # 1. 生成 REDUP XFST 规则文件
 python scripts/02.generate_liheci_redup_xfst.py
-# 输出: scripts/liheci_redup.xfst
+# 输出: scripts/hfst_files/liheci_redup.xfst
 
 # 2. 编译为 HFST
-cd scripts
+cd scripts/hfst_files
 hfst-xfst -F liheci_redup.xfst
 # 输出: liheci_redup.analyser.hfst, liheci_redup.generator.hfst
 
 # 3. 运行验证
-cd ..
-python scripts/04.liheci_validate_redup_hfst.py
+cd ../..
+python scripts/04.stage2_redup_recognition.py
+```
+
+#### Stage 3: Insertion Analysis (WFST)
+
+```bash
+# 1. 生成加权 XFST 规则文件
+python scripts/03_generate_insertion_wfst.py
+# 输出: scripts/hfst_files/liheci_insertion_classifier.xfst
+
+# 2. 编译为加权 HFST (Tropical semiring)
+cd scripts/hfst_files
+hfst-xfst -F liheci_insertion_classifier.xfst
+# 输出: liheci_insertion_classifier.analyser.hfst
+
+# 3. 运行插入语分析
+cd ../..
+python scripts/05.stage3_insertion_analysis.py
 ```
 
 ### 使用命令行工具测试
@@ -174,18 +206,44 @@ echo "见一见面" | hfst-lookup scripts/liheci_redup.analyser.hfst
 | 1 | 睡觉 | True | 昨天晚上我睡了一个好觉。 | 睡觉 | Verb-Object | SPLIT | False | 睡觉+Lemma+Verb-Object+SPLIT |
 | 2 | 散步 | True | 晚饭后我们去散散步。 | 散步 | Verb-Object | WHOLE | False | 散步+Lemma+Verb-Object+WHOLE |
 
-### Stage 2 输出 (`liheci_hfst_outputs_filtered.tsv`)
+### Stage 2 输出 (`liheci_hfst_outputs.tsv`)
 
-206 rows，过滤了无效的重叠形式：
+208 rows，过滤了无效的重叠形式：
 
-- **189 rows**: 非重叠形式（WHOLE 或 SPLIT）
-- **17 rows**: 有效的重叠形式（REDUP）
+- **190 rows**: 非重叠形式（WHOLE 或 SPLIT）
+- **18 rows**: 有效的重叠形式（REDUP）
 
-**有效的 REDUP lemmas (17个)**：
-散步, 见面, 聊天, 睡觉, 把脉, 洗澡, 鼓掌, 放假, 开会, 加班, 输液, 看病, 游泳, 排队, 散心
+**有效的 REDUP lemmas (18个)**：
+散步, 见面, 聊天, 睡觉, 把脉, 洗澡, 鼓掌, 敲门, 放假, 开会, 加班, 输液, 看病, 游泳, 排队, 散心, 请客, (1 more)
 
 **被过滤的无效 REDUP lemmas (45个)**：
-结婚, 离婚, 订婚, 分手, 放心, 担心, 灰心, 操心, 动心, 下课, 请假, 考试, 留学, 辞职, 生病, 住院, 鞠躬, 敬礼, 站岗, 受罪, 出院, 回家, 签名, 戒烟, 受伤, 扫兴, 接吻, 开枪, 受骗, 挨批, 干杯, 退休, 出事, 提醒, 出恭, 学习, 慷慨, 幽默, 滑稽, 军训, 体检, 同学, 告状, 请客
+结婚, 离婚, 订婚, 分手, 放心, 担心, 灰心, 操心, 动心, 下课, 请假, 考试, 留学, 辞职, 生病, 住院, 鞠躬, 敬礼, 站岗, 受罪, 出院, 回家, 签名, 戒烟, 受伤, 扫兴, 接吻, 开枪, 受骗, 挨批, 干杯, 退休, 出事, 提醒, 出恭, 学习, 慷慨, 幽默, 滑稽, 军训, 体检, 同学, 告状
+
+### Stage 3 输出 (`liheci_with_insertion_analysis.tsv`)
+
+208 rows with additional columns:
+
+| insertion | insertion_type | confidence | hfst_weight |
+|-----------|----------------|------------|--------------|
+| 了一个好 | aspect+modifier+quant | 0.92 | 0.08 |
+| 散 | redup_prefix | 0.88 | 0.12 |
+| 了 | aspect_marker | 0.95 | 0.05 |
+
+**Confidence Score Interpretation**:
+- **≥ 0.85**: High confidence (likely valid liheci)
+- **0.60-0.84**: Medium confidence (needs review)
+- **< 0.60**: Low confidence (likely false positive)
+
+**Insertion Type Categories**:
+- `aspect_marker`: 了/过/着 (0.95 confidence)
+- `aspect+quantifier`: 了一个/过三次 (0.92)
+- `quantifier`: 一个/三次 (0.85)
+- `pronoun`: 我/你/他 (0.75)
+- `modifier+quant`: 好几个/大半天 (0.82)
+- `result_complement`: 完/好/到 (0.75)
+- `redup_prefix`: AAB pattern (0.88)
+- `whole_form`: No insertion (0.50)
+- `unknown`: Complex/unrecognized (0.30)
 
 ## 数据说明
 
@@ -295,13 +353,20 @@ input\tanalysis\tweight
 
 ## 更新日志
 
+- **2026-01-01**:
+  - ✅ 实现 Stage 3: 加权FST (WFST) 插入语分析
+  - ✅ 使用 Tropical semiring 计算置信度（0-1分数）
+  - ✅ 分类9种插入语类型并赋予不同权重
+  - ✅ 生成带置信度评分的输出 (208 rows with scores)
+  - ✅ 更新文档，修正列名为 hfst_analysis
+  - ✅ 修正 Stage 2 输出路径bug
 - **2024-12-29**: 
   - ✅ 实现两阶段 HFST 分析流程
   - ✅ Stage 1: WHOLE/SPLIT 识别（131 lemmas, 663 states）
   - ✅ Stage 2: REDUP 有效性验证（55 lemmas, 225 states）
   - ✅ 修复所有 XFST 生成和 HFST 输出解析问题
-  - ✅ 验证 17 个有效 REDUP lemmas，过滤 45 个无效 lemmas
-  - ✅ 最终输出 206 条有效识别结果
+  - ✅ 验证 18 个有效 REDUP lemmas，过滤 45 个无效 lemmas
+  - ✅ 最终输出 208 条有效识别结果
 - **2024-12-09**: 初始版本，成功编译 HFST 文件
 - **2024-12-27**: 更新词典，添加 RedupPattern 标注
 

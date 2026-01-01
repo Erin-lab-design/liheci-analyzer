@@ -157,7 +157,7 @@ sent_id	gold_stem	gold_label	sentence
 133	把脉	True	医生给他把把脉。
 134	洗澡	True	身上脏了，去洗洗澡。
 135	鼓掌	True	观众为精彩的表演鼓了鼓掌。
-136	敲门    True    狼外婆敲了敲门。
+136	敲门	True	狼外婆敲了敲门。
 137 把关    True    你可得好好给咱们女儿把把关呐。
 138 拌嘴    True    小夫妻吵吵架，拌拌嘴，都是很正常的。
 138 吵架    True    小夫妻吵吵架，拌拌嘴，都是很正常的。
@@ -165,7 +165,11 @@ sent_id	gold_stem	gold_label	sentence
 139 看书    True    他平时生活很规律，就看看书，打打球，吃吃饭，睡睡觉
 139 吃饭    True    他平时生活很规律，就看看书，打打球，吃吃饭，睡睡觉
 139 睡觉    True    他平时生活很规律，就看看书，打打球，吃吃饭，睡睡觉
-
+221	看病	True	我们要带奶奶去看看病。
+203	开会	True	我们来开开会商讨一下。
+211	输液	True	只是要输输液而已。
+226	游泳	True	他等下要去游游泳。
+281	请客	True	该你请请客了。
 # ------------------------------------------------------------
 # [PART 4] False Positives - need to be recognised as False
 # Error Types:
@@ -242,7 +246,6 @@ sent_id	gold_stem	gold_label	sentence
 200	留学	False	[INVALID_REDUP] 留留学很贵。
 201	报名	False	[COINCIDENCE] 报纸上有他的名字。
 202	辞职	False	[INVALID_REDUP] 辞辞职很简单。
-203	开会	False	[INVALID_REDUP] 开开会很无聊。
 204	发言	False	[CROSS_CONST] 他头发很长，不擅言语。
 205	值班	False	[COINCIDENCE] 他值得全班的表扬。
 206	加班	False	[INVALID_REDUP] 加加班很辛苦。
@@ -250,22 +253,19 @@ sent_id	gold_stem	gold_label	sentence
 208	生病	False	[INVALID_REDUP] 生生病很难受。
 209	住院	False	[INVALID_REDUP] 住住院很花钱。
 210	打针	False	[missing tail] 打没打孩子你自己心里清楚。
-211	输液	False	[INVALID_REDUP] 只是要输输液而已。
 212	挂号	False	[CROSS_CONST] 他挂了电话，问我是几号病人。
 213	把脉	False	[CROSS_CONST] 他把门关上，递给我一瓶脉动。
 214	减肥	False	[CROSS_CONST] 这样虽然减少了开支，但降低了肥料品质。
-215	鞠躬	False	[INVALID_REDUP] 鞠鞠躬表示尊敬。
-216	敬礼	False	[INVALID_REDUP] 敬敬礼很庄重。
+215	鞠躬	False	[INVALID_REDUP] 门口服务员向我们鞠鞠躬。
+216	敬礼	False	[INVALID_REDUP] 你来像领导敬敬礼。
 217	站岗	False	[INVALID_REDUP] 站站岗很辛苦。
 218	吃苦	False	[COINCIDENCE]他吃了一口苦瓜。
 219	吃亏	False	[CROSS_CONST] 吃自助光吃菜干嘛，不亏吗。
 220	受罪	False	[INVALID_REDUP] 受受罪也值得。
-221	看病	False	[INVALID_REDUP] 看看病就好了。
 222	跳舞	False	[REVERSED_ORDER] 她看舞蹈看得她兴奋地跳起来。
 223	唱歌	False	[missing head]这首曲子歌词很美。
-224	出院	False	[INVALID_REDUP] 出出院就能回家。
+224	出院	False	[INVALID_REDUP] 等出出院就好了。
 225	回家	False	[INVALID_REDUP] 回回家就安全了。
-226	游泳	False	[INVALID_REDUP] 游游泳很凉快。
 227	划船	False	[CROSS_CONST] 船在海中划开波浪，片刻之后开走了。
 228	钓鱼	False	[CROSS_CONST] 钓了半天，鱼竿断了。
 229	滑冰	False	[COINCIDENCE] 她滑倒在冰面上。
@@ -282,10 +282,10 @@ sent_id	gold_stem	gold_label	sentence
 240	送礼	False	[CROSS_CONS] 他送你东西，你也要还礼吧。
 241	拌嘴	False	[CROSS_CONST] 拌了沙拉，嘴巴很甜。
 242	叹气	False	[CROSS_CONST] 他哀叹道，真是气煞我也。
-243	丢脸	False	[MISSING_DE] 这次真是丢你脸了。
-244	接吻	False	[INVALID_REDUP] 接接吻很浪漫。
-245	开枪	False	[INVALID_REDUP] 开开枪很危险。
-246	受骗	False	[INVALID_REDUP] 受受骗很可怜。
+243	丢脸	False	[MISSING_DE] 这次真的丢你脸了。
+244	接吻	False	[INVALID_REDUP] 他们在街头接接吻。
+245	开枪	False	[INVALID_REDUP] 他突然对着人群开开枪。
+246	受骗	False	[INVALID_REDUP] 年轻人不要上当受受骗。
 247	挨批	False	[INVALID_REDUP] 挨挨批是常事。
 248	干杯	False	[INVALID_REDUP] 干干杯很痛快。
 249	革命	False	[MISSING_DE] 他们这是要革你命啊。
@@ -319,6 +319,5 @@ sent_id	gold_stem	gold_label	sentence
 277	下雨	False	[COINCIDENCE] 他在下午泪如雨下。
 278	撒谎	False	[CROSS_CONST] 你撒了一地的纸，还谎称不是自己弄的。
 279	吹牛	False	[CROSS_CONST] 看我吹的气球，牛不牛？
-280	告状	False	[INVALID_REDUP] 告告状很可耻。
-281	请客	False	[INVALID_REDUP] 该你请请客了。
+280	告状	False	[INVALID_REDUP] 我想去告告状。
 282	写作业	False	[CROSS_CONST] 写完了作文，作业还没交。

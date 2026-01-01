@@ -23,7 +23,7 @@ import csv
 from pathlib import Path
 
 INPUT_CSV = "data/liheci_lexicon.csv"
-OUTPUT_XFST = "scripts/liheci_split.xfst"
+OUTPUT_XFST = "scripts/hfst_files/liheci_split.xfst"
 
 
 def map_type_tag(type_str: str) -> str:

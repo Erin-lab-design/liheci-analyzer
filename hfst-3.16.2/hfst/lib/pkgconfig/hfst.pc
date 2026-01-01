@@ -1,0 +1,10 @@
+prefix=/opt/win-x86_64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: hfst
+Description: Finite-state transducer library bridge for multiple FLOSS packages
+Version: 3.16.2
+Libs: -L${libdir} -lhfst
+Cflags: -I${includedir}/hfst/

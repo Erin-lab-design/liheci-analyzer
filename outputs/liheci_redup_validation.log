@@ -1,8 +1,8 @@
 Reading Stage 1 output...
-  Read 325 rows, 313 unique after dedup
+  Read 326 rows, 314 unique after dedup
   Duplicates removed: 12
 
-Identified 62 potential reduplication patterns
+Identified 63 potential reduplication patterns
 
 Validating reduplication with HFST...
   ✓ Valid REDUP: sent_id=8, lemma=散步, sentence='晚饭后我们去河边散散步。...'
@@ -15,15 +15,16 @@ Validating reduplication with HFST...
   ✓ Valid REDUP: sent_id=133, lemma=把脉, sentence='医生给他把把脉。...'
   ✓ Valid REDUP: sent_id=134, lemma=洗澡, sentence='身上脏了，去洗洗澡。...'
   ✓ Valid REDUP: sent_id=135, lemma=鼓掌, sentence='观众为精彩的表演鼓了鼓掌。...'
-  ✓ Valid REDUP: sent_id=197, lemma=放假, sentence='放放假多开心。...'
-  ✓ Valid REDUP: sent_id=203, lemma=开会, sentence='开开会很无聊。...'
-  ✓ Valid REDUP: sent_id=206, lemma=加班, sentence='加加班很辛苦。...'
+  ✓ Valid REDUP: sent_id=136, lemma=敲门, sentence='狼外婆敲了敲门。...'
+  ✓ Valid REDUP: sent_id=221, lemma=看病, sentence='我们要带奶奶去看看病。...'
+  ✓ Valid REDUP: sent_id=203, lemma=开会, sentence='我们来开开会商讨一下。...'
   ✓ Valid REDUP: sent_id=211, lemma=输液, sentence='只是要输输液而已。...'
-  ✓ Valid REDUP: sent_id=221, lemma=看病, sentence='看看病就好了。...'
-  ✓ Valid REDUP: sent_id=226, lemma=游泳, sentence='游游泳很凉快。...'
-  ✓ Valid REDUP: sent_id=231, lemma=排队, sentence='排排队很无聊。...'
+  ✓ Valid REDUP: sent_id=226, lemma=游泳, sentence='他等下要去游游泳。...'
+  ✓ Valid REDUP: sent_id=281, lemma=请客, sentence='该你请请客了。...'
+  ✓ Valid REDUP: sent_id=197, lemma=放假, sentence='放放假多开心。...'
+  ✓ Valid REDUP: sent_id=206, lemma=加班, sentence='加加班很辛苦。...'
 
-Valid reduplication found: 17
+Valid reduplication found: 18
   ✗ Filtered invalid REDUP: sent_id=39, lemma=结婚
   ✗ Filtered invalid REDUP: sent_id=180, lemma=结婚
   ✗ Filtered invalid REDUP: sent_id=181, lemma=离婚
@@ -48,6 +49,7 @@ Valid reduplication found: 17
   ✗ Filtered invalid REDUP: sent_id=224, lemma=出院
   ✗ Filtered invalid REDUP: sent_id=225, lemma=回家
   ✗ Filtered invalid REDUP: sent_id=230, lemma=签名
+  ✗ Filtered invalid REDUP: sent_id=231, lemma=排队
   ✗ Filtered invalid REDUP: sent_id=233, lemma=戒烟
   ✗ Filtered invalid REDUP: sent_id=236, lemma=受伤
   ✗ Filtered invalid REDUP: sent_id=238, lemma=扫兴
@@ -68,17 +70,16 @@ Valid reduplication found: 17
   ✗ Filtered invalid REDUP: sent_id=266, lemma=体检
   ✗ Filtered invalid REDUP: sent_id=267, lemma=同学
   ✗ Filtered invalid REDUP: sent_id=280, lemma=告状
-  ✗ Filtered invalid REDUP: sent_id=281, lemma=请客
 
 ============================================================
 Stage 2 Validation Results:
-  Original rows: 325
-  After deduplication: 313
-  Potential reduplication patterns: 124 rows
-    Valid reduplication kept: 17 lemmas
+  Original rows: 326
+  After deduplication: 314
+  Potential reduplication patterns: 126 rows
+    Valid reduplication kept: 18 lemmas
     Invalid reduplication filtered: 90 rows
-  Non-reduplication kept: 189 rows
+  Non-reduplication kept: 188 rows
   Total output rows: 206
 
-Output written to: D:\Erin\liheci-analyzer\outputs\liheci_hfst_outputs_filtered.tsv
+Output written to: D:\Erin\liheci-analyzer\outputs\liheci_hfst_outputs.tsv
 ============================================================

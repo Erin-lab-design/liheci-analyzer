@@ -38,7 +38,7 @@ Lemma,A,B,Type,Pinyin,English Definition,RedupPattern,Transitivity,PronounInsert
 撒谎,撒,谎,Verb-Object,sā huǎng,to lie,,INTRANSITIVE,NO_DIRECT_NP,EXT:TARGET_PP_OPTIONAL(对|跟|向); INT:NO_DIRECT_NP,撒了一个谎；可用“对/跟/向+人”撒谎(可省)
 吹牛,吹,牛,Verb-Object,chuī niú,to brag,AAB,,,,吹了一次牛，吹吹牛
 告状,告,状,Verb-Object,gào zhuàng,to lodge a complaint,,TRANSITIVE,PRON_OBJ_OK,EXT:GOAL_PP_OPTIONAL(向|跟|到); INT:PRON_OBJ_OK,告了他一状；可用“向/跟/到+人”告状(可省)
-请客,请,客,Verb-Object,qǐng kè,to treat guests,,,,,请了一次客
+请客,请,客,Verb-Object,qǐng kè,to treat guests,AAB,,,,请了一次客，请请客
 结婚,结,婚,Verb-Object,jié hūn,to marry,,,,,结过一次婚
 离婚,离,婚,Verb-Object,lí hūn,to divorce,,,,,离了两次婚
 订婚,订,婚,Verb-Object,dìng hūn,to get engaged,,,,,订完婚
@@ -90,7 +90,7 @@ Lemma,A,B,Type,Pinyin,English Definition,RedupPattern,Transitivity,PronounInsert
 钓鱼,钓,鱼,Verb-Object,diào yú,to fish,AAB,,,,钓了一天鱼，钓钓鱼
 滑冰,滑,冰,Verb-Object,huá bīng,to ice skate,AAB,,,,滑了一次冰，滑滑冰
 签名,签,名,Verb-Object,qiān míng,to sign name,,,,,签了一个名
-排队,排,队,Verb-Object,pái duì,to queue up, AAB,,,,排了半天队，排排队
+排队,排,队,Verb-Object,pái duì,to queue up,,,,,排了半天队
 打工,打,工,Verb-Object,dǎ gōng,to work part-time,AAB,,,,打了一辈子工，打打工
 戒烟,戒,烟,Verb-Object,jiè yān,to quit smoking,,,,,戒了烟
 回家,回,家,Verb-Object,huí jiā,to go home,,,,,回了一趟家

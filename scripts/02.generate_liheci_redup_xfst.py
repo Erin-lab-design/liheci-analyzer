@@ -149,7 +149,7 @@ def main():
     # Paths
     base_dir = Path(__file__).parent.parent
     csv_path = base_dir / "data" / "liheci_lexicon.csv"
-    output_path = base_dir / "scripts" / "liheci_redup.xfst"
+    output_path = base_dir / "scripts" / "hfst_files" / "liheci_redup.xfst"
     
     # Read lexicon (only AAB lemmas)
     lemmas = read_csv_lexicon(csv_path)

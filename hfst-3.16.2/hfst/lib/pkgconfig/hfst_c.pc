@@ -1,0 +1,10 @@
+prefix=/opt/win-x86_64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: hfst_c
+Description: C bindings for HFST library
+Version: 0.0.0
+Libs: -L${libdir} -lhfst -lhfst_c
+Cflags: -I${includedir}/hfst/
