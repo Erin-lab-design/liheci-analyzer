@@ -10,788 +10,788 @@ define RedupMid [一 | 了];
 ! === 睡觉 (Type=Verb-Object) ===
 define L001WholePat ?* 睡 觉 ?* ;
 define L001SplitPat ?* 睡 LegalIns LegalIns* 觉 ?* ;
-define L001Whole "睡觉+Lemma+Verb-Object+WHOLE" : L001WholePat ;
-define L001Split "睡觉+Lemma+Verb-Object+SPLIT" : L001SplitPat ;
+define L001Whole "睡觉+Lemma+Verb-Object+WHOLE+Head:睡+Tail:觉" : L001WholePat ;
+define L001Split "睡觉+Lemma+Verb-Object+SPLIT+Head:睡+Tail:觉" : L001SplitPat ;
 
 ! === 洗澡 (Type=Verb-Object) ===
 define L002WholePat ?* 洗 澡 ?* ;
 define L002SplitPat ?* 洗 LegalIns LegalIns* 澡 ?* ;
-define L002Whole "洗澡+Lemma+Verb-Object+WHOLE" : L002WholePat ;
-define L002Split "洗澡+Lemma+Verb-Object+SPLIT" : L002SplitPat ;
+define L002Whole "洗澡+Lemma+Verb-Object+WHOLE+Head:洗+Tail:澡" : L002WholePat ;
+define L002Split "洗澡+Lemma+Verb-Object+SPLIT+Head:洗+Tail:澡" : L002SplitPat ;
 
 ! === 吃饭 (Type=Verb-Object) ===
 define L003WholePat ?* 吃 饭 ?* ;
 define L003SplitPat ?* 吃 LegalIns LegalIns* 饭 ?* ;
-define L003Whole "吃饭+Lemma+Verb-Object+WHOLE" : L003WholePat ;
-define L003Split "吃饭+Lemma+Verb-Object+SPLIT" : L003SplitPat ;
+define L003Whole "吃饭+Lemma+Verb-Object+WHOLE+Head:吃+Tail:饭" : L003WholePat ;
+define L003Split "吃饭+Lemma+Verb-Object+SPLIT+Head:吃+Tail:饭" : L003SplitPat ;
 
 ! === 刷牙 (Type=Verb-Object) ===
 define L004WholePat ?* 刷 牙 ?* ;
 define L004SplitPat ?* 刷 LegalIns LegalIns* 牙 ?* ;
-define L004Whole "刷牙+Lemma+Verb-Object+WHOLE" : L004WholePat ;
-define L004Split "刷牙+Lemma+Verb-Object+SPLIT" : L004SplitPat ;
+define L004Whole "刷牙+Lemma+Verb-Object+WHOLE+Head:刷+Tail:牙" : L004WholePat ;
+define L004Split "刷牙+Lemma+Verb-Object+SPLIT+Head:刷+Tail:牙" : L004SplitPat ;
 
 ! === 洗脸 (Type=Verb-Object) ===
 define L005WholePat ?* 洗 脸 ?* ;
 define L005SplitPat ?* 洗 LegalIns LegalIns* 脸 ?* ;
-define L005Whole "洗脸+Lemma+Verb-Object+WHOLE" : L005WholePat ;
-define L005Split "洗脸+Lemma+Verb-Object+SPLIT" : L005SplitPat ;
+define L005Whole "洗脸+Lemma+Verb-Object+WHOLE+Head:洗+Tail:脸" : L005WholePat ;
+define L005Split "洗脸+Lemma+Verb-Object+SPLIT+Head:洗+Tail:脸" : L005SplitPat ;
 
 ! === 走路 (Type=Verb-Object) ===
 define L006WholePat ?* 走 路 ?* ;
 define L006SplitPat ?* 走 LegalIns LegalIns* 路 ?* ;
-define L006Whole "走路+Lemma+Verb-Object+WHOLE" : L006WholePat ;
-define L006Split "走路+Lemma+Verb-Object+SPLIT" : L006SplitPat ;
+define L006Whole "走路+Lemma+Verb-Object+WHOLE+Head:走+Tail:路" : L006WholePat ;
+define L006Split "走路+Lemma+Verb-Object+SPLIT+Head:走+Tail:路" : L006SplitPat ;
 
 ! === 跑步 (Type=Verb-Object) ===
 define L007WholePat ?* 跑 步 ?* ;
 define L007SplitPat ?* 跑 LegalIns LegalIns* 步 ?* ;
-define L007Whole "跑步+Lemma+Verb-Object+WHOLE" : L007WholePat ;
-define L007Split "跑步+Lemma+Verb-Object+SPLIT" : L007SplitPat ;
+define L007Whole "跑步+Lemma+Verb-Object+WHOLE+Head:跑+Tail:步" : L007WholePat ;
+define L007Split "跑步+Lemma+Verb-Object+SPLIT+Head:跑+Tail:步" : L007SplitPat ;
 
 ! === 散步 (Type=Verb-Object) ===
 define L008WholePat ?* 散 步 ?* ;
 define L008SplitPat ?* 散 LegalIns LegalIns* 步 ?* ;
-define L008Whole "散步+Lemma+Verb-Object+WHOLE" : L008WholePat ;
-define L008Split "散步+Lemma+Verb-Object+SPLIT" : L008SplitPat ;
+define L008Whole "散步+Lemma+Verb-Object+WHOLE+Head:散+Tail:步" : L008WholePat ;
+define L008Split "散步+Lemma+Verb-Object+SPLIT+Head:散+Tail:步" : L008SplitPat ;
 
 ! === 上网 (Type=Verb-Object) ===
 define L009WholePat ?* 上 网 ?* ;
 define L009SplitPat ?* 上 LegalIns LegalIns* 网 ?* ;
-define L009Whole "上网+Lemma+Verb-Object+WHOLE" : L009WholePat ;
-define L009Split "上网+Lemma+Verb-Object+SPLIT" : L009SplitPat ;
+define L009Whole "上网+Lemma+Verb-Object+WHOLE+Head:上+Tail:网" : L009WholePat ;
+define L009Split "上网+Lemma+Verb-Object+SPLIT+Head:上+Tail:网" : L009SplitPat ;
 
 ! === 理发 (Type=Verb-Object) ===
 define L010WholePat ?* 理 发 ?* ;
 define L010SplitPat ?* 理 LegalIns LegalIns* 发 ?* ;
-define L010Whole "理发+Lemma+Verb-Object+WHOLE" : L010WholePat ;
-define L010Split "理发+Lemma+Verb-Object+SPLIT" : L010SplitPat ;
+define L010Whole "理发+Lemma+Verb-Object+WHOLE+Head:理+Tail:发" : L010WholePat ;
+define L010Split "理发+Lemma+Verb-Object+SPLIT+Head:理+Tail:发" : L010SplitPat ;
 
 ! === 搬家 (Type=Verb-Object) ===
 define L011WholePat ?* 搬 家 ?* ;
 define L011SplitPat ?* 搬 LegalIns LegalIns* 家 ?* ;
-define L011Whole "搬家+Lemma+Verb-Object+WHOLE" : L011WholePat ;
-define L011Split "搬家+Lemma+Verb-Object+SPLIT" : L011SplitPat ;
+define L011Whole "搬家+Lemma+Verb-Object+WHOLE+Head:搬+Tail:家" : L011WholePat ;
+define L011Split "搬家+Lemma+Verb-Object+SPLIT+Head:搬+Tail:家" : L011SplitPat ;
 
 ! === 起床 (Type=Verb-Object) ===
 define L012WholePat ?* 起 床 ?* ;
 define L012SplitPat ?* 起 LegalIns LegalIns* 床 ?* ;
-define L012Whole "起床+Lemma+Verb-Object+WHOLE" : L012WholePat ;
-define L012Split "起床+Lemma+Verb-Object+SPLIT" : L012SplitPat ;
+define L012Whole "起床+Lemma+Verb-Object+WHOLE+Head:起+Tail:床" : L012WholePat ;
+define L012Split "起床+Lemma+Verb-Object+SPLIT+Head:起+Tail:床" : L012SplitPat ;
 
 ! === 看书 (Type=Verb-Object) ===
 define L013WholePat ?* 看 书 ?* ;
 define L013SplitPat ?* 看 LegalIns LegalIns* 书 ?* ;
-define L013Whole "看书+Lemma+Verb-Object+WHOLE" : L013WholePat ;
-define L013Split "看书+Lemma+Verb-Object+SPLIT" : L013SplitPat ;
+define L013Whole "看书+Lemma+Verb-Object+WHOLE+Head:看+Tail:书" : L013WholePat ;
+define L013Split "看书+Lemma+Verb-Object+SPLIT+Head:看+Tail:书" : L013SplitPat ;
 
 ! === 写字 (Type=Verb-Object) ===
 define L014WholePat ?* 写 字 ?* ;
 define L014SplitPat ?* 写 LegalIns LegalIns* 字 ?* ;
-define L014Whole "写字+Lemma+Verb-Object+WHOLE" : L014WholePat ;
-define L014Split "写字+Lemma+Verb-Object+SPLIT" : L014SplitPat ;
+define L014Whole "写字+Lemma+Verb-Object+WHOLE+Head:写+Tail:字" : L014WholePat ;
+define L014Split "写字+Lemma+Verb-Object+SPLIT+Head:写+Tail:字" : L014SplitPat ;
 
 ! === 开门 (Type=Verb-Object) ===
 define L015WholePat ?* 开 门 ?* ;
 define L015SplitPat ?* 开 LegalIns LegalIns* 门 ?* ;
-define L015Whole "开门+Lemma+Verb-Object+WHOLE" : L015WholePat ;
-define L015Split "开门+Lemma+Verb-Object+SPLIT" : L015SplitPat ;
+define L015Whole "开门+Lemma+Verb-Object+WHOLE+Head:开+Tail:门" : L015WholePat ;
+define L015Split "开门+Lemma+Verb-Object+SPLIT+Head:开+Tail:门" : L015SplitPat ;
 
 ! === 关灯 (Type=Verb-Object) ===
 define L016WholePat ?* 关 灯 ?* ;
 define L016SplitPat ?* 关 LegalIns LegalIns* 灯 ?* ;
-define L016Whole "关灯+Lemma+Verb-Object+WHOLE" : L016WholePat ;
-define L016Split "关灯+Lemma+Verb-Object+SPLIT" : L016SplitPat ;
+define L016Whole "关灯+Lemma+Verb-Object+WHOLE+Head:关+Tail:灯" : L016WholePat ;
+define L016Split "关灯+Lemma+Verb-Object+SPLIT+Head:关+Tail:灯" : L016SplitPat ;
 
 ! === 做饭 (Type=Verb-Object) ===
 define L017WholePat ?* 做 饭 ?* ;
 define L017SplitPat ?* 做 LegalIns LegalIns* 饭 ?* ;
-define L017Whole "做饭+Lemma+Verb-Object+WHOLE" : L017WholePat ;
-define L017Split "做饭+Lemma+Verb-Object+SPLIT" : L017SplitPat ;
+define L017Whole "做饭+Lemma+Verb-Object+WHOLE+Head:做+Tail:饭" : L017WholePat ;
+define L017Split "做饭+Lemma+Verb-Object+SPLIT+Head:做+Tail:饭" : L017SplitPat ;
 
 ! === 打球 (Type=Verb-Object) ===
 define L018WholePat ?* 打 球 ?* ;
 define L018SplitPat ?* 打 LegalIns LegalIns* 球 ?* ;
-define L018Whole "打球+Lemma+Verb-Object+WHOLE" : L018WholePat ;
-define L018Split "打球+Lemma+Verb-Object+SPLIT" : L018SplitPat ;
+define L018Whole "打球+Lemma+Verb-Object+WHOLE+Head:打+Tail:球" : L018WholePat ;
+define L018Split "打球+Lemma+Verb-Object+SPLIT+Head:打+Tail:球" : L018SplitPat ;
 
 ! === 抽烟 (Type=Verb-Object) ===
 define L019WholePat ?* 抽 烟 ?* ;
 define L019SplitPat ?* 抽 LegalIns LegalIns* 烟 ?* ;
-define L019Whole "抽烟+Lemma+Verb-Object+WHOLE" : L019WholePat ;
-define L019Split "抽烟+Lemma+Verb-Object+SPLIT" : L019SplitPat ;
+define L019Whole "抽烟+Lemma+Verb-Object+WHOLE+Head:抽+Tail:烟" : L019WholePat ;
+define L019Split "抽烟+Lemma+Verb-Object+SPLIT+Head:抽+Tail:烟" : L019SplitPat ;
 
 ! === 见面 (Type=Verb-Object) ===
 define L020WholePat ?* 见 面 ?* ;
 define L020SplitPat ?* 见 LegalIns LegalIns* 面 ?* ;
-define L020Whole "见面+Lemma+Verb-Object+WHOLE" : L020WholePat ;
-define L020Split "见面+Lemma+Verb-Object+SPLIT" : L020SplitPat ;
+define L020Whole "见面+Lemma+Verb-Object+WHOLE+Head:见+Tail:面" : L020WholePat ;
+define L020Split "见面+Lemma+Verb-Object+SPLIT+Head:见+Tail:面" : L020SplitPat ;
 
 ! === 帮忙 (Type=Verb-Object) ===
 define L021WholePat ?* 帮 忙 ?* ;
 define L021SplitPat ?* 帮 LegalIns LegalIns* 忙 ?* ;
-define L021Whole "帮忙+Lemma+Verb-Object+WHOLE" : L021WholePat ;
-define L021Split "帮忙+Lemma+Verb-Object+SPLIT" : L021SplitPat ;
+define L021Whole "帮忙+Lemma+Verb-Object+WHOLE+Head:帮+Tail:忙" : L021WholePat ;
+define L021Split "帮忙+Lemma+Verb-Object+SPLIT+Head:帮+Tail:忙" : L021SplitPat ;
 
 ! === 聊天 (Type=Verb-Object) ===
 define L022WholePat ?* 聊 天 ?* ;
 define L022SplitPat ?* 聊 LegalIns LegalIns* 天 ?* ;
-define L022Whole "聊天+Lemma+Verb-Object+WHOLE" : L022WholePat ;
-define L022Split "聊天+Lemma+Verb-Object+SPLIT" : L022SplitPat ;
+define L022Whole "聊天+Lemma+Verb-Object+WHOLE+Head:聊+Tail:天" : L022WholePat ;
+define L022Split "聊天+Lemma+Verb-Object+SPLIT+Head:聊+Tail:天" : L022SplitPat ;
 
 ! === 说话 (Type=Verb-Object) ===
 define L023WholePat ?* 说 话 ?* ;
 define L023SplitPat ?* 说 LegalIns LegalIns* 话 ?* ;
-define L023Whole "说话+Lemma+Verb-Object+WHOLE" : L023WholePat ;
-define L023Split "说话+Lemma+Verb-Object+SPLIT" : L023SplitPat ;
+define L023Whole "说话+Lemma+Verb-Object+WHOLE+Head:说+Tail:话" : L023WholePat ;
+define L023Split "说话+Lemma+Verb-Object+SPLIT+Head:说+Tail:话" : L023SplitPat ;
 
 ! === 吵架 (Type=Verb-Object) ===
 define L024WholePat ?* 吵 架 ?* ;
 define L024SplitPat ?* 吵 LegalIns LegalIns* 架 ?* ;
-define L024Whole "吵架+Lemma+Verb-Object+WHOLE" : L024WholePat ;
-define L024Split "吵架+Lemma+Verb-Object+SPLIT" : L024SplitPat ;
+define L024Whole "吵架+Lemma+Verb-Object+WHOLE+Head:吵+Tail:架" : L024WholePat ;
+define L024Split "吵架+Lemma+Verb-Object+SPLIT+Head:吵+Tail:架" : L024SplitPat ;
 
 ! === 打架 (Type=Verb-Object) ===
 define L025WholePat ?* 打 架 ?* ;
 define L025SplitPat ?* 打 LegalIns LegalIns* 架 ?* ;
-define L025Whole "打架+Lemma+Verb-Object+WHOLE" : L025WholePat ;
-define L025Split "打架+Lemma+Verb-Object+SPLIT" : L025SplitPat ;
+define L025Whole "打架+Lemma+Verb-Object+WHOLE+Head:打+Tail:架" : L025WholePat ;
+define L025Split "打架+Lemma+Verb-Object+SPLIT+Head:打+Tail:架" : L025SplitPat ;
 
 ! === 打仗 (Type=Verb-Object) ===
 define L026WholePat ?* 打 仗 ?* ;
 define L026SplitPat ?* 打 LegalIns LegalIns* 仗 ?* ;
-define L026Whole "打仗+Lemma+Verb-Object+WHOLE" : L026WholePat ;
-define L026Split "打仗+Lemma+Verb-Object+SPLIT" : L026SplitPat ;
+define L026Whole "打仗+Lemma+Verb-Object+WHOLE+Head:打+Tail:仗" : L026WholePat ;
+define L026Split "打仗+Lemma+Verb-Object+SPLIT+Head:打+Tail:仗" : L026SplitPat ;
 
 ! === 生气 (Type=Verb-Object) ===
 define L027WholePat ?* 生 气 ?* ;
 define L027SplitPat ?* 生 LegalIns LegalIns* 气 ?* ;
-define L027Whole "生气+Lemma+Verb-Object+WHOLE" : L027WholePat ;
-define L027Split "生气+Lemma+Verb-Object+SPLIT" : L027SplitPat ;
+define L027Whole "生气+Lemma+Verb-Object+WHOLE+Head:生+Tail:气" : L027WholePat ;
+define L027Split "生气+Lemma+Verb-Object+SPLIT+Head:生+Tail:气" : L027SplitPat ;
 
 ! === 发火 (Type=Verb-Object) ===
 define L028WholePat ?* 发 火 ?* ;
 define L028SplitPat ?* 发 LegalIns LegalIns* 火 ?* ;
-define L028Whole "发火+Lemma+Verb-Object+WHOLE" : L028WholePat ;
-define L028Split "发火+Lemma+Verb-Object+SPLIT" : L028SplitPat ;
+define L028Whole "发火+Lemma+Verb-Object+WHOLE+Head:发+Tail:火" : L028WholePat ;
+define L028Split "发火+Lemma+Verb-Object+SPLIT+Head:发+Tail:火" : L028SplitPat ;
 
 ! === 道歉 (Type=Verb-Object) ===
 define L029WholePat ?* 道 歉 ?* ;
 define L029SplitPat ?* 道 LegalIns LegalIns* 歉 ?* ;
-define L029Whole "道歉+Lemma+Verb-Object+WHOLE" : L029WholePat ;
-define L029Split "道歉+Lemma+Verb-Object+SPLIT" : L029SplitPat ;
+define L029Whole "道歉+Lemma+Verb-Object+WHOLE+Head:道+Tail:歉" : L029WholePat ;
+define L029Split "道歉+Lemma+Verb-Object+SPLIT+Head:道+Tail:歉" : L029SplitPat ;
 
 ! === 道谢 (Type=Verb-Object) ===
 define L030WholePat ?* 道 谢 ?* ;
 define L030SplitPat ?* 道 LegalIns LegalIns* 谢 ?* ;
-define L030Whole "道谢+Lemma+Verb-Object+WHOLE" : L030WholePat ;
-define L030Split "道谢+Lemma+Verb-Object+SPLIT" : L030SplitPat ;
+define L030Whole "道谢+Lemma+Verb-Object+WHOLE+Head:道+Tail:谢" : L030WholePat ;
+define L030Split "道谢+Lemma+Verb-Object+SPLIT+Head:道+Tail:谢" : L030SplitPat ;
 
 ! === 拜年 (Type=Verb-Object) ===
 define L031WholePat ?* 拜 年 ?* ;
 define L031SplitPat ?* 拜 LegalIns LegalIns* 年 ?* ;
-define L031Whole "拜年+Lemma+Verb-Object+WHOLE" : L031WholePat ;
-define L031Split "拜年+Lemma+Verb-Object+SPLIT" : L031SplitPat ;
+define L031Whole "拜年+Lemma+Verb-Object+WHOLE+Head:拜+Tail:年" : L031WholePat ;
+define L031Split "拜年+Lemma+Verb-Object+SPLIT+Head:拜+Tail:年" : L031SplitPat ;
 
 ! === 握手 (Type=Verb-Object) ===
 define L032WholePat ?* 握 手 ?* ;
 define L032SplitPat ?* 握 LegalIns LegalIns* 手 ?* ;
-define L032Whole "握手+Lemma+Verb-Object+WHOLE" : L032WholePat ;
-define L032Split "握手+Lemma+Verb-Object+SPLIT" : L032SplitPat ;
+define L032Whole "握手+Lemma+Verb-Object+WHOLE+Head:握+Tail:手" : L032WholePat ;
+define L032Split "握手+Lemma+Verb-Object+SPLIT+Head:握+Tail:手" : L032SplitPat ;
 
 ! === 鼓掌 (Type=Verb-Object) ===
 define L033WholePat ?* 鼓 掌 ?* ;
 define L033SplitPat ?* 鼓 LegalIns LegalIns* 掌 ?* ;
-define L033Whole "鼓掌+Lemma+Verb-Object+WHOLE" : L033WholePat ;
-define L033Split "鼓掌+Lemma+Verb-Object+SPLIT" : L033SplitPat ;
+define L033Whole "鼓掌+Lemma+Verb-Object+WHOLE+Head:鼓+Tail:掌" : L033WholePat ;
+define L033Split "鼓掌+Lemma+Verb-Object+SPLIT+Head:鼓+Tail:掌" : L033SplitPat ;
 
 ! === 捣乱 (Type=Verb-Object) ===
 define L034WholePat ?* 捣 乱 ?* ;
 define L034SplitPat ?* 捣 LegalIns LegalIns* 乱 ?* ;
-define L034Whole "捣乱+Lemma+Verb-Object+WHOLE" : L034WholePat ;
-define L034Split "捣乱+Lemma+Verb-Object+SPLIT" : L034SplitPat ;
+define L034Whole "捣乱+Lemma+Verb-Object+WHOLE+Head:捣+Tail:乱" : L034WholePat ;
+define L034Split "捣乱+Lemma+Verb-Object+SPLIT+Head:捣+Tail:乱" : L034SplitPat ;
 
 ! === 开玩笑 (Type=Verb-Object) ===
 define L035WholePat ?* 开 玩 笑 ?* ;
 define L035SplitPat ?* 开 LegalIns LegalIns* 玩 笑 ?* ;
-define L035Whole "开玩笑+Lemma+Verb-Object+WHOLE" : L035WholePat ;
-define L035Split "开玩笑+Lemma+Verb-Object+SPLIT" : L035SplitPat ;
+define L035Whole "开玩笑+Lemma+Verb-Object+WHOLE+Head:开+Tail:玩笑" : L035WholePat ;
+define L035Split "开玩笑+Lemma+Verb-Object+SPLIT+Head:开+Tail:玩笑" : L035SplitPat ;
 
 ! === 谈恋爱 (Type=Verb-Object) ===
 define L036WholePat ?* 谈 恋 爱 ?* ;
 define L036SplitPat ?* 谈 LegalIns LegalIns* 恋 爱 ?* ;
-define L036Whole "谈恋爱+Lemma+Verb-Object+WHOLE" : L036WholePat ;
-define L036Split "谈恋爱+Lemma+Verb-Object+SPLIT" : L036SplitPat ;
+define L036Whole "谈恋爱+Lemma+Verb-Object+WHOLE+Head:谈+Tail:恋爱" : L036WholePat ;
+define L036Split "谈恋爱+Lemma+Verb-Object+SPLIT+Head:谈+Tail:恋爱" : L036SplitPat ;
 
 ! === 撒谎 (Type=Verb-Object) ===
 define L037WholePat ?* 撒 谎 ?* ;
 define L037SplitPat ?* 撒 LegalIns LegalIns* 谎 ?* ;
-define L037Whole "撒谎+Lemma+Verb-Object+WHOLE" : L037WholePat ;
-define L037Split "撒谎+Lemma+Verb-Object+SPLIT" : L037SplitPat ;
+define L037Whole "撒谎+Lemma+Verb-Object+WHOLE+Head:撒+Tail:谎" : L037WholePat ;
+define L037Split "撒谎+Lemma+Verb-Object+SPLIT+Head:撒+Tail:谎" : L037SplitPat ;
 
 ! === 吹牛 (Type=Verb-Object) ===
 define L038WholePat ?* 吹 牛 ?* ;
 define L038SplitPat ?* 吹 LegalIns LegalIns* 牛 ?* ;
-define L038Whole "吹牛+Lemma+Verb-Object+WHOLE" : L038WholePat ;
-define L038Split "吹牛+Lemma+Verb-Object+SPLIT" : L038SplitPat ;
+define L038Whole "吹牛+Lemma+Verb-Object+WHOLE+Head:吹+Tail:牛" : L038WholePat ;
+define L038Split "吹牛+Lemma+Verb-Object+SPLIT+Head:吹+Tail:牛" : L038SplitPat ;
 
 ! === 告状 (Type=Verb-Object) ===
 define L039WholePat ?* 告 状 ?* ;
 define L039SplitPat ?* 告 LegalIns LegalIns* 状 ?* ;
-define L039Whole "告状+Lemma+Verb-Object+WHOLE" : L039WholePat ;
-define L039Split "告状+Lemma+Verb-Object+SPLIT" : L039SplitPat ;
+define L039Whole "告状+Lemma+Verb-Object+WHOLE+Head:告+Tail:状" : L039WholePat ;
+define L039Split "告状+Lemma+Verb-Object+SPLIT+Head:告+Tail:状" : L039SplitPat ;
 
 ! === 请客 (Type=Verb-Object) ===
 define L040WholePat ?* 请 客 ?* ;
 define L040SplitPat ?* 请 LegalIns LegalIns* 客 ?* ;
-define L040Whole "请客+Lemma+Verb-Object+WHOLE" : L040WholePat ;
-define L040Split "请客+Lemma+Verb-Object+SPLIT" : L040SplitPat ;
+define L040Whole "请客+Lemma+Verb-Object+WHOLE+Head:请+Tail:客" : L040WholePat ;
+define L040Split "请客+Lemma+Verb-Object+SPLIT+Head:请+Tail:客" : L040SplitPat ;
 
 ! === 结婚 (Type=Verb-Object) ===
 define L041WholePat ?* 结 婚 ?* ;
 define L041SplitPat ?* 结 LegalIns LegalIns* 婚 ?* ;
-define L041Whole "结婚+Lemma+Verb-Object+WHOLE" : L041WholePat ;
-define L041Split "结婚+Lemma+Verb-Object+SPLIT" : L041SplitPat ;
+define L041Whole "结婚+Lemma+Verb-Object+WHOLE+Head:结+Tail:婚" : L041WholePat ;
+define L041Split "结婚+Lemma+Verb-Object+SPLIT+Head:结+Tail:婚" : L041SplitPat ;
 
 ! === 离婚 (Type=Verb-Object) ===
 define L042WholePat ?* 离 婚 ?* ;
 define L042SplitPat ?* 离 LegalIns LegalIns* 婚 ?* ;
-define L042Whole "离婚+Lemma+Verb-Object+WHOLE" : L042WholePat ;
-define L042Split "离婚+Lemma+Verb-Object+SPLIT" : L042SplitPat ;
+define L042Whole "离婚+Lemma+Verb-Object+WHOLE+Head:离+Tail:婚" : L042WholePat ;
+define L042Split "离婚+Lemma+Verb-Object+SPLIT+Head:离+Tail:婚" : L042SplitPat ;
 
 ! === 订婚 (Type=Verb-Object) ===
 define L043WholePat ?* 订 婚 ?* ;
 define L043SplitPat ?* 订 LegalIns LegalIns* 婚 ?* ;
-define L043Whole "订婚+Lemma+Verb-Object+WHOLE" : L043WholePat ;
-define L043Split "订婚+Lemma+Verb-Object+SPLIT" : L043SplitPat ;
+define L043Whole "订婚+Lemma+Verb-Object+WHOLE+Head:订+Tail:婚" : L043WholePat ;
+define L043Split "订婚+Lemma+Verb-Object+SPLIT+Head:订+Tail:婚" : L043SplitPat ;
 
 ! === 分手 (Type=Verb-Object) ===
 define L044WholePat ?* 分 手 ?* ;
 define L044SplitPat ?* 分 LegalIns LegalIns* 手 ?* ;
-define L044Whole "分手+Lemma+Verb-Object+WHOLE" : L044WholePat ;
-define L044Split "分手+Lemma+Verb-Object+SPLIT" : L044SplitPat ;
+define L044Whole "分手+Lemma+Verb-Object+WHOLE+Head:分+Tail:手" : L044WholePat ;
+define L044Split "分手+Lemma+Verb-Object+SPLIT+Head:分+Tail:手" : L044SplitPat ;
 
 ! === 吃醋 (Type=Verb-Object) ===
 define L045WholePat ?* 吃 醋 ?* ;
 define L045SplitPat ?* 吃 LegalIns LegalIns* 醋 ?* ;
-define L045Whole "吃醋+Lemma+Verb-Object+WHOLE" : L045WholePat ;
-define L045Split "吃醋+Lemma+Verb-Object+SPLIT" : L045SplitPat ;
+define L045Whole "吃醋+Lemma+Verb-Object+WHOLE+Head:吃+Tail:醋" : L045WholePat ;
+define L045Split "吃醋+Lemma+Verb-Object+SPLIT+Head:吃+Tail:醋" : L045SplitPat ;
 
 ! === 伤心 (Type=Verb-Object) ===
 define L046WholePat ?* 伤 心 ?* ;
 define L046SplitPat ?* 伤 LegalIns LegalIns* 心 ?* ;
-define L046Whole "伤心+Lemma+Verb-Object+WHOLE" : L046WholePat ;
-define L046Split "伤心+Lemma+Verb-Object+SPLIT" : L046SplitPat ;
+define L046Whole "伤心+Lemma+Verb-Object+WHOLE+Head:伤+Tail:心" : L046WholePat ;
+define L046Split "伤心+Lemma+Verb-Object+SPLIT+Head:伤+Tail:心" : L046SplitPat ;
 
 ! === 放心 (Type=Verb-Object) ===
 define L047WholePat ?* 放 心 ?* ;
 define L047SplitPat ?* 放 LegalIns LegalIns* 心 ?* ;
-define L047Whole "放心+Lemma+Verb-Object+WHOLE" : L047WholePat ;
-define L047Split "放心+Lemma+Verb-Object+SPLIT" : L047SplitPat ;
+define L047Whole "放心+Lemma+Verb-Object+WHOLE+Head:放+Tail:心" : L047WholePat ;
+define L047Split "放心+Lemma+Verb-Object+SPLIT+Head:放+Tail:心" : L047SplitPat ;
 
 ! === 担心 (Type=Verb-Object) ===
 define L048WholePat ?* 担 心 ?* ;
 define L048SplitPat ?* 担 LegalIns LegalIns* 心 ?* ;
-define L048Whole "担心+Lemma+Verb-Object+WHOLE" : L048WholePat ;
-define L048Split "担心+Lemma+Verb-Object+SPLIT" : L048SplitPat ;
+define L048Whole "担心+Lemma+Verb-Object+WHOLE+Head:担+Tail:心" : L048WholePat ;
+define L048Split "担心+Lemma+Verb-Object+SPLIT+Head:担+Tail:心" : L048SplitPat ;
 
 ! === 灰心 (Type=Verb-Object) ===
 define L049WholePat ?* 灰 心 ?* ;
 define L049SplitPat ?* 灰 LegalIns LegalIns* 心 ?* ;
-define L049Whole "灰心+Lemma+Verb-Object+WHOLE" : L049WholePat ;
-define L049Split "灰心+Lemma+Verb-Object+SPLIT" : L049SplitPat ;
+define L049Whole "灰心+Lemma+Verb-Object+WHOLE+Head:灰+Tail:心" : L049WholePat ;
+define L049Split "灰心+Lemma+Verb-Object+SPLIT+Head:灰+Tail:心" : L049SplitPat ;
 
 ! === 操心 (Type=Verb-Object) ===
 define L050WholePat ?* 操 心 ?* ;
 define L050SplitPat ?* 操 LegalIns LegalIns* 心 ?* ;
-define L050Whole "操心+Lemma+Verb-Object+WHOLE" : L050WholePat ;
-define L050Split "操心+Lemma+Verb-Object+SPLIT" : L050SplitPat ;
+define L050Whole "操心+Lemma+Verb-Object+WHOLE+Head:操+Tail:心" : L050WholePat ;
+define L050Split "操心+Lemma+Verb-Object+SPLIT+Head:操+Tail:心" : L050SplitPat ;
 
 ! === 动心 (Type=Verb-Object) ===
 define L051WholePat ?* 动 心 ?* ;
 define L051SplitPat ?* 动 LegalIns LegalIns* 心 ?* ;
-define L051Whole "动心+Lemma+Verb-Object+WHOLE" : L051WholePat ;
-define L051Split "动心+Lemma+Verb-Object+SPLIT" : L051SplitPat ;
+define L051Whole "动心+Lemma+Verb-Object+WHOLE+Head:动+Tail:心" : L051WholePat ;
+define L051Split "动心+Lemma+Verb-Object+SPLIT+Head:动+Tail:心" : L051SplitPat ;
 
 ! === 上班 (Type=Verb-Object) ===
 define L052WholePat ?* 上 班 ?* ;
 define L052SplitPat ?* 上 LegalIns LegalIns* 班 ?* ;
-define L052Whole "上班+Lemma+Verb-Object+WHOLE" : L052WholePat ;
-define L052Split "上班+Lemma+Verb-Object+SPLIT" : L052SplitPat ;
+define L052Whole "上班+Lemma+Verb-Object+WHOLE+Head:上+Tail:班" : L052WholePat ;
+define L052Split "上班+Lemma+Verb-Object+SPLIT+Head:上+Tail:班" : L052SplitPat ;
 
 ! === 下班 (Type=Verb-Object) ===
 define L053WholePat ?* 下 班 ?* ;
 define L053SplitPat ?* 下 LegalIns LegalIns* 班 ?* ;
-define L053Whole "下班+Lemma+Verb-Object+WHOLE" : L053WholePat ;
-define L053Split "下班+Lemma+Verb-Object+SPLIT" : L053SplitPat ;
+define L053Whole "下班+Lemma+Verb-Object+WHOLE+Head:下+Tail:班" : L053WholePat ;
+define L053Split "下班+Lemma+Verb-Object+SPLIT+Head:下+Tail:班" : L053SplitPat ;
 
 ! === 上学 (Type=Verb-Object) ===
 define L054WholePat ?* 上 学 ?* ;
 define L054SplitPat ?* 上 LegalIns LegalIns* 学 ?* ;
-define L054Whole "上学+Lemma+Verb-Object+WHOLE" : L054WholePat ;
-define L054Split "上学+Lemma+Verb-Object+SPLIT" : L054SplitPat ;
+define L054Whole "上学+Lemma+Verb-Object+WHOLE+Head:上+Tail:学" : L054WholePat ;
+define L054Split "上学+Lemma+Verb-Object+SPLIT+Head:上+Tail:学" : L054SplitPat ;
 
 ! === 上课 (Type=Verb-Object) ===
 define L055WholePat ?* 上 课 ?* ;
 define L055SplitPat ?* 上 LegalIns LegalIns* 课 ?* ;
-define L055Whole "上课+Lemma+Verb-Object+WHOLE" : L055WholePat ;
-define L055Split "上课+Lemma+Verb-Object+SPLIT" : L055SplitPat ;
+define L055Whole "上课+Lemma+Verb-Object+WHOLE+Head:上+Tail:课" : L055WholePat ;
+define L055Split "上课+Lemma+Verb-Object+SPLIT+Head:上+Tail:课" : L055SplitPat ;
 
 ! === 写作业 (Type=Verb-Object) ===
 define L056WholePat ?* 写 作 业 ?* ;
 define L056SplitPat ?* 写 LegalIns LegalIns* 作 业 ?* ;
-define L056Whole "写作业+Lemma+Verb-Object+WHOLE" : L056WholePat ;
-define L056Split "写作业+Lemma+Verb-Object+SPLIT" : L056SplitPat ;
+define L056Whole "写作业+Lemma+Verb-Object+WHOLE+Head:写+Tail:作业" : L056WholePat ;
+define L056Split "写作业+Lemma+Verb-Object+SPLIT+Head:写+Tail:作业" : L056SplitPat ;
 
 ! === 下课 (Type=Verb-Object) ===
 define L057WholePat ?* 下 课 ?* ;
 define L057SplitPat ?* 下 LegalIns LegalIns* 课 ?* ;
-define L057Whole "下课+Lemma+Verb-Object+WHOLE" : L057WholePat ;
-define L057Split "下课+Lemma+Verb-Object+SPLIT" : L057SplitPat ;
+define L057Whole "下课+Lemma+Verb-Object+WHOLE+Head:下+Tail:课" : L057WholePat ;
+define L057Split "下课+Lemma+Verb-Object+SPLIT+Head:下+Tail:课" : L057SplitPat ;
 
 ! === 请假 (Type=Verb-Object) ===
 define L058WholePat ?* 请 假 ?* ;
 define L058SplitPat ?* 请 LegalIns LegalIns* 假 ?* ;
-define L058Whole "请假+Lemma+Verb-Object+WHOLE" : L058WholePat ;
-define L058Split "请假+Lemma+Verb-Object+SPLIT" : L058SplitPat ;
+define L058Whole "请假+Lemma+Verb-Object+WHOLE+Head:请+Tail:假" : L058WholePat ;
+define L058Split "请假+Lemma+Verb-Object+SPLIT+Head:请+Tail:假" : L058SplitPat ;
 
 ! === 放假 (Type=Verb-Object) ===
 define L059WholePat ?* 放 假 ?* ;
 define L059SplitPat ?* 放 LegalIns LegalIns* 假 ?* ;
-define L059Whole "放假+Lemma+Verb-Object+WHOLE" : L059WholePat ;
-define L059Split "放假+Lemma+Verb-Object+SPLIT" : L059SplitPat ;
+define L059Whole "放假+Lemma+Verb-Object+WHOLE+Head:放+Tail:假" : L059WholePat ;
+define L059Split "放假+Lemma+Verb-Object+SPLIT+Head:放+Tail:假" : L059SplitPat ;
 
 ! === 考试 (Type=Verb-Object) ===
 define L060WholePat ?* 考 试 ?* ;
 define L060SplitPat ?* 考 LegalIns LegalIns* 试 ?* ;
-define L060Whole "考试+Lemma+Verb-Object+WHOLE" : L060WholePat ;
-define L060Split "考试+Lemma+Verb-Object+SPLIT" : L060SplitPat ;
+define L060Whole "考试+Lemma+Verb-Object+WHOLE+Head:考+Tail:试" : L060WholePat ;
+define L060Split "考试+Lemma+Verb-Object+SPLIT+Head:考+Tail:试" : L060SplitPat ;
 
 ! === 毕业 (Type=Verb-Object) ===
 define L061WholePat ?* 毕 业 ?* ;
 define L061SplitPat ?* 毕 LegalIns LegalIns* 业 ?* ;
-define L061Whole "毕业+Lemma+Verb-Object+WHOLE" : L061WholePat ;
-define L061Split "毕业+Lemma+Verb-Object+SPLIT" : L061SplitPat ;
+define L061Whole "毕业+Lemma+Verb-Object+WHOLE+Head:毕+Tail:业" : L061WholePat ;
+define L061Split "毕业+Lemma+Verb-Object+SPLIT+Head:毕+Tail:业" : L061SplitPat ;
 
 ! === 留学 (Type=Verb-Object) ===
 define L062WholePat ?* 留 学 ?* ;
 define L062SplitPat ?* 留 LegalIns LegalIns* 学 ?* ;
-define L062Whole "留学+Lemma+Verb-Object+WHOLE" : L062WholePat ;
-define L062Split "留学+Lemma+Verb-Object+SPLIT" : L062SplitPat ;
+define L062Whole "留学+Lemma+Verb-Object+WHOLE+Head:留+Tail:学" : L062WholePat ;
+define L062Split "留学+Lemma+Verb-Object+SPLIT+Head:留+Tail:学" : L062SplitPat ;
 
 ! === 报名 (Type=Verb-Object) ===
 define L063WholePat ?* 报 名 ?* ;
 define L063SplitPat ?* 报 LegalIns LegalIns* 名 ?* ;
-define L063Whole "报名+Lemma+Verb-Object+WHOLE" : L063WholePat ;
-define L063Split "报名+Lemma+Verb-Object+SPLIT" : L063SplitPat ;
+define L063Whole "报名+Lemma+Verb-Object+WHOLE+Head:报+Tail:名" : L063WholePat ;
+define L063Split "报名+Lemma+Verb-Object+SPLIT+Head:报+Tail:名" : L063SplitPat ;
 
 ! === 辞职 (Type=Verb-Object) ===
 define L064WholePat ?* 辞 职 ?* ;
 define L064SplitPat ?* 辞 LegalIns LegalIns* 职 ?* ;
-define L064Whole "辞职+Lemma+Verb-Object+WHOLE" : L064WholePat ;
-define L064Split "辞职+Lemma+Verb-Object+SPLIT" : L064SplitPat ;
+define L064Whole "辞职+Lemma+Verb-Object+WHOLE+Head:辞+Tail:职" : L064WholePat ;
+define L064Split "辞职+Lemma+Verb-Object+SPLIT+Head:辞+Tail:职" : L064SplitPat ;
 
 ! === 开会 (Type=Verb-Object) ===
 define L065WholePat ?* 开 会 ?* ;
 define L065SplitPat ?* 开 LegalIns LegalIns* 会 ?* ;
-define L065Whole "开会+Lemma+Verb-Object+WHOLE" : L065WholePat ;
-define L065Split "开会+Lemma+Verb-Object+SPLIT" : L065SplitPat ;
+define L065Whole "开会+Lemma+Verb-Object+WHOLE+Head:开+Tail:会" : L065WholePat ;
+define L065Split "开会+Lemma+Verb-Object+SPLIT+Head:开+Tail:会" : L065SplitPat ;
 
 ! === 发言 (Type=Verb-Object) ===
 define L066WholePat ?* 发 言 ?* ;
 define L066SplitPat ?* 发 LegalIns LegalIns* 言 ?* ;
-define L066Whole "发言+Lemma+Verb-Object+WHOLE" : L066WholePat ;
-define L066Split "发言+Lemma+Verb-Object+SPLIT" : L066SplitPat ;
+define L066Whole "发言+Lemma+Verb-Object+WHOLE+Head:发+Tail:言" : L066WholePat ;
+define L066Split "发言+Lemma+Verb-Object+SPLIT+Head:发+Tail:言" : L066SplitPat ;
 
 ! === 值班 (Type=Verb-Object) ===
 define L067WholePat ?* 值 班 ?* ;
 define L067SplitPat ?* 值 LegalIns LegalIns* 班 ?* ;
-define L067Whole "值班+Lemma+Verb-Object+WHOLE" : L067WholePat ;
-define L067Split "值班+Lemma+Verb-Object+SPLIT" : L067SplitPat ;
+define L067Whole "值班+Lemma+Verb-Object+WHOLE+Head:值+Tail:班" : L067WholePat ;
+define L067Split "值班+Lemma+Verb-Object+SPLIT+Head:值+Tail:班" : L067SplitPat ;
 
 ! === 加班 (Type=Verb-Object) ===
 define L068WholePat ?* 加 班 ?* ;
 define L068SplitPat ?* 加 LegalIns LegalIns* 班 ?* ;
-define L068Whole "加班+Lemma+Verb-Object+WHOLE" : L068WholePat ;
-define L068Split "加班+Lemma+Verb-Object+SPLIT" : L068SplitPat ;
+define L068Whole "加班+Lemma+Verb-Object+WHOLE+Head:加+Tail:班" : L068WholePat ;
+define L068Split "加班+Lemma+Verb-Object+SPLIT+Head:加+Tail:班" : L068SplitPat ;
 
 ! === 出差 (Type=Verb-Object) ===
 define L069WholePat ?* 出 差 ?* ;
 define L069SplitPat ?* 出 LegalIns LegalIns* 差 ?* ;
-define L069Whole "出差+Lemma+Verb-Object+WHOLE" : L069WholePat ;
-define L069Split "出差+Lemma+Verb-Object+SPLIT" : L069SplitPat ;
+define L069Whole "出差+Lemma+Verb-Object+WHOLE+Head:出+Tail:差" : L069WholePat ;
+define L069Split "出差+Lemma+Verb-Object+SPLIT+Head:出+Tail:差" : L069SplitPat ;
 
 ! === 生病 (Type=Verb-Object) ===
 define L070WholePat ?* 生 病 ?* ;
 define L070SplitPat ?* 生 LegalIns LegalIns* 病 ?* ;
-define L070Whole "生病+Lemma+Verb-Object+WHOLE" : L070WholePat ;
-define L070Split "生病+Lemma+Verb-Object+SPLIT" : L070SplitPat ;
+define L070Whole "生病+Lemma+Verb-Object+WHOLE+Head:生+Tail:病" : L070WholePat ;
+define L070Split "生病+Lemma+Verb-Object+SPLIT+Head:生+Tail:病" : L070SplitPat ;
 
 ! === 看病 (Type=Verb-Object) ===
 define L071WholePat ?* 看 病 ?* ;
 define L071SplitPat ?* 看 LegalIns LegalIns* 病 ?* ;
-define L071Whole "看病+Lemma+Verb-Object+WHOLE" : L071WholePat ;
-define L071Split "看病+Lemma+Verb-Object+SPLIT" : L071SplitPat ;
+define L071Whole "看病+Lemma+Verb-Object+WHOLE+Head:看+Tail:病" : L071WholePat ;
+define L071Split "看病+Lemma+Verb-Object+SPLIT+Head:看+Tail:病" : L071SplitPat ;
 
 ! === 住院 (Type=Verb-Object) ===
 define L072WholePat ?* 住 院 ?* ;
 define L072SplitPat ?* 住 LegalIns LegalIns* 院 ?* ;
-define L072Whole "住院+Lemma+Verb-Object+WHOLE" : L072WholePat ;
-define L072Split "住院+Lemma+Verb-Object+SPLIT" : L072SplitPat ;
+define L072Whole "住院+Lemma+Verb-Object+WHOLE+Head:住+Tail:院" : L072WholePat ;
+define L072Split "住院+Lemma+Verb-Object+SPLIT+Head:住+Tail:院" : L072SplitPat ;
 
 ! === 出院 (Type=Verb-Object) ===
 define L073WholePat ?* 出 院 ?* ;
 define L073SplitPat ?* 出 LegalIns LegalIns* 院 ?* ;
-define L073Whole "出院+Lemma+Verb-Object+WHOLE" : L073WholePat ;
-define L073Split "出院+Lemma+Verb-Object+SPLIT" : L073SplitPat ;
+define L073Whole "出院+Lemma+Verb-Object+WHOLE+Head:出+Tail:院" : L073WholePat ;
+define L073Split "出院+Lemma+Verb-Object+SPLIT+Head:出+Tail:院" : L073SplitPat ;
 
 ! === 打针 (Type=Verb-Object) ===
 define L074WholePat ?* 打 针 ?* ;
 define L074SplitPat ?* 打 LegalIns LegalIns* 针 ?* ;
-define L074Whole "打针+Lemma+Verb-Object+WHOLE" : L074WholePat ;
-define L074Split "打针+Lemma+Verb-Object+SPLIT" : L074SplitPat ;
+define L074Whole "打针+Lemma+Verb-Object+WHOLE+Head:打+Tail:针" : L074WholePat ;
+define L074Split "打针+Lemma+Verb-Object+SPLIT+Head:打+Tail:针" : L074SplitPat ;
 
 ! === 输液 (Type=Verb-Object) ===
 define L075WholePat ?* 输 液 ?* ;
 define L075SplitPat ?* 输 LegalIns LegalIns* 液 ?* ;
-define L075Whole "输液+Lemma+Verb-Object+WHOLE" : L075WholePat ;
-define L075Split "输液+Lemma+Verb-Object+SPLIT" : L075SplitPat ;
+define L075Whole "输液+Lemma+Verb-Object+WHOLE+Head:输+Tail:液" : L075WholePat ;
+define L075Split "输液+Lemma+Verb-Object+SPLIT+Head:输+Tail:液" : L075SplitPat ;
 
 ! === 挂号 (Type=Verb-Object) ===
 define L076WholePat ?* 挂 号 ?* ;
 define L076SplitPat ?* 挂 LegalIns LegalIns* 号 ?* ;
-define L076Whole "挂号+Lemma+Verb-Object+WHOLE" : L076WholePat ;
-define L076Split "挂号+Lemma+Verb-Object+SPLIT" : L076SplitPat ;
+define L076Whole "挂号+Lemma+Verb-Object+WHOLE+Head:挂+Tail:号" : L076WholePat ;
+define L076Split "挂号+Lemma+Verb-Object+SPLIT+Head:挂+Tail:号" : L076SplitPat ;
 
 ! === 把脉 (Type=Verb-Object) ===
 define L077WholePat ?* 把 脉 ?* ;
 define L077SplitPat ?* 把 LegalIns LegalIns* 脉 ?* ;
-define L077Whole "把脉+Lemma+Verb-Object+WHOLE" : L077WholePat ;
-define L077Split "把脉+Lemma+Verb-Object+SPLIT" : L077SplitPat ;
+define L077Whole "把脉+Lemma+Verb-Object+WHOLE+Head:把+Tail:脉" : L077WholePat ;
+define L077Split "把脉+Lemma+Verb-Object+SPLIT+Head:把+Tail:脉" : L077SplitPat ;
 
 ! === 减肥 (Type=Verb-Object) ===
 define L078WholePat ?* 减 肥 ?* ;
 define L078SplitPat ?* 减 LegalIns LegalIns* 肥 ?* ;
-define L078Whole "减肥+Lemma+Verb-Object+WHOLE" : L078WholePat ;
-define L078Split "减肥+Lemma+Verb-Object+SPLIT" : L078SplitPat ;
+define L078Whole "减肥+Lemma+Verb-Object+WHOLE+Head:减+Tail:肥" : L078WholePat ;
+define L078Split "减肥+Lemma+Verb-Object+SPLIT+Head:减+Tail:肥" : L078SplitPat ;
 
 ! === 鞠躬 (Type=Verb-Object) ===
 define L079WholePat ?* 鞠 躬 ?* ;
 define L079SplitPat ?* 鞠 LegalIns LegalIns* 躬 ?* ;
-define L079Whole "鞠躬+Lemma+Verb-Object+WHOLE" : L079WholePat ;
-define L079Split "鞠躬+Lemma+Verb-Object+SPLIT" : L079SplitPat ;
+define L079Whole "鞠躬+Lemma+Verb-Object+WHOLE+Head:鞠+Tail:躬" : L079WholePat ;
+define L079Split "鞠躬+Lemma+Verb-Object+SPLIT+Head:鞠+Tail:躬" : L079SplitPat ;
 
 ! === 敬礼 (Type=Verb-Object) ===
 define L080WholePat ?* 敬 礼 ?* ;
 define L080SplitPat ?* 敬 LegalIns LegalIns* 礼 ?* ;
-define L080Whole "敬礼+Lemma+Verb-Object+WHOLE" : L080WholePat ;
-define L080Split "敬礼+Lemma+Verb-Object+SPLIT" : L080SplitPat ;
+define L080Whole "敬礼+Lemma+Verb-Object+WHOLE+Head:敬+Tail:礼" : L080WholePat ;
+define L080Split "敬礼+Lemma+Verb-Object+SPLIT+Head:敬+Tail:礼" : L080SplitPat ;
 
 ! === 站岗 (Type=Verb-Object) ===
 define L081WholePat ?* 站 岗 ?* ;
 define L081SplitPat ?* 站 LegalIns LegalIns* 岗 ?* ;
-define L081Whole "站岗+Lemma+Verb-Object+WHOLE" : L081WholePat ;
-define L081Split "站岗+Lemma+Verb-Object+SPLIT" : L081SplitPat ;
+define L081Whole "站岗+Lemma+Verb-Object+WHOLE+Head:站+Tail:岗" : L081WholePat ;
+define L081Split "站岗+Lemma+Verb-Object+SPLIT+Head:站+Tail:岗" : L081SplitPat ;
 
 ! === 吃苦 (Type=Verb-Object) ===
 define L082WholePat ?* 吃 苦 ?* ;
 define L082SplitPat ?* 吃 LegalIns LegalIns* 苦 ?* ;
-define L082Whole "吃苦+Lemma+Verb-Object+WHOLE" : L082WholePat ;
-define L082Split "吃苦+Lemma+Verb-Object+SPLIT" : L082SplitPat ;
+define L082Whole "吃苦+Lemma+Verb-Object+WHOLE+Head:吃+Tail:苦" : L082WholePat ;
+define L082Split "吃苦+Lemma+Verb-Object+SPLIT+Head:吃+Tail:苦" : L082SplitPat ;
 
 ! === 吃亏 (Type=Verb-Object) ===
 define L083WholePat ?* 吃 亏 ?* ;
 define L083SplitPat ?* 吃 LegalIns LegalIns* 亏 ?* ;
-define L083Whole "吃亏+Lemma+Verb-Object+WHOLE" : L083WholePat ;
-define L083Split "吃亏+Lemma+Verb-Object+SPLIT" : L083SplitPat ;
+define L083Whole "吃亏+Lemma+Verb-Object+WHOLE+Head:吃+Tail:亏" : L083WholePat ;
+define L083Split "吃亏+Lemma+Verb-Object+SPLIT+Head:吃+Tail:亏" : L083SplitPat ;
 
 ! === 受罪 (Type=Verb-Object) ===
 define L084WholePat ?* 受 罪 ?* ;
 define L084SplitPat ?* 受 LegalIns LegalIns* 罪 ?* ;
-define L084Whole "受罪+Lemma+Verb-Object+WHOLE" : L084WholePat ;
-define L084Split "受罪+Lemma+Verb-Object+SPLIT" : L084SplitPat ;
+define L084Whole "受罪+Lemma+Verb-Object+WHOLE+Head:受+Tail:罪" : L084WholePat ;
+define L084Split "受罪+Lemma+Verb-Object+SPLIT+Head:受+Tail:罪" : L084SplitPat ;
 
 ! === 跳舞 (Type=Verb-Object) ===
 define L085WholePat ?* 跳 舞 ?* ;
 define L085SplitPat ?* 跳 LegalIns LegalIns* 舞 ?* ;
-define L085Whole "跳舞+Lemma+Verb-Object+WHOLE" : L085WholePat ;
-define L085Split "跳舞+Lemma+Verb-Object+SPLIT" : L085SplitPat ;
+define L085Whole "跳舞+Lemma+Verb-Object+WHOLE+Head:跳+Tail:舞" : L085WholePat ;
+define L085Split "跳舞+Lemma+Verb-Object+SPLIT+Head:跳+Tail:舞" : L085SplitPat ;
 
 ! === 唱歌 (Type=Verb-Object) ===
 define L086WholePat ?* 唱 歌 ?* ;
 define L086SplitPat ?* 唱 LegalIns LegalIns* 歌 ?* ;
-define L086Whole "唱歌+Lemma+Verb-Object+WHOLE" : L086WholePat ;
-define L086Split "唱歌+Lemma+Verb-Object+SPLIT" : L086SplitPat ;
+define L086Whole "唱歌+Lemma+Verb-Object+WHOLE+Head:唱+Tail:歌" : L086WholePat ;
+define L086Split "唱歌+Lemma+Verb-Object+SPLIT+Head:唱+Tail:歌" : L086SplitPat ;
 
 ! === 游泳 (Type=Verb-Object) ===
 define L087WholePat ?* 游 泳 ?* ;
 define L087SplitPat ?* 游 LegalIns LegalIns* 泳 ?* ;
-define L087Whole "游泳+Lemma+Verb-Object+WHOLE" : L087WholePat ;
-define L087Split "游泳+Lemma+Verb-Object+SPLIT" : L087SplitPat ;
+define L087Whole "游泳+Lemma+Verb-Object+WHOLE+Head:游+Tail:泳" : L087WholePat ;
+define L087Split "游泳+Lemma+Verb-Object+SPLIT+Head:游+Tail:泳" : L087SplitPat ;
 
 ! === 划船 (Type=Verb-Object) ===
 define L088WholePat ?* 划 船 ?* ;
 define L088SplitPat ?* 划 LegalIns LegalIns* 船 ?* ;
-define L088Whole "划船+Lemma+Verb-Object+WHOLE" : L088WholePat ;
-define L088Split "划船+Lemma+Verb-Object+SPLIT" : L088SplitPat ;
+define L088Whole "划船+Lemma+Verb-Object+WHOLE+Head:划+Tail:船" : L088WholePat ;
+define L088Split "划船+Lemma+Verb-Object+SPLIT+Head:划+Tail:船" : L088SplitPat ;
 
 ! === 钓鱼 (Type=Verb-Object) ===
 define L089WholePat ?* 钓 鱼 ?* ;
 define L089SplitPat ?* 钓 LegalIns LegalIns* 鱼 ?* ;
-define L089Whole "钓鱼+Lemma+Verb-Object+WHOLE" : L089WholePat ;
-define L089Split "钓鱼+Lemma+Verb-Object+SPLIT" : L089SplitPat ;
+define L089Whole "钓鱼+Lemma+Verb-Object+WHOLE+Head:钓+Tail:鱼" : L089WholePat ;
+define L089Split "钓鱼+Lemma+Verb-Object+SPLIT+Head:钓+Tail:鱼" : L089SplitPat ;
 
 ! === 滑冰 (Type=Verb-Object) ===
 define L090WholePat ?* 滑 冰 ?* ;
 define L090SplitPat ?* 滑 LegalIns LegalIns* 冰 ?* ;
-define L090Whole "滑冰+Lemma+Verb-Object+WHOLE" : L090WholePat ;
-define L090Split "滑冰+Lemma+Verb-Object+SPLIT" : L090SplitPat ;
+define L090Whole "滑冰+Lemma+Verb-Object+WHOLE+Head:滑+Tail:冰" : L090WholePat ;
+define L090Split "滑冰+Lemma+Verb-Object+SPLIT+Head:滑+Tail:冰" : L090SplitPat ;
 
 ! === 签名 (Type=Verb-Object) ===
 define L091WholePat ?* 签 名 ?* ;
 define L091SplitPat ?* 签 LegalIns LegalIns* 名 ?* ;
-define L091Whole "签名+Lemma+Verb-Object+WHOLE" : L091WholePat ;
-define L091Split "签名+Lemma+Verb-Object+SPLIT" : L091SplitPat ;
+define L091Whole "签名+Lemma+Verb-Object+WHOLE+Head:签+Tail:名" : L091WholePat ;
+define L091Split "签名+Lemma+Verb-Object+SPLIT+Head:签+Tail:名" : L091SplitPat ;
 
 ! === 排队 (Type=Verb-Object) ===
 define L092WholePat ?* 排 队 ?* ;
 define L092SplitPat ?* 排 LegalIns LegalIns* 队 ?* ;
-define L092Whole "排队+Lemma+Verb-Object+WHOLE" : L092WholePat ;
-define L092Split "排队+Lemma+Verb-Object+SPLIT" : L092SplitPat ;
+define L092Whole "排队+Lemma+Verb-Object+WHOLE+Head:排+Tail:队" : L092WholePat ;
+define L092Split "排队+Lemma+Verb-Object+SPLIT+Head:排+Tail:队" : L092SplitPat ;
 
 ! === 打工 (Type=Verb-Object) ===
 define L093WholePat ?* 打 工 ?* ;
 define L093SplitPat ?* 打 LegalIns LegalIns* 工 ?* ;
-define L093Whole "打工+Lemma+Verb-Object+WHOLE" : L093WholePat ;
-define L093Split "打工+Lemma+Verb-Object+SPLIT" : L093SplitPat ;
+define L093Whole "打工+Lemma+Verb-Object+WHOLE+Head:打+Tail:工" : L093WholePat ;
+define L093Split "打工+Lemma+Verb-Object+SPLIT+Head:打+Tail:工" : L093SplitPat ;
 
 ! === 戒烟 (Type=Verb-Object) ===
 define L094WholePat ?* 戒 烟 ?* ;
 define L094SplitPat ?* 戒 LegalIns LegalIns* 烟 ?* ;
-define L094Whole "戒烟+Lemma+Verb-Object+WHOLE" : L094WholePat ;
-define L094Split "戒烟+Lemma+Verb-Object+SPLIT" : L094SplitPat ;
+define L094Whole "戒烟+Lemma+Verb-Object+WHOLE+Head:戒+Tail:烟" : L094WholePat ;
+define L094Split "戒烟+Lemma+Verb-Object+SPLIT+Head:戒+Tail:烟" : L094SplitPat ;
 
 ! === 回家 (Type=Verb-Object) ===
 define L095WholePat ?* 回 家 ?* ;
 define L095SplitPat ?* 回 LegalIns LegalIns* 家 ?* ;
-define L095Whole "回家+Lemma+Verb-Object+WHOLE" : L095WholePat ;
-define L095Split "回家+Lemma+Verb-Object+SPLIT" : L095SplitPat ;
+define L095Whole "回家+Lemma+Verb-Object+WHOLE+Head:回+Tail:家" : L095WholePat ;
+define L095Split "回家+Lemma+Verb-Object+SPLIT+Head:回+Tail:家" : L095SplitPat ;
 
 ! === 死心 (Type=Verb-Object) ===
 define L096WholePat ?* 死 心 ?* ;
 define L096SplitPat ?* 死 LegalIns LegalIns* 心 ?* ;
-define L096Whole "死心+Lemma+Verb-Object+WHOLE" : L096WholePat ;
-define L096Split "死心+Lemma+Verb-Object+SPLIT" : L096SplitPat ;
+define L096Whole "死心+Lemma+Verb-Object+WHOLE+Head:死+Tail:心" : L096WholePat ;
+define L096Split "死心+Lemma+Verb-Object+SPLIT+Head:死+Tail:心" : L096SplitPat ;
 
 ! === 挑水 (Type=Verb-Object) ===
 define L097WholePat ?* 挑 水 ?* ;
 define L097SplitPat ?* 挑 LegalIns LegalIns* 水 ?* ;
-define L097Whole "挑水+Lemma+Verb-Object+WHOLE" : L097WholePat ;
-define L097Split "挑水+Lemma+Verb-Object+SPLIT" : L097SplitPat ;
+define L097Whole "挑水+Lemma+Verb-Object+WHOLE+Head:挑+Tail:水" : L097WholePat ;
+define L097Split "挑水+Lemma+Verb-Object+SPLIT+Head:挑+Tail:水" : L097SplitPat ;
 
 ! === 受伤 (Type=Verb-Object) ===
 define L098WholePat ?* 受 伤 ?* ;
 define L098SplitPat ?* 受 LegalIns LegalIns* 伤 ?* ;
-define L098Whole "受伤+Lemma+Verb-Object+WHOLE" : L098WholePat ;
-define L098Split "受伤+Lemma+Verb-Object+SPLIT" : L098SplitPat ;
+define L098Whole "受伤+Lemma+Verb-Object+WHOLE+Head:受+Tail:伤" : L098WholePat ;
+define L098Split "受伤+Lemma+Verb-Object+SPLIT+Head:受+Tail:伤" : L098SplitPat ;
 
 ! === 散心 (Type=Verb-Object) ===
 define L099WholePat ?* 散 心 ?* ;
 define L099SplitPat ?* 散 LegalIns LegalIns* 心 ?* ;
-define L099Whole "散心+Lemma+Verb-Object+WHOLE" : L099WholePat ;
-define L099Split "散心+Lemma+Verb-Object+SPLIT" : L099SplitPat ;
+define L099Whole "散心+Lemma+Verb-Object+WHOLE+Head:散+Tail:心" : L099WholePat ;
+define L099Split "散心+Lemma+Verb-Object+SPLIT+Head:散+Tail:心" : L099SplitPat ;
 
 ! === 扫兴 (Type=Verb-Object) ===
 define L100WholePat ?* 扫 兴 ?* ;
 define L100SplitPat ?* 扫 LegalIns LegalIns* 兴 ?* ;
-define L100Whole "扫兴+Lemma+Verb-Object+WHOLE" : L100WholePat ;
-define L100Split "扫兴+Lemma+Verb-Object+SPLIT" : L100SplitPat ;
+define L100Whole "扫兴+Lemma+Verb-Object+WHOLE+Head:扫+Tail:兴" : L100WholePat ;
+define L100Split "扫兴+Lemma+Verb-Object+SPLIT+Head:扫+Tail:兴" : L100SplitPat ;
 
 ! === 领情 (Type=Verb-Object) ===
 define L101WholePat ?* 领 情 ?* ;
 define L101SplitPat ?* 领 LegalIns LegalIns* 情 ?* ;
-define L101Whole "领情+Lemma+Verb-Object+WHOLE" : L101WholePat ;
-define L101Split "领情+Lemma+Verb-Object+SPLIT" : L101SplitPat ;
+define L101Whole "领情+Lemma+Verb-Object+WHOLE+Head:领+Tail:情" : L101WholePat ;
+define L101Split "领情+Lemma+Verb-Object+SPLIT+Head:领+Tail:情" : L101SplitPat ;
 
 ! === 送礼 (Type=Verb-Object) ===
 define L102WholePat ?* 送 礼 ?* ;
 define L102SplitPat ?* 送 LegalIns LegalIns* 礼 ?* ;
-define L102Whole "送礼+Lemma+Verb-Object+WHOLE" : L102WholePat ;
-define L102Split "送礼+Lemma+Verb-Object+SPLIT" : L102SplitPat ;
+define L102Whole "送礼+Lemma+Verb-Object+WHOLE+Head:送+Tail:礼" : L102WholePat ;
+define L102Split "送礼+Lemma+Verb-Object+SPLIT+Head:送+Tail:礼" : L102SplitPat ;
 
 ! === 拌嘴 (Type=Verb-Object) ===
 define L103WholePat ?* 拌 嘴 ?* ;
 define L103SplitPat ?* 拌 LegalIns LegalIns* 嘴 ?* ;
-define L103Whole "拌嘴+Lemma+Verb-Object+WHOLE" : L103WholePat ;
-define L103Split "拌嘴+Lemma+Verb-Object+SPLIT" : L103SplitPat ;
+define L103Whole "拌嘴+Lemma+Verb-Object+WHOLE+Head:拌+Tail:嘴" : L103WholePat ;
+define L103Split "拌嘴+Lemma+Verb-Object+SPLIT+Head:拌+Tail:嘴" : L103SplitPat ;
 
 ! === 叹气 (Type=Verb-Object) ===
 define L104WholePat ?* 叹 气 ?* ;
 define L104SplitPat ?* 叹 LegalIns LegalIns* 气 ?* ;
-define L104Whole "叹气+Lemma+Verb-Object+WHOLE" : L104WholePat ;
-define L104Split "叹气+Lemma+Verb-Object+SPLIT" : L104SplitPat ;
+define L104Whole "叹气+Lemma+Verb-Object+WHOLE+Head:叹+Tail:气" : L104WholePat ;
+define L104Split "叹气+Lemma+Verb-Object+SPLIT+Head:叹+Tail:气" : L104SplitPat ;
 
 ! === 丢脸 (Type=Verb-Object) ===
 define L105WholePat ?* 丢 脸 ?* ;
 define L105SplitPat ?* 丢 LegalIns LegalIns* 脸 ?* ;
-define L105Whole "丢脸+Lemma+Verb-Object+WHOLE" : L105WholePat ;
-define L105Split "丢脸+Lemma+Verb-Object+SPLIT" : L105SplitPat ;
+define L105Whole "丢脸+Lemma+Verb-Object+WHOLE+Head:丢+Tail:脸" : L105WholePat ;
+define L105Split "丢脸+Lemma+Verb-Object+SPLIT+Head:丢+Tail:脸" : L105SplitPat ;
 
 ! === 接吻 (Type=Verb-Object) ===
 define L106WholePat ?* 接 吻 ?* ;
 define L106SplitPat ?* 接 LegalIns LegalIns* 吻 ?* ;
-define L106Whole "接吻+Lemma+Verb-Object+WHOLE" : L106WholePat ;
-define L106Split "接吻+Lemma+Verb-Object+SPLIT" : L106SplitPat ;
+define L106Whole "接吻+Lemma+Verb-Object+WHOLE+Head:接+Tail:吻" : L106WholePat ;
+define L106Split "接吻+Lemma+Verb-Object+SPLIT+Head:接+Tail:吻" : L106SplitPat ;
 
 ! === 受骗 (Type=Verb-Object) ===
 define L107WholePat ?* 受 骗 ?* ;
 define L107SplitPat ?* 受 LegalIns LegalIns* 骗 ?* ;
-define L107Whole "受骗+Lemma+Verb-Object+WHOLE" : L107WholePat ;
-define L107Split "受骗+Lemma+Verb-Object+SPLIT" : L107SplitPat ;
+define L107Whole "受骗+Lemma+Verb-Object+WHOLE+Head:受+Tail:骗" : L107WholePat ;
+define L107Split "受骗+Lemma+Verb-Object+SPLIT+Head:受+Tail:骗" : L107SplitPat ;
 
 ! === 挨批 (Type=Verb-Object) ===
 define L108WholePat ?* 挨 批 ?* ;
 define L108SplitPat ?* 挨 LegalIns LegalIns* 批 ?* ;
-define L108Whole "挨批+Lemma+Verb-Object+WHOLE" : L108WholePat ;
-define L108Split "挨批+Lemma+Verb-Object+SPLIT" : L108SplitPat ;
+define L108Whole "挨批+Lemma+Verb-Object+WHOLE+Head:挨+Tail:批" : L108WholePat ;
+define L108Split "挨批+Lemma+Verb-Object+SPLIT+Head:挨+Tail:批" : L108SplitPat ;
 
 ! === 干杯 (Type=Verb-Object) ===
 define L109WholePat ?* 干 杯 ?* ;
 define L109SplitPat ?* 干 LegalIns LegalIns* 杯 ?* ;
-define L109Whole "干杯+Lemma+Verb-Object+WHOLE" : L109WholePat ;
-define L109Split "干杯+Lemma+Verb-Object+SPLIT" : L109SplitPat ;
+define L109Whole "干杯+Lemma+Verb-Object+WHOLE+Head:干+Tail:杯" : L109WholePat ;
+define L109Split "干杯+Lemma+Verb-Object+SPLIT+Head:干+Tail:杯" : L109SplitPat ;
 
 ! === 革命 (Type=Verb-Object) ===
 define L110WholePat ?* 革 命 ?* ;
 define L110SplitPat ?* 革 LegalIns LegalIns* 命 ?* ;
-define L110Whole "革命+Lemma+Verb-Object+WHOLE" : L110WholePat ;
-define L110Split "革命+Lemma+Verb-Object+SPLIT" : L110SplitPat ;
+define L110Whole "革命+Lemma+Verb-Object+WHOLE+Head:革+Tail:命" : L110WholePat ;
+define L110Split "革命+Lemma+Verb-Object+SPLIT+Head:革+Tail:命" : L110SplitPat ;
 
 ! === 造反 (Type=Verb-Object) ===
 define L111WholePat ?* 造 反 ?* ;
 define L111SplitPat ?* 造 LegalIns LegalIns* 反 ?* ;
-define L111Whole "造反+Lemma+Verb-Object+WHOLE" : L111WholePat ;
-define L111Split "造反+Lemma+Verb-Object+SPLIT" : L111SplitPat ;
+define L111Whole "造反+Lemma+Verb-Object+WHOLE+Head:造+Tail:反" : L111WholePat ;
+define L111Split "造反+Lemma+Verb-Object+SPLIT+Head:造+Tail:反" : L111SplitPat ;
 
 ! === 退休 (Type=Verb-Object) ===
 define L112WholePat ?* 退 休 ?* ;
 define L112SplitPat ?* 退 LegalIns LegalIns* 休 ?* ;
-define L112Whole "退休+Lemma+Verb-Object+WHOLE" : L112WholePat ;
-define L112Split "退休+Lemma+Verb-Object+SPLIT" : L112SplitPat ;
+define L112Whole "退休+Lemma+Verb-Object+WHOLE+Head:退+Tail:休" : L112WholePat ;
+define L112Split "退休+Lemma+Verb-Object+SPLIT+Head:退+Tail:休" : L112SplitPat ;
 
 ! === 出事 (Type=Verb-Object) ===
 define L113WholePat ?* 出 事 ?* ;
 define L113SplitPat ?* 出 LegalIns LegalIns* 事 ?* ;
-define L113Whole "出事+Lemma+Verb-Object+WHOLE" : L113WholePat ;
-define L113Split "出事+Lemma+Verb-Object+SPLIT" : L113SplitPat ;
+define L113Whole "出事+Lemma+Verb-Object+WHOLE+Head:出+Tail:事" : L113WholePat ;
+define L113Split "出事+Lemma+Verb-Object+SPLIT+Head:出+Tail:事" : L113SplitPat ;
 
 ! === 把关 (Type=Verb-Object) ===
 define L114WholePat ?* 把 关 ?* ;
 define L114SplitPat ?* 把 LegalIns LegalIns* 关 ?* ;
-define L114Whole "把关+Lemma+Verb-Object+WHOLE" : L114WholePat ;
-define L114Split "把关+Lemma+Verb-Object+SPLIT" : L114SplitPat ;
+define L114Whole "把关+Lemma+Verb-Object+WHOLE+Head:把+Tail:关" : L114WholePat ;
+define L114Split "把关+Lemma+Verb-Object+SPLIT+Head:把+Tail:关" : L114SplitPat ;
 
 ! === 施肥 (Type=Verb-Object) ===
 define L115WholePat ?* 施 肥 ?* ;
 define L115SplitPat ?* 施 LegalIns LegalIns* 肥 ?* ;
-define L115Whole "施肥+Lemma+Verb-Object+WHOLE" : L115WholePat ;
-define L115Split "施肥+Lemma+Verb-Object+SPLIT" : L115SplitPat ;
+define L115Whole "施肥+Lemma+Verb-Object+WHOLE+Head:施+Tail:肥" : L115WholePat ;
+define L115Split "施肥+Lemma+Verb-Object+SPLIT+Head:施+Tail:肥" : L115SplitPat ;
 
 ! === 倒霉 (Type=Verb-Object) ===
 define L116WholePat ?* 倒 霉 ?* ;
 define L116SplitPat ?* 倒 LegalIns LegalIns* 霉 ?* ;
-define L116Whole "倒霉+Lemma+Verb-Object+WHOLE" : L116WholePat ;
-define L116Split "倒霉+Lemma+Verb-Object+SPLIT" : L116SplitPat ;
+define L116Whole "倒霉+Lemma+Verb-Object+WHOLE+Head:倒+Tail:霉" : L116WholePat ;
+define L116Split "倒霉+Lemma+Verb-Object+SPLIT+Head:倒+Tail:霉" : L116SplitPat ;
 
 ! === 敲门 (Type=Verb-Object) ===
 define L117WholePat ?* 敲 门 ?* ;
 define L117SplitPat ?* 敲 LegalIns LegalIns* 门 ?* ;
-define L117Whole "敲门+Lemma+Verb-Object+WHOLE" : L117WholePat ;
-define L117Split "敲门+Lemma+Verb-Object+SPLIT" : L117SplitPat ;
+define L117Whole "敲门+Lemma+Verb-Object+WHOLE+Head:敲+Tail:门" : L117WholePat ;
+define L117Split "敲门+Lemma+Verb-Object+SPLIT+Head:敲+Tail:门" : L117SplitPat ;
 
 ! === 下雨 (Type=Verb-Object) ===
 define L118WholePat ?* 下 雨 ?* ;
 define L118SplitPat ?* 下 LegalIns LegalIns* 雨 ?* ;
-define L118Whole "下雨+Lemma+Verb-Object+WHOLE" : L118WholePat ;
-define L118Split "下雨+Lemma+Verb-Object+SPLIT" : L118SplitPat ;
+define L118Whole "下雨+Lemma+Verb-Object+WHOLE+Head:下+Tail:雨" : L118WholePat ;
+define L118Split "下雨+Lemma+Verb-Object+SPLIT+Head:下+Tail:雨" : L118SplitPat ;
 
 ! === 开枪 (Type=Verb-Object) ===
 define L119WholePat ?* 开 枪 ?* ;
 define L119SplitPat ?* 开 LegalIns LegalIns* 枪 ?* ;
-define L119Whole "开枪+Lemma+Verb-Object+WHOLE" : L119WholePat ;
-define L119Split "开枪+Lemma+Verb-Object+SPLIT" : L119SplitPat ;
+define L119Whole "开枪+Lemma+Verb-Object+WHOLE+Head:开+Tail:枪" : L119WholePat ;
+define L119Split "开枪+Lemma+Verb-Object+SPLIT+Head:开+Tail:枪" : L119SplitPat ;
 
 ! === 提醒 (Type=Pseudo V-O) ===
 define L120WholePat ?* 提 醒 ?* ;
 define L120SplitPat ?* 提 LegalIns LegalIns* 醒 ?* ;
-define L120Whole "提醒+Lemma+PseudoV-O+WHOLE" : L120WholePat ;
-define L120Split "提醒+Lemma+PseudoV-O+SPLIT" : L120SplitPat ;
+define L120Whole "提醒+Lemma+PseudoV-O+WHOLE+Head:提+Tail:醒" : L120WholePat ;
+define L120Split "提醒+Lemma+PseudoV-O+SPLIT+Head:提+Tail:醒" : L120SplitPat ;
 
 ! === 出恭 (Type=Pseudo V-O) ===
 define L121WholePat ?* 出 恭 ?* ;
 define L121SplitPat ?* 出 LegalIns LegalIns* 恭 ?* ;
-define L121Whole "出恭+Lemma+PseudoV-O+WHOLE" : L121WholePat ;
-define L121Split "出恭+Lemma+PseudoV-O+SPLIT" : L121SplitPat ;
+define L121Whole "出恭+Lemma+PseudoV-O+WHOLE+Head:出+Tail:恭" : L121WholePat ;
+define L121Split "出恭+Lemma+PseudoV-O+SPLIT+Head:出+Tail:恭" : L121SplitPat ;
 
 ! === 将军 (Type=Pseudo V-O) ===
 define L122WholePat ?* 将 军 ?* ;
 define L122SplitPat ?* 将 LegalIns LegalIns* 军 ?* ;
-define L122Whole "将军+Lemma+PseudoV-O+WHOLE" : L122WholePat ;
-define L122Split "将军+Lemma+PseudoV-O+SPLIT" : L122SplitPat ;
+define L122Whole "将军+Lemma+PseudoV-O+WHOLE+Head:将+Tail:军" : L122WholePat ;
+define L122Split "将军+Lemma+PseudoV-O+SPLIT+Head:将+Tail:军" : L122SplitPat ;
 
 ! === 学习 (Type=Pseudo V-O) ===
 define L123WholePat ?* 学 习 ?* ;
 define L123SplitPat ?* 学 LegalIns LegalIns* 习 ?* ;
-define L123Whole "学习+Lemma+PseudoV-O+WHOLE" : L123WholePat ;
-define L123Split "学习+Lemma+PseudoV-O+SPLIT" : L123SplitPat ;
+define L123Whole "学习+Lemma+PseudoV-O+WHOLE+Head:学+Tail:习" : L123WholePat ;
+define L123Split "学习+Lemma+PseudoV-O+SPLIT+Head:学+Tail:习" : L123SplitPat ;
 
 ! === 小便 (Type=Modifier-Head) ===
 define L124WholePat ?* 小 便 ?* ;
 define L124SplitPat ?* 小 LegalIns LegalIns* 便 ?* ;
-define L124Whole "小便+Lemma+Modifier-Head+WHOLE" : L124WholePat ;
-define L124Split "小便+Lemma+Modifier-Head+SPLIT" : L124SplitPat ;
+define L124Whole "小便+Lemma+Modifier-Head+WHOLE+Head:小+Tail:便" : L124WholePat ;
+define L124Split "小便+Lemma+Modifier-Head+SPLIT+Head:小+Tail:便" : L124SplitPat ;
 
 ! === 大便 (Type=Modifier-Head) ===
 define L125WholePat ?* 大 便 ?* ;
 define L125SplitPat ?* 大 LegalIns LegalIns* 便 ?* ;
-define L125Whole "大便+Lemma+Modifier-Head+WHOLE" : L125WholePat ;
-define L125Split "大便+Lemma+Modifier-Head+SPLIT" : L125SplitPat ;
+define L125Whole "大便+Lemma+Modifier-Head+WHOLE+Head:大+Tail:便" : L125WholePat ;
+define L125Split "大便+Lemma+Modifier-Head+SPLIT+Head:大+Tail:便" : L125SplitPat ;
 
 ! === 军训 (Type=Modifier-Head) ===
 define L126WholePat ?* 军 训 ?* ;
 define L126SplitPat ?* 军 LegalIns LegalIns* 训 ?* ;
-define L126Whole "军训+Lemma+Modifier-Head+WHOLE" : L126WholePat ;
-define L126Split "军训+Lemma+Modifier-Head+SPLIT" : L126SplitPat ;
+define L126Whole "军训+Lemma+Modifier-Head+WHOLE+Head:军+Tail:训" : L126WholePat ;
+define L126Split "军训+Lemma+Modifier-Head+SPLIT+Head:军+Tail:训" : L126SplitPat ;
 
 ! === 体检 (Type=Modifier-Head) ===
 define L127WholePat ?* 体 检 ?* ;
 define L127SplitPat ?* 体 LegalIns LegalIns* 检 ?* ;
-define L127Whole "体检+Lemma+Modifier-Head+WHOLE" : L127WholePat ;
-define L127Split "体检+Lemma+Modifier-Head+SPLIT" : L127SplitPat ;
+define L127Whole "体检+Lemma+Modifier-Head+WHOLE+Head:体+Tail:检" : L127WholePat ;
+define L127Split "体检+Lemma+Modifier-Head+SPLIT+Head:体+Tail:检" : L127SplitPat ;
 
 ! === 同学 (Type=Modifier-Head) ===
 define L128WholePat ?* 同 学 ?* ;
 define L128SplitPat ?* 同 LegalIns LegalIns* 学 ?* ;
-define L128Whole "同学+Lemma+Modifier-Head+WHOLE" : L128WholePat ;
-define L128Split "同学+Lemma+Modifier-Head+SPLIT" : L128SplitPat ;
+define L128Whole "同学+Lemma+Modifier-Head+WHOLE+Head:同+Tail:学" : L128WholePat ;
+define L128Split "同学+Lemma+Modifier-Head+SPLIT+Head:同+Tail:学" : L128SplitPat ;
 
 ! === 慷慨 (Type=Simplex Word) ===
 define L129WholePat ?* 慷 慨 ?* ;
 define L129SplitPat ?* 慷 LegalIns LegalIns* 慨 ?* ;
-define L129Whole "慷慨+Lemma+SimplexWord+WHOLE" : L129WholePat ;
-define L129Split "慷慨+Lemma+SimplexWord+SPLIT" : L129SplitPat ;
+define L129Whole "慷慨+Lemma+SimplexWord+WHOLE+Head:慷+Tail:慨" : L129WholePat ;
+define L129Split "慷慨+Lemma+SimplexWord+SPLIT+Head:慷+Tail:慨" : L129SplitPat ;
 
 ! === 幽默 (Type=Simplex Word) ===
 define L130WholePat ?* 幽 默 ?* ;
 define L130SplitPat ?* 幽 LegalIns LegalIns* 默 ?* ;
-define L130Whole "幽默+Lemma+SimplexWord+WHOLE" : L130WholePat ;
-define L130Split "幽默+Lemma+SimplexWord+SPLIT" : L130SplitPat ;
+define L130Whole "幽默+Lemma+SimplexWord+WHOLE+Head:幽+Tail:默" : L130WholePat ;
+define L130Split "幽默+Lemma+SimplexWord+SPLIT+Head:幽+Tail:默" : L130SplitPat ;
 
 ! === 滑稽 (Type=Simplex Word) ===
 define L131WholePat ?* 滑 稽 ?* ;
 define L131SplitPat ?* 滑 LegalIns LegalIns* 稽 ?* ;
-define L131Whole "滑稽+Lemma+SimplexWord+WHOLE" : L131WholePat ;
-define L131Split "滑稽+Lemma+SimplexWord+SPLIT" : L131SplitPat ;
+define L131Whole "滑稽+Lemma+SimplexWord+WHOLE+Head:滑+Tail:稽" : L131WholePat ;
+define L131Split "滑稽+Lemma+SimplexWord+SPLIT+Head:滑+Tail:稽" : L131SplitPat ;
 
 ! Combine all lemma transducers
 regex L001Whole | L001Split | L002Whole | L002Split | L003Whole | L003Split | L004Whole | L004Split | L005Whole | L005Split | L006Whole | L006Split | L007Whole | L007Split | L008Whole | L008Split | L009Whole | L009Split | L010Whole | L010Split | L011Whole | L011Split | L012Whole | L012Split | L013Whole | L013Split | L014Whole | L014Split | L015Whole | L015Split | L016Whole | L016Split | L017Whole | L017Split | L018Whole | L018Split | L019Whole | L019Split | L020Whole | L020Split | L021Whole | L021Split | L022Whole | L022Split | L023Whole | L023Split | L024Whole | L024Split | L025Whole | L025Split | L026Whole | L026Split | L027Whole | L027Split | L028Whole | L028Split | L029Whole | L029Split | L030Whole | L030Split | L031Whole | L031Split | L032Whole | L032Split | L033Whole | L033Split | L034Whole | L034Split | L035Whole | L035Split | L036Whole | L036Split | L037Whole | L037Split | L038Whole | L038Split | L039Whole | L039Split | L040Whole | L040Split | L041Whole | L041Split | L042Whole | L042Split | L043Whole | L043Split | L044Whole | L044Split | L045Whole | L045Split | L046Whole | L046Split | L047Whole | L047Split | L048Whole | L048Split | L049Whole | L049Split | L050Whole | L050Split | L051Whole | L051Split | L052Whole | L052Split | L053Whole | L053Split | L054Whole | L054Split | L055Whole | L055Split | L056Whole | L056Split | L057Whole | L057Split | L058Whole | L058Split | L059Whole | L059Split | L060Whole | L060Split | L061Whole | L061Split | L062Whole | L062Split | L063Whole | L063Split | L064Whole | L064Split | L065Whole | L065Split | L066Whole | L066Split | L067Whole | L067Split | L068Whole | L068Split | L069Whole | L069Split | L070Whole | L070Split | L071Whole | L071Split | L072Whole | L072Split | L073Whole | L073Split | L074Whole | L074Split | L075Whole | L075Split | L076Whole | L076Split | L077Whole | L077Split | L078Whole | L078Split | L079Whole | L079Split | L080Whole | L080Split | L081Whole | L081Split | L082Whole | L082Split | L083Whole | L083Split | L084Whole | L084Split | L085Whole | L085Split | L086Whole | L086Split | L087Whole | L087Split | L088Whole | L088Split | L089Whole | L089Split | L090Whole | L090Split | L091Whole | L091Split | L092Whole | L092Split | L093Whole | L093Split | L094Whole | L094Split | L095Whole | L095Split | L096Whole | L096Split | L097Whole | L097Split | L098Whole | L098Split | L099Whole | L099Split | L100Whole | L100Split | L101Whole | L101Split | L102Whole | L102Split | L103Whole | L103Split | L104Whole | L104Split | L105Whole | L105Split | L106Whole | L106Split | L107Whole | L107Split | L108Whole | L108Split | L109Whole | L109Split | L110Whole | L110Split | L111Whole | L111Split | L112Whole | L112Split | L113Whole | L113Split | L114Whole | L114Split | L115Whole | L115Split | L116Whole | L116Split | L117Whole | L117Split | L118Whole | L118Split | L119Whole | L119Split | L120Whole | L120Split | L121Whole | L121Split | L122Whole | L122Split | L123Whole | L123Split | L124Whole | L124Split | L125Whole | L125Split | L126Whole | L126Split | L127Whole | L127Split | L128Whole | L128Split | L129Whole | L129Split | L130Whole | L130Split | L131Whole | L131Split ;

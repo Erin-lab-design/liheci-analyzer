@@ -60,10 +60,12 @@ def setup_logging():
 
 def parse_hfst_analysis(analysis: str):
     """
-    输入例子: "睡觉+Lemma+Verb-Object+SPLIT"
-            "散步+Lemma+Verb-Object+SPLIT+REDUP"
-    返回:
-        lemma, type_tag, shape
+    Parse HFST analysis string with Head and Tail information
+    
+    Input example: "睡觉+Lemma+Verb-Object+SPLIT+Head:睡+Tail:觉"
+                  "散步+Lemma+Verb-Object+REDUP+Head:散+Tail:步"
+    Returns:
+        lemma, type_tag, shape, head, tail
     """
     parts = analysis.split("+")
     lemma = parts[0]
@@ -71,6 +73,8 @@ def parse_hfst_analysis(analysis: str):
 
     type_tag = None
     shape = None
+    head = None
+    tail = None
 
     for t in tags:
         if t in {"Verb-Object", "PseudoV-O", "Modifier-Head",
@@ -78,8 +82,12 @@ def parse_hfst_analysis(analysis: str):
             type_tag = t
         elif t in {"WHOLE", "SPLIT"}:
             shape = t
+        elif t.startswith("Head:"):
+            head = t.split(":", 1)[1]
+        elif t.startswith("Tail:"):
+            tail = t.split(":", 1)[1]
 
-    return lemma, type_tag, shape
+    return lemma, type_tag, shape, head, tail
 
 
 def hfst_analyze_sentence(sentence: str, logger):
@@ -143,13 +151,15 @@ def hfst_analyze_sentence(sentence: str, logger):
         if "+Lemma" not in analysis:
             continue
 
-        lemma, type_tag, shape = parse_hfst_analysis(analysis)
+        lemma, type_tag, shape, head, tail = parse_hfst_analysis(analysis)
 
         parsed.append({
             "raw": analysis,
             "lemma": lemma,
             "type_tag": type_tag,
             "shape": shape,
+            "head": head,
+            "tail": tail,
         })
 
     # Deduplicate by raw analysis
@@ -204,6 +214,8 @@ def run_export():
         "lemma",
         "type_tag",
         "shape",
+        "head",
+        "tail",
         "hfst_analysis",
     ])
 
@@ -277,6 +289,8 @@ def run_export():
                 a["lemma"],
                 a["type_tag"],
                 a["shape"],
+                a["head"],
+                a["tail"],
                 a["raw"],
             ])
 

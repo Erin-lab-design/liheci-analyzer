@@ -120,11 +120,10 @@ def main():
 
         base = f"L{idx:03d}"  # L001, L002, ...
 
-        # Upper-side labels
-        # Only generate WHOLE and SPLIT forms
-        # REDUP forms will be handled in a separate pipeline stage
-        whole_upper = f"{lemma}+Lemma+{type_tag}+WHOLE"
-        split_upper = f"{lemma}+Lemma+{type_tag}+SPLIT"
+        # Upper-side labels with Head and Tail information
+        # Format: lemma+Lemma+Type+Shape+Head:X+Tail:Y
+        whole_upper = f"{lemma}+Lemma+{type_tag}+WHOLE+Head:{head}+Tail:{tail}"
+        split_upper = f"{lemma}+Lemma+{type_tag}+SPLIT+Head:{head}+Tail:{tail}"
 
         whole_pat_name = f"{base}WholePat"
         split_pat_name = f"{base}SplitPat"

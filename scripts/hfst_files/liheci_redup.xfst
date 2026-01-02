@@ -12,385 +12,385 @@ define L001RedupAAB ?* 睡 睡 觉 ?* ;
 define L001RedupAYiAB ?* 睡 一 睡 觉 ?* ;
 define L001RedupALeAB ?* 睡 了 睡 觉 ?* ;
 define L001RedupPat L001RedupAAB | L001RedupAYiAB | L001RedupALeAB ;
-define L001Redup "睡觉+Lemma+Verb-Object+REDUP" : L001RedupPat ;
+define L001Redup "睡觉+Lemma+Verb-Object+REDUP+Head:睡+Tail:觉" : L001RedupPat ;
 
 ! 2. 洗澡 (洗+澡)
 define L002RedupAAB ?* 洗 洗 澡 ?* ;
 define L002RedupAYiAB ?* 洗 一 洗 澡 ?* ;
 define L002RedupALeAB ?* 洗 了 洗 澡 ?* ;
 define L002RedupPat L002RedupAAB | L002RedupAYiAB | L002RedupALeAB ;
-define L002Redup "洗澡+Lemma+Verb-Object+REDUP" : L002RedupPat ;
+define L002Redup "洗澡+Lemma+Verb-Object+REDUP+Head:洗+Tail:澡" : L002RedupPat ;
 
 ! 3. 吃饭 (吃+饭)
 define L003RedupAAB ?* 吃 吃 饭 ?* ;
 define L003RedupAYiAB ?* 吃 一 吃 饭 ?* ;
 define L003RedupALeAB ?* 吃 了 吃 饭 ?* ;
 define L003RedupPat L003RedupAAB | L003RedupAYiAB | L003RedupALeAB ;
-define L003Redup "吃饭+Lemma+Verb-Object+REDUP" : L003RedupPat ;
+define L003Redup "吃饭+Lemma+Verb-Object+REDUP+Head:吃+Tail:饭" : L003RedupPat ;
 
 ! 4. 刷牙 (刷+牙)
 define L004RedupAAB ?* 刷 刷 牙 ?* ;
 define L004RedupAYiAB ?* 刷 一 刷 牙 ?* ;
 define L004RedupALeAB ?* 刷 了 刷 牙 ?* ;
 define L004RedupPat L004RedupAAB | L004RedupAYiAB | L004RedupALeAB ;
-define L004Redup "刷牙+Lemma+Verb-Object+REDUP" : L004RedupPat ;
+define L004Redup "刷牙+Lemma+Verb-Object+REDUP+Head:刷+Tail:牙" : L004RedupPat ;
 
 ! 5. 洗脸 (洗+脸)
 define L005RedupAAB ?* 洗 洗 脸 ?* ;
 define L005RedupAYiAB ?* 洗 一 洗 脸 ?* ;
 define L005RedupALeAB ?* 洗 了 洗 脸 ?* ;
 define L005RedupPat L005RedupAAB | L005RedupAYiAB | L005RedupALeAB ;
-define L005Redup "洗脸+Lemma+Verb-Object+REDUP" : L005RedupPat ;
+define L005Redup "洗脸+Lemma+Verb-Object+REDUP+Head:洗+Tail:脸" : L005RedupPat ;
 
 ! 6. 跑步 (跑+步)
 define L006RedupAAB ?* 跑 跑 步 ?* ;
 define L006RedupAYiAB ?* 跑 一 跑 步 ?* ;
 define L006RedupALeAB ?* 跑 了 跑 步 ?* ;
 define L006RedupPat L006RedupAAB | L006RedupAYiAB | L006RedupALeAB ;
-define L006Redup "跑步+Lemma+Verb-Object+REDUP" : L006RedupPat ;
+define L006Redup "跑步+Lemma+Verb-Object+REDUP+Head:跑+Tail:步" : L006RedupPat ;
 
 ! 7. 散步 (散+步)
 define L007RedupAAB ?* 散 散 步 ?* ;
 define L007RedupAYiAB ?* 散 一 散 步 ?* ;
 define L007RedupALeAB ?* 散 了 散 步 ?* ;
 define L007RedupPat L007RedupAAB | L007RedupAYiAB | L007RedupALeAB ;
-define L007Redup "散步+Lemma+Verb-Object+REDUP" : L007RedupPat ;
+define L007Redup "散步+Lemma+Verb-Object+REDUP+Head:散+Tail:步" : L007RedupPat ;
 
 ! 8. 上网 (上+网)
 define L008RedupAAB ?* 上 上 网 ?* ;
 define L008RedupAYiAB ?* 上 一 上 网 ?* ;
 define L008RedupALeAB ?* 上 了 上 网 ?* ;
 define L008RedupPat L008RedupAAB | L008RedupAYiAB | L008RedupALeAB ;
-define L008Redup "上网+Lemma+Verb-Object+REDUP" : L008RedupPat ;
+define L008Redup "上网+Lemma+Verb-Object+REDUP+Head:上+Tail:网" : L008RedupPat ;
 
 ! 9. 看书 (看+书)
 define L009RedupAAB ?* 看 看 书 ?* ;
 define L009RedupAYiAB ?* 看 一 看 书 ?* ;
 define L009RedupALeAB ?* 看 了 看 书 ?* ;
 define L009RedupPat L009RedupAAB | L009RedupAYiAB | L009RedupALeAB ;
-define L009Redup "看书+Lemma+Verb-Object+REDUP" : L009RedupPat ;
+define L009Redup "看书+Lemma+Verb-Object+REDUP+Head:看+Tail:书" : L009RedupPat ;
 
 ! 10. 写字 (写+字)
 define L010RedupAAB ?* 写 写 字 ?* ;
 define L010RedupAYiAB ?* 写 一 写 字 ?* ;
 define L010RedupALeAB ?* 写 了 写 字 ?* ;
 define L010RedupPat L010RedupAAB | L010RedupAYiAB | L010RedupALeAB ;
-define L010Redup "写字+Lemma+Verb-Object+REDUP" : L010RedupPat ;
+define L010Redup "写字+Lemma+Verb-Object+REDUP+Head:写+Tail:字" : L010RedupPat ;
 
 ! 11. 开门 (开+门)
 define L011RedupAAB ?* 开 开 门 ?* ;
 define L011RedupAYiAB ?* 开 一 开 门 ?* ;
 define L011RedupALeAB ?* 开 了 开 门 ?* ;
 define L011RedupPat L011RedupAAB | L011RedupAYiAB | L011RedupALeAB ;
-define L011Redup "开门+Lemma+Verb-Object+REDUP" : L011RedupPat ;
+define L011Redup "开门+Lemma+Verb-Object+REDUP+Head:开+Tail:门" : L011RedupPat ;
 
 ! 12. 做饭 (做+饭)
 define L012RedupAAB ?* 做 做 饭 ?* ;
 define L012RedupAYiAB ?* 做 一 做 饭 ?* ;
 define L012RedupALeAB ?* 做 了 做 饭 ?* ;
 define L012RedupPat L012RedupAAB | L012RedupAYiAB | L012RedupALeAB ;
-define L012Redup "做饭+Lemma+Verb-Object+REDUP" : L012RedupPat ;
+define L012Redup "做饭+Lemma+Verb-Object+REDUP+Head:做+Tail:饭" : L012RedupPat ;
 
 ! 13. 打球 (打+球)
 define L013RedupAAB ?* 打 打 球 ?* ;
 define L013RedupAYiAB ?* 打 一 打 球 ?* ;
 define L013RedupALeAB ?* 打 了 打 球 ?* ;
 define L013RedupPat L013RedupAAB | L013RedupAYiAB | L013RedupALeAB ;
-define L013Redup "打球+Lemma+Verb-Object+REDUP" : L013RedupPat ;
+define L013Redup "打球+Lemma+Verb-Object+REDUP+Head:打+Tail:球" : L013RedupPat ;
 
 ! 14. 见面 (见+面)
 define L014RedupAAB ?* 见 见 面 ?* ;
 define L014RedupAYiAB ?* 见 一 见 面 ?* ;
 define L014RedupALeAB ?* 见 了 见 面 ?* ;
 define L014RedupPat L014RedupAAB | L014RedupAYiAB | L014RedupALeAB ;
-define L014Redup "见面+Lemma+Verb-Object+REDUP" : L014RedupPat ;
+define L014Redup "见面+Lemma+Verb-Object+REDUP+Head:见+Tail:面" : L014RedupPat ;
 
 ! 15. 帮忙 (帮+忙)
 define L015RedupAAB ?* 帮 帮 忙 ?* ;
 define L015RedupAYiAB ?* 帮 一 帮 忙 ?* ;
 define L015RedupALeAB ?* 帮 了 帮 忙 ?* ;
 define L015RedupPat L015RedupAAB | L015RedupAYiAB | L015RedupALeAB ;
-define L015Redup "帮忙+Lemma+Verb-Object+REDUP" : L015RedupPat ;
+define L015Redup "帮忙+Lemma+Verb-Object+REDUP+Head:帮+Tail:忙" : L015RedupPat ;
 
 ! 16. 聊天 (聊+天)
 define L016RedupAAB ?* 聊 聊 天 ?* ;
 define L016RedupAYiAB ?* 聊 一 聊 天 ?* ;
 define L016RedupALeAB ?* 聊 了 聊 天 ?* ;
 define L016RedupPat L016RedupAAB | L016RedupAYiAB | L016RedupALeAB ;
-define L016Redup "聊天+Lemma+Verb-Object+REDUP" : L016RedupPat ;
+define L016Redup "聊天+Lemma+Verb-Object+REDUP+Head:聊+Tail:天" : L016RedupPat ;
 
 ! 17. 说话 (说+话)
 define L017RedupAAB ?* 说 说 话 ?* ;
 define L017RedupAYiAB ?* 说 一 说 话 ?* ;
 define L017RedupALeAB ?* 说 了 说 话 ?* ;
 define L017RedupPat L017RedupAAB | L017RedupAYiAB | L017RedupALeAB ;
-define L017Redup "说话+Lemma+Verb-Object+REDUP" : L017RedupPat ;
+define L017Redup "说话+Lemma+Verb-Object+REDUP+Head:说+Tail:话" : L017RedupPat ;
 
 ! 18. 吵架 (吵+架)
 define L018RedupAAB ?* 吵 吵 架 ?* ;
 define L018RedupAYiAB ?* 吵 一 吵 架 ?* ;
 define L018RedupALeAB ?* 吵 了 吵 架 ?* ;
 define L018RedupPat L018RedupAAB | L018RedupAYiAB | L018RedupALeAB ;
-define L018Redup "吵架+Lemma+Verb-Object+REDUP" : L018RedupPat ;
+define L018Redup "吵架+Lemma+Verb-Object+REDUP+Head:吵+Tail:架" : L018RedupPat ;
 
 ! 19. 拜年 (拜+年)
 define L019RedupAAB ?* 拜 拜 年 ?* ;
 define L019RedupAYiAB ?* 拜 一 拜 年 ?* ;
 define L019RedupALeAB ?* 拜 了 拜 年 ?* ;
 define L019RedupPat L019RedupAAB | L019RedupAYiAB | L019RedupALeAB ;
-define L019Redup "拜年+Lemma+Verb-Object+REDUP" : L019RedupPat ;
+define L019Redup "拜年+Lemma+Verb-Object+REDUP+Head:拜+Tail:年" : L019RedupPat ;
 
 ! 20. 握手 (握+手)
 define L020RedupAAB ?* 握 握 手 ?* ;
 define L020RedupAYiAB ?* 握 一 握 手 ?* ;
 define L020RedupALeAB ?* 握 了 握 手 ?* ;
 define L020RedupPat L020RedupAAB | L020RedupAYiAB | L020RedupALeAB ;
-define L020Redup "握手+Lemma+Verb-Object+REDUP" : L020RedupPat ;
+define L020Redup "握手+Lemma+Verb-Object+REDUP+Head:握+Tail:手" : L020RedupPat ;
 
 ! 21. 鼓掌 (鼓+掌)
 define L021RedupAAB ?* 鼓 鼓 掌 ?* ;
 define L021RedupAYiAB ?* 鼓 一 鼓 掌 ?* ;
 define L021RedupALeAB ?* 鼓 了 鼓 掌 ?* ;
 define L021RedupPat L021RedupAAB | L021RedupAYiAB | L021RedupALeAB ;
-define L021Redup "鼓掌+Lemma+Verb-Object+REDUP" : L021RedupPat ;
+define L021Redup "鼓掌+Lemma+Verb-Object+REDUP+Head:鼓+Tail:掌" : L021RedupPat ;
 
 ! 22. 开玩笑 (开+玩笑)
 define L022RedupAAB ?* 开 开 玩 笑 ?* ;
 define L022RedupAYiAB ?* 开 一 开 玩 笑 ?* ;
 define L022RedupALeAB ?* 开 了 开 玩 笑 ?* ;
 define L022RedupPat L022RedupAAB | L022RedupAYiAB | L022RedupALeAB ;
-define L022Redup "开玩笑+Lemma+Verb-Object+REDUP" : L022RedupPat ;
+define L022Redup "开玩笑+Lemma+Verb-Object+REDUP+Head:开+Tail:玩笑" : L022RedupPat ;
 
 ! 23. 谈恋爱 (谈+恋爱)
 define L023RedupAAB ?* 谈 谈 恋 爱 ?* ;
 define L023RedupAYiAB ?* 谈 一 谈 恋 爱 ?* ;
 define L023RedupALeAB ?* 谈 了 谈 恋 爱 ?* ;
 define L023RedupPat L023RedupAAB | L023RedupAYiAB | L023RedupALeAB ;
-define L023Redup "谈恋爱+Lemma+Verb-Object+REDUP" : L023RedupPat ;
+define L023Redup "谈恋爱+Lemma+Verb-Object+REDUP+Head:谈+Tail:恋爱" : L023RedupPat ;
 
 ! 24. 吹牛 (吹+牛)
 define L024RedupAAB ?* 吹 吹 牛 ?* ;
 define L024RedupAYiAB ?* 吹 一 吹 牛 ?* ;
 define L024RedupALeAB ?* 吹 了 吹 牛 ?* ;
 define L024RedupPat L024RedupAAB | L024RedupAYiAB | L024RedupALeAB ;
-define L024Redup "吹牛+Lemma+Verb-Object+REDUP" : L024RedupPat ;
+define L024Redup "吹牛+Lemma+Verb-Object+REDUP+Head:吹+Tail:牛" : L024RedupPat ;
 
 ! 25. 请客 (请+客)
 define L025RedupAAB ?* 请 请 客 ?* ;
 define L025RedupAYiAB ?* 请 一 请 客 ?* ;
 define L025RedupALeAB ?* 请 了 请 客 ?* ;
 define L025RedupPat L025RedupAAB | L025RedupAYiAB | L025RedupALeAB ;
-define L025Redup "请客+Lemma+Verb-Object+REDUP" : L025RedupPat ;
+define L025Redup "请客+Lemma+Verb-Object+REDUP+Head:请+Tail:客" : L025RedupPat ;
 
 ! 26. 上班 (上+班)
 define L026RedupAAB ?* 上 上 班 ?* ;
 define L026RedupAYiAB ?* 上 一 上 班 ?* ;
 define L026RedupALeAB ?* 上 了 上 班 ?* ;
 define L026RedupPat L026RedupAAB | L026RedupAYiAB | L026RedupALeAB ;
-define L026Redup "上班+Lemma+Verb-Object+REDUP" : L026RedupPat ;
+define L026Redup "上班+Lemma+Verb-Object+REDUP+Head:上+Tail:班" : L026RedupPat ;
 
 ! 27. 上学 (上+学)
 define L027RedupAAB ?* 上 上 学 ?* ;
 define L027RedupAYiAB ?* 上 一 上 学 ?* ;
 define L027RedupALeAB ?* 上 了 上 学 ?* ;
 define L027RedupPat L027RedupAAB | L027RedupAYiAB | L027RedupALeAB ;
-define L027Redup "上学+Lemma+Verb-Object+REDUP" : L027RedupPat ;
+define L027Redup "上学+Lemma+Verb-Object+REDUP+Head:上+Tail:学" : L027RedupPat ;
 
 ! 28. 上课 (上+课)
 define L028RedupAAB ?* 上 上 课 ?* ;
 define L028RedupAYiAB ?* 上 一 上 课 ?* ;
 define L028RedupALeAB ?* 上 了 上 课 ?* ;
 define L028RedupPat L028RedupAAB | L028RedupAYiAB | L028RedupALeAB ;
-define L028Redup "上课+Lemma+Verb-Object+REDUP" : L028RedupPat ;
+define L028Redup "上课+Lemma+Verb-Object+REDUP+Head:上+Tail:课" : L028RedupPat ;
 
 ! 29. 写作业 (写+作业)
 define L029RedupAAB ?* 写 写 作 业 ?* ;
 define L029RedupAYiAB ?* 写 一 写 作 业 ?* ;
 define L029RedupALeAB ?* 写 了 写 作 业 ?* ;
 define L029RedupPat L029RedupAAB | L029RedupAYiAB | L029RedupALeAB ;
-define L029Redup "写作业+Lemma+Verb-Object+REDUP" : L029RedupPat ;
+define L029Redup "写作业+Lemma+Verb-Object+REDUP+Head:写+Tail:作业" : L029RedupPat ;
 
 ! 30. 放假 (放+假)
 define L030RedupAAB ?* 放 放 假 ?* ;
 define L030RedupAYiAB ?* 放 一 放 假 ?* ;
 define L030RedupALeAB ?* 放 了 放 假 ?* ;
 define L030RedupPat L030RedupAAB | L030RedupAYiAB | L030RedupALeAB ;
-define L030Redup "放假+Lemma+Verb-Object+REDUP" : L030RedupPat ;
+define L030Redup "放假+Lemma+Verb-Object+REDUP+Head:放+Tail:假" : L030RedupPat ;
 
 ! 31. 开会 (开+会)
 define L031RedupAAB ?* 开 开 会 ?* ;
 define L031RedupAYiAB ?* 开 一 开 会 ?* ;
 define L031RedupALeAB ?* 开 了 开 会 ?* ;
 define L031RedupPat L031RedupAAB | L031RedupAYiAB | L031RedupALeAB ;
-define L031Redup "开会+Lemma+Verb-Object+REDUP" : L031RedupPat ;
+define L031Redup "开会+Lemma+Verb-Object+REDUP+Head:开+Tail:会" : L031RedupPat ;
 
 ! 32. 发言 (发+言)
 define L032RedupAAB ?* 发 发 言 ?* ;
 define L032RedupAYiAB ?* 发 一 发 言 ?* ;
 define L032RedupALeAB ?* 发 了 发 言 ?* ;
 define L032RedupPat L032RedupAAB | L032RedupAYiAB | L032RedupALeAB ;
-define L032Redup "发言+Lemma+Verb-Object+REDUP" : L032RedupPat ;
+define L032Redup "发言+Lemma+Verb-Object+REDUP+Head:发+Tail:言" : L032RedupPat ;
 
 ! 33. 加班 (加+班)
 define L033RedupAAB ?* 加 加 班 ?* ;
 define L033RedupAYiAB ?* 加 一 加 班 ?* ;
 define L033RedupALeAB ?* 加 了 加 班 ?* ;
 define L033RedupPat L033RedupAAB | L033RedupAYiAB | L033RedupALeAB ;
-define L033Redup "加班+Lemma+Verb-Object+REDUP" : L033RedupPat ;
+define L033Redup "加班+Lemma+Verb-Object+REDUP+Head:加+Tail:班" : L033RedupPat ;
 
 ! 34. 出差 (出+差)
 define L034RedupAAB ?* 出 出 差 ?* ;
 define L034RedupAYiAB ?* 出 一 出 差 ?* ;
 define L034RedupALeAB ?* 出 了 出 差 ?* ;
 define L034RedupPat L034RedupAAB | L034RedupAYiAB | L034RedupALeAB ;
-define L034Redup "出差+Lemma+Verb-Object+REDUP" : L034RedupPat ;
+define L034Redup "出差+Lemma+Verb-Object+REDUP+Head:出+Tail:差" : L034RedupPat ;
 
 ! 35. 看病 (看+病)
 define L035RedupAAB ?* 看 看 病 ?* ;
 define L035RedupAYiAB ?* 看 一 看 病 ?* ;
 define L035RedupALeAB ?* 看 了 看 病 ?* ;
 define L035RedupPat L035RedupAAB | L035RedupAYiAB | L035RedupALeAB ;
-define L035Redup "看病+Lemma+Verb-Object+REDUP" : L035RedupPat ;
+define L035Redup "看病+Lemma+Verb-Object+REDUP+Head:看+Tail:病" : L035RedupPat ;
 
 ! 36. 打针 (打+针)
 define L036RedupAAB ?* 打 打 针 ?* ;
 define L036RedupAYiAB ?* 打 一 打 针 ?* ;
 define L036RedupALeAB ?* 打 了 打 针 ?* ;
 define L036RedupPat L036RedupAAB | L036RedupAYiAB | L036RedupALeAB ;
-define L036Redup "打针+Lemma+Verb-Object+REDUP" : L036RedupPat ;
+define L036Redup "打针+Lemma+Verb-Object+REDUP+Head:打+Tail:针" : L036RedupPat ;
 
 ! 37. 输液 (输+液)
 define L037RedupAAB ?* 输 输 液 ?* ;
 define L037RedupAYiAB ?* 输 一 输 液 ?* ;
 define L037RedupALeAB ?* 输 了 输 液 ?* ;
 define L037RedupPat L037RedupAAB | L037RedupAYiAB | L037RedupALeAB ;
-define L037Redup "输液+Lemma+Verb-Object+REDUP" : L037RedupPat ;
+define L037Redup "输液+Lemma+Verb-Object+REDUP+Head:输+Tail:液" : L037RedupPat ;
 
 ! 38. 把脉 (把+脉)
 define L038RedupAAB ?* 把 把 脉 ?* ;
 define L038RedupAYiAB ?* 把 一 把 脉 ?* ;
 define L038RedupALeAB ?* 把 了 把 脉 ?* ;
 define L038RedupPat L038RedupAAB | L038RedupAYiAB | L038RedupALeAB ;
-define L038Redup "把脉+Lemma+Verb-Object+REDUP" : L038RedupPat ;
+define L038Redup "把脉+Lemma+Verb-Object+REDUP+Head:把+Tail:脉" : L038RedupPat ;
 
 ! 39. 减肥 (减+肥)
 define L039RedupAAB ?* 减 减 肥 ?* ;
 define L039RedupAYiAB ?* 减 一 减 肥 ?* ;
 define L039RedupALeAB ?* 减 了 减 肥 ?* ;
 define L039RedupPat L039RedupAAB | L039RedupAYiAB | L039RedupALeAB ;
-define L039Redup "减肥+Lemma+Verb-Object+REDUP" : L039RedupPat ;
+define L039Redup "减肥+Lemma+Verb-Object+REDUP+Head:减+Tail:肥" : L039RedupPat ;
 
 ! 40. 吃苦 (吃+苦)
 define L040RedupAAB ?* 吃 吃 苦 ?* ;
 define L040RedupAYiAB ?* 吃 一 吃 苦 ?* ;
 define L040RedupALeAB ?* 吃 了 吃 苦 ?* ;
 define L040RedupPat L040RedupAAB | L040RedupAYiAB | L040RedupALeAB ;
-define L040Redup "吃苦+Lemma+Verb-Object+REDUP" : L040RedupPat ;
+define L040Redup "吃苦+Lemma+Verb-Object+REDUP+Head:吃+Tail:苦" : L040RedupPat ;
 
 ! 41. 吃亏 (吃+亏)
 define L041RedupAAB ?* 吃 吃 亏 ?* ;
 define L041RedupAYiAB ?* 吃 一 吃 亏 ?* ;
 define L041RedupALeAB ?* 吃 了 吃 亏 ?* ;
 define L041RedupPat L041RedupAAB | L041RedupAYiAB | L041RedupALeAB ;
-define L041Redup "吃亏+Lemma+Verb-Object+REDUP" : L041RedupPat ;
+define L041Redup "吃亏+Lemma+Verb-Object+REDUP+Head:吃+Tail:亏" : L041RedupPat ;
 
 ! 42. 跳舞 (跳+舞)
 define L042RedupAAB ?* 跳 跳 舞 ?* ;
 define L042RedupAYiAB ?* 跳 一 跳 舞 ?* ;
 define L042RedupALeAB ?* 跳 了 跳 舞 ?* ;
 define L042RedupPat L042RedupAAB | L042RedupAYiAB | L042RedupALeAB ;
-define L042Redup "跳舞+Lemma+Verb-Object+REDUP" : L042RedupPat ;
+define L042Redup "跳舞+Lemma+Verb-Object+REDUP+Head:跳+Tail:舞" : L042RedupPat ;
 
 ! 43. 唱歌 (唱+歌)
 define L043RedupAAB ?* 唱 唱 歌 ?* ;
 define L043RedupAYiAB ?* 唱 一 唱 歌 ?* ;
 define L043RedupALeAB ?* 唱 了 唱 歌 ?* ;
 define L043RedupPat L043RedupAAB | L043RedupAYiAB | L043RedupALeAB ;
-define L043Redup "唱歌+Lemma+Verb-Object+REDUP" : L043RedupPat ;
+define L043Redup "唱歌+Lemma+Verb-Object+REDUP+Head:唱+Tail:歌" : L043RedupPat ;
 
 ! 44. 游泳 (游+泳)
 define L044RedupAAB ?* 游 游 泳 ?* ;
 define L044RedupAYiAB ?* 游 一 游 泳 ?* ;
 define L044RedupALeAB ?* 游 了 游 泳 ?* ;
 define L044RedupPat L044RedupAAB | L044RedupAYiAB | L044RedupALeAB ;
-define L044Redup "游泳+Lemma+Verb-Object+REDUP" : L044RedupPat ;
+define L044Redup "游泳+Lemma+Verb-Object+REDUP+Head:游+Tail:泳" : L044RedupPat ;
 
 ! 45. 划船 (划+船)
 define L045RedupAAB ?* 划 划 船 ?* ;
 define L045RedupAYiAB ?* 划 一 划 船 ?* ;
 define L045RedupALeAB ?* 划 了 划 船 ?* ;
 define L045RedupPat L045RedupAAB | L045RedupAYiAB | L045RedupALeAB ;
-define L045Redup "划船+Lemma+Verb-Object+REDUP" : L045RedupPat ;
+define L045Redup "划船+Lemma+Verb-Object+REDUP+Head:划+Tail:船" : L045RedupPat ;
 
 ! 46. 钓鱼 (钓+鱼)
 define L046RedupAAB ?* 钓 钓 鱼 ?* ;
 define L046RedupAYiAB ?* 钓 一 钓 鱼 ?* ;
 define L046RedupALeAB ?* 钓 了 钓 鱼 ?* ;
 define L046RedupPat L046RedupAAB | L046RedupAYiAB | L046RedupALeAB ;
-define L046Redup "钓鱼+Lemma+Verb-Object+REDUP" : L046RedupPat ;
+define L046Redup "钓鱼+Lemma+Verb-Object+REDUP+Head:钓+Tail:鱼" : L046RedupPat ;
 
 ! 47. 滑冰 (滑+冰)
 define L047RedupAAB ?* 滑 滑 冰 ?* ;
 define L047RedupAYiAB ?* 滑 一 滑 冰 ?* ;
 define L047RedupALeAB ?* 滑 了 滑 冰 ?* ;
 define L047RedupPat L047RedupAAB | L047RedupAYiAB | L047RedupALeAB ;
-define L047Redup "滑冰+Lemma+Verb-Object+REDUP" : L047RedupPat ;
+define L047Redup "滑冰+Lemma+Verb-Object+REDUP+Head:滑+Tail:冰" : L047RedupPat ;
 
 ! 48. 打工 (打+工)
 define L048RedupAAB ?* 打 打 工 ?* ;
 define L048RedupAYiAB ?* 打 一 打 工 ?* ;
 define L048RedupALeAB ?* 打 了 打 工 ?* ;
 define L048RedupPat L048RedupAAB | L048RedupAYiAB | L048RedupALeAB ;
-define L048Redup "打工+Lemma+Verb-Object+REDUP" : L048RedupPat ;
+define L048Redup "打工+Lemma+Verb-Object+REDUP+Head:打+Tail:工" : L048RedupPat ;
 
 ! 49. 散心 (散+心)
 define L049RedupAAB ?* 散 散 心 ?* ;
 define L049RedupAYiAB ?* 散 一 散 心 ?* ;
 define L049RedupALeAB ?* 散 了 散 心 ?* ;
 define L049RedupPat L049RedupAAB | L049RedupAYiAB | L049RedupALeAB ;
-define L049Redup "散心+Lemma+Verb-Object+REDUP" : L049RedupPat ;
+define L049Redup "散心+Lemma+Verb-Object+REDUP+Head:散+Tail:心" : L049RedupPat ;
 
 ! 50. 送礼 (送+礼)
 define L050RedupAAB ?* 送 送 礼 ?* ;
 define L050RedupAYiAB ?* 送 一 送 礼 ?* ;
 define L050RedupALeAB ?* 送 了 送 礼 ?* ;
 define L050RedupPat L050RedupAAB | L050RedupAYiAB | L050RedupALeAB ;
-define L050Redup "送礼+Lemma+Verb-Object+REDUP" : L050RedupPat ;
+define L050Redup "送礼+Lemma+Verb-Object+REDUP+Head:送+Tail:礼" : L050RedupPat ;
 
 ! 51. 拌嘴 (拌+嘴)
 define L051RedupAAB ?* 拌 拌 嘴 ?* ;
 define L051RedupAYiAB ?* 拌 一 拌 嘴 ?* ;
 define L051RedupALeAB ?* 拌 了 拌 嘴 ?* ;
 define L051RedupPat L051RedupAAB | L051RedupAYiAB | L051RedupALeAB ;
-define L051Redup "拌嘴+Lemma+Verb-Object+REDUP" : L051RedupPat ;
+define L051Redup "拌嘴+Lemma+Verb-Object+REDUP+Head:拌+Tail:嘴" : L051RedupPat ;
 
 ! 52. 把关 (把+关)
 define L052RedupAAB ?* 把 把 关 ?* ;
 define L052RedupAYiAB ?* 把 一 把 关 ?* ;
 define L052RedupALeAB ?* 把 了 把 关 ?* ;
 define L052RedupPat L052RedupAAB | L052RedupAYiAB | L052RedupALeAB ;
-define L052Redup "把关+Lemma+Verb-Object+REDUP" : L052RedupPat ;
+define L052Redup "把关+Lemma+Verb-Object+REDUP+Head:把+Tail:关" : L052RedupPat ;
 
 ! 53. 施肥 (施+肥)
 define L053RedupAAB ?* 施 施 肥 ?* ;
 define L053RedupAYiAB ?* 施 一 施 肥 ?* ;
 define L053RedupALeAB ?* 施 了 施 肥 ?* ;
 define L053RedupPat L053RedupAAB | L053RedupAYiAB | L053RedupALeAB ;
-define L053Redup "施肥+Lemma+Verb-Object+REDUP" : L053RedupPat ;
+define L053Redup "施肥+Lemma+Verb-Object+REDUP+Head:施+Tail:肥" : L053RedupPat ;
 
 ! 54. 敲门 (敲+门)
 define L054RedupAAB ?* 敲 敲 门 ?* ;
 define L054RedupAYiAB ?* 敲 一 敲 门 ?* ;
 define L054RedupALeAB ?* 敲 了 敲 门 ?* ;
 define L054RedupPat L054RedupAAB | L054RedupAYiAB | L054RedupALeAB ;
-define L054Redup "敲门+Lemma+Verb-Object+REDUP" : L054RedupPat ;
+define L054Redup "敲门+Lemma+Verb-Object+REDUP+Head:敲+Tail:门" : L054RedupPat ;
 
 ! 55. 学习 (学+习)
 define L055RedupAAB ?* 学 学 习 ?* ;
 define L055RedupAYiAB ?* 学 一 学 习 ?* ;
 define L055RedupALeAB ?* 学 了 学 习 ?* ;
 define L055RedupPat L055RedupAAB | L055RedupAYiAB | L055RedupALeAB ;
-define L055Redup "学习+Lemma+Pseudo V-O+REDUP" : L055RedupPat ;
+define L055Redup "学习+Lemma+Pseudo V-O+REDUP+Head:学+Tail:习" : L055RedupPat ;
 
 ! Combine all reduplication transducers
 define LiheciRedupRecognizer L001Redup | L002Redup | L003Redup | L004Redup | L005Redup | L006Redup | L007Redup | L008Redup | L009Redup | L010Redup | L011Redup | L012Redup | L013Redup | L014Redup | L015Redup | L016Redup | L017Redup | L018Redup | L019Redup | L020Redup | L021Redup | L022Redup | L023Redup | L024Redup | L025Redup | L026Redup | L027Redup | L028Redup | L029Redup | L030Redup | L031Redup | L032Redup | L033Redup | L034Redup | L035Redup | L036Redup | L037Redup | L038Redup | L039Redup | L040Redup | L041Redup | L042Redup | L043Redup | L044Redup | L045Redup | L046Redup | L047Redup | L048Redup | L049Redup | L050Redup | L051Redup | L052Redup | L053Redup | L054Redup | L055Redup ;

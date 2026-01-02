@@ -1,0 +1,207 @@
+sent_id	gold_stem	gold_label	error_type	sentence	lemma	type_tag	shape	head	tail	hfst_analysis	insertion	insertion_tagged	insertion_type	has_de	confidence_score
+1	睡觉	True		昨天晚上我睡了一个好觉。	睡觉	Verb-Object	SPLIT	睡	觉	睡觉+Lemma+Verb-Object+SPLIT+Head:睡+Tail:觉	了ASPECT一NUM个CLF好MOD	了:ASPECT+一:NUM+个:CLF+好:MOD	ASPECT_QUANT	False	1.0
+2	洗澡	True		运动完必须洗个热水澡。	洗澡	Verb-Object	SPLIT	洗	澡	洗澡+Lemma+Verb-Object+SPLIT+Head:洗+Tail:澡	个CLF热水	个:CLF	QUANTIFIER	False	0.3333333333333333
+3	吃饭	True		如果你还没吃完饭，就等一会儿。	吃饭	Verb-Object	SPLIT	吃	饭	吃饭+Lemma+Verb-Object+SPLIT+Head:吃+Tail:饭	完RES	完:RES	RESULTATIVE	False	1.0
+4	刷牙	True		医生建议每天至少刷两分钟牙。	刷牙	Verb-Object	SPLIT	刷	牙	刷牙+Lemma+Verb-Object+SPLIT+Head:刷+Tail:牙	两NUM分钟	两:NUM	UNKNOWN	False	0.3333333333333333
+5	洗脸	True		早上匆匆忙忙洗了一把脸就出门了。	洗脸	Verb-Object	SPLIT	洗	脸	洗脸+Lemma+Verb-Object+SPLIT+Head:洗+Tail:脸	了ASPECT一NUM把PREPCLF	了:ASPECT+一:NUM+把:PREP	ASPECT	False	1.0
+6	走路	True		我们走了很久的路。	走路	Verb-Object	SPLIT	走	路	走路+Lemma+Verb-Object+SPLIT+Head:走+Tail:路	了ASPECT很MOD久的DE	了:ASPECT+很:MOD+的:DE	ASPECT	True	0.75
+7	跑步	True		他在公园里跑了一会儿步。	跑步	Verb-Object	SPLIT	跑	步	跑步+Lemma+Verb-Object+SPLIT+Head:跑+Tail:步	了ASPECT一NUM会儿	了:ASPECT+一:NUM	ASPECT	False	0.5
+8	散步	True		晚饭后我们去河边散散步。	散步	Verb-Object	REDUP	散	步	散步+Lemma+Verb-Object+REDUP+Head:散+Tail:步			REDUP_SKIP	False	1.0
+9	上网	True		为了查资料，我上了两个小时网。	上网	Verb-Object	SPLIT	上	网	上网+Lemma+Verb-Object+SPLIT+Head:上+Tail:网	了ASPECT两NUM个CLF小MOD时	了:ASPECT+两:NUM+个:CLF+小:MOD	ASPECT_QUANT	False	0.8
+10	理发	True		过年前要去理一次发。	理发	Verb-Object	SPLIT	理	发	理发+Lemma+Verb-Object+SPLIT+Head:理+Tail:发	一NUM次CLF	一:NUM+次:CLF	QUANTIFIER	False	1.0
+11	搬家	True		这几年北漂搬了三次家。	搬家	Verb-Object	SPLIT	搬	家	搬家+Lemma+Verb-Object+SPLIT+Head:搬+Tail:家	了ASPECT三NUM次CLF	了:ASPECT+三:NUM+次:CLF	ASPECT_QUANT	False	1.0
+12	起床	True		生病了，难受得起不来床。	生病	Verb-Object	WHOLE	生	病	生病+Lemma+Verb-Object+WHOLE+Head:生+Tail:病			EMPTY	False	0.5
+12	起床	True		生病了，难受得起不来床。	起床	Verb-Object	SPLIT	起	床	起床+Lemma+Verb-Object+SPLIT+Head:起+Tail:床	不来		EMPTY	False	0.0
+13	看书	True		他在图书馆安静地看了半天书。	看书	Verb-Object	SPLIT	看	书	看书+Lemma+Verb-Object+SPLIT+Head:看+Tail:书	了ASPECT半NUM天CLF	了:ASPECT+半:NUM+天:CLF	ASPECT_QUANT	False	1.0
+14	写字	True		练习了十年，终于写了一手好字。	写字	Verb-Object	SPLIT	写	字	写字+Lemma+Verb-Object+SPLIT+Head:写+Tail:字	了ASPECT一NUM手CLF好MOD	了:ASPECT+一:NUM+手:CLF+好:MOD	ASPECT_QUANT	False	1.0
+15	开门	True		他敲了半天门，快去开一下门。	开门	Verb-Object	SPLIT	开	门	开门+Lemma+Verb-Object+SPLIT+Head:开+Tail:门	一NUM下CLF	一:NUM+下:CLF	QUANTIFIER	False	1.0
+15	开门	True		他敲了半天门，快去开一下门。	敲门	Verb-Object	SPLIT	敲	门	敲门+Lemma+Verb-Object+SPLIT+Head:敲+Tail:门	了ASPECT半NUM天CLF	了:ASPECT+半:NUM+天:CLF	ASPECT_QUANT	False	1.0
+16	关灯	True		记得关了灯再睡觉。	关灯	Verb-Object	SPLIT	关	灯	关灯+Lemma+Verb-Object+SPLIT+Head:关+Tail:灯	了ASPECT	了:ASPECT	ASPECT	False	1.0
+16	关灯	True		记得关了灯再睡觉。	睡觉	Verb-Object	WHOLE	睡	觉	睡觉+Lemma+Verb-Object+WHOLE+Head:睡+Tail:觉			EMPTY	False	0.5
+17	做饭	True		今天妈妈做了一顿丰盛的晚饭。	做饭	Verb-Object	SPLIT	做	饭	做饭+Lemma+Verb-Object+SPLIT+Head:做+Tail:饭	了ASPECT一NUM顿丰盛的DE晚	了:ASPECT+一:NUM+的:DE	ASPECT	True	0.42857142857142855
+18	打球	True		周末约朋友去打了一场球。	打球	Verb-Object	SPLIT	打	球	打球+Lemma+Verb-Object+SPLIT+Head:打+Tail:球	了ASPECT一NUM场CLF	了:ASPECT+一:NUM+场:CLF	ASPECT_QUANT	False	1.0
+19	抽烟	True		压力大的时候他抽了一根烟。	抽烟	Verb-Object	SPLIT	抽	烟	抽烟+Lemma+Verb-Object+SPLIT+Head:抽+Tail:烟	了ASPECT一NUM根CLF	了:ASPECT+一:NUM+根:CLF	ASPECT_QUANT	False	1.0
+20	见面	True		我们虽然同城，但也只见过一面。	见面	Verb-Object	SPLIT	见	面	见面+Lemma+Verb-Object+SPLIT+Head:见+Tail:面	过ASPECT一NUM	过:ASPECT+一:NUM	ASPECT	False	1.0
+21	帮忙	True		你真是帮了我一个大忙。	帮忙	Verb-Object	SPLIT	帮	忙	帮忙+Lemma+Verb-Object+SPLIT+Head:帮+Tail:忙	了ASPECT我PRO一NUM个CLF大MOD	了:ASPECT+我:PRO+一:NUM+个:CLF+大:MOD	ASPECT_QUANT	False	1.0
+22	聊天	True		和老朋友见面，聊了一整天。	聊天	Verb-Object	SPLIT	聊	天	聊天+Lemma+Verb-Object+SPLIT+Head:聊+Tail:天	了ASPECT一NUM整MOD	了:ASPECT+一:NUM+整:MOD	ASPECT	False	1.0
+22	聊天	True		和老朋友见面，聊了一整天。	见面	Verb-Object	WHOLE	见	面	见面+Lemma+Verb-Object+WHOLE+Head:见+Tail:面			EMPTY	False	0.5
+23	说话	True		请你帮我说两句好话。	说话	Verb-Object	SPLIT	说	话	说话+Lemma+Verb-Object+SPLIT+Head:说+Tail:话	两NUM句好MOD	两:NUM+好:MOD	MODIFIER	False	0.6666666666666666
+24	吵架	True		因为一点小事，他们吵了一架。	吵架	Verb-Object	SPLIT	吵	架	吵架+Lemma+Verb-Object+SPLIT+Head:吵+Tail:架	了ASPECT一NUM	了:ASPECT+一:NUM	ASPECT	False	1.0
+25	打架	True		两只猫在屋顶上打了一架。	打架	Verb-Object	SPLIT	打	架	打架+Lemma+Verb-Object+SPLIT+Head:打+Tail:架	了ASPECT一NUM	了:ASPECT+一:NUM	ASPECT	False	1.0
+26	打仗	True		俄罗斯和乌克兰还要打多久的仗呢？	打仗	Verb-Object	SPLIT	打	仗	打仗+Lemma+Verb-Object+SPLIT+Head:打+Tail:仗	多久的DE	的:DE	UNKNOWN	True	0.3333333333333333
+27	生气	True		别再生他的气了。	生气	Verb-Object	SPLIT	生	气	生气+Lemma+Verb-Object+SPLIT+Head:生+Tail:气	他PRO的DE	他:PRO+的:DE	PRONOUN_DE	True	1.0
+28	发火	True		领导在会上发了一通火。	发火	Verb-Object	SPLIT	发	火	发火+Lemma+Verb-Object+SPLIT+Head:发+Tail:火	了ASPECT一NUM通	了:ASPECT+一:NUM	ASPECT	False	0.6666666666666666
+29	道歉	True		做错事就该给人家道一个歉。	道歉	Verb-Object	SPLIT	道	歉	道歉+Lemma+Verb-Object+SPLIT+Head:道+Tail:歉	一NUM个CLF	一:NUM+个:CLF	QUANTIFIER	False	1.0
+30	道谢	True		临走时，他特意向主人道了一声谢。	道谢	Verb-Object	SPLIT	道	谢	道谢+Lemma+Verb-Object+SPLIT+Head:道+Tail:谢	了ASPECT一NUM声CLF	了:ASPECT+一:NUM+声:CLF	ASPECT_QUANT	False	1.0
+31	拜年	True		大年初一去给长辈拜个年。	拜年	Verb-Object	SPLIT	拜	年	拜年+Lemma+Verb-Object+SPLIT+Head:拜+Tail:年	个CLF	个:CLF	QUANTIFIER	False	1.0
+32	握手	True		大家见面互相握了一下手。	握手	Verb-Object	SPLIT	握	手	握手+Lemma+Verb-Object+SPLIT+Head:握+Tail:手	了ASPECT一NUM下CLF	了:ASPECT+一:NUM+下:CLF	ASPECT_QUANT	False	1.0
+32	握手	True		大家见面互相握了一下手。	见面	Verb-Object	WHOLE	见	面	见面+Lemma+Verb-Object+WHOLE+Head:见+Tail:面			EMPTY	False	0.5
+33	捣乱	True		别在他工作的时候捣他的乱。	捣乱	Verb-Object	SPLIT	捣	乱	捣乱+Lemma+Verb-Object+SPLIT+Head:捣+Tail:乱	他PRO的DE	他:PRO+的:DE	PRONOUN_DE	True	1.0
+34	开玩笑	True		我只是跟你开了一个玩笑。	开玩笑	Verb-Object	SPLIT	开	玩笑	开玩笑+Lemma+Verb-Object+SPLIT+Head:开+Tail:玩笑	了ASPECT一NUM个CLF	了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	1.0
+35	撒谎	True		他脸红了，显然是撒了一个谎。	撒谎	Verb-Object	SPLIT	撒	谎	撒谎+Lemma+Verb-Object+SPLIT+Head:撒+Tail:谎	了ASPECT一NUM个CLF	了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	1.0
+36	吹牛	True		别听他瞎说，他又在吹牛。	吹牛	Verb-Object	WHOLE	吹	牛	吹牛+Lemma+Verb-Object+WHOLE+Head:吹+Tail:牛			EMPTY	False	0.5
+37	告状	True		他去老师那里告了你一状。	告状	Verb-Object	SPLIT	告	状	告状+Lemma+Verb-Object+SPLIT+Head:告+Tail:状	了ASPECT你PRO一NUM	了:ASPECT+你:PRO+一:NUM	ASPECT	False	1.0
+38	请客	True		为了庆祝升职，他请了一次客。	请客	Verb-Object	SPLIT	请	客	请客+Lemma+Verb-Object+SPLIT+Head:请+Tail:客	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+40	离婚	True		听说邻居离了两次婚。	离婚	Verb-Object	SPLIT	离	婚	离婚+Lemma+Verb-Object+SPLIT+Head:离+Tail:婚	了ASPECT两NUM次CLF	了:ASPECT+两:NUM+次:CLF	ASPECT_QUANT	False	1.0
+41	订婚	True		他们刚刚订完婚。	订婚	Verb-Object	SPLIT	订	婚	订婚+Lemma+Verb-Object+SPLIT+Head:订+Tail:婚	完RES	完:RES	RESULTATIVE	False	1.0
+42	谈恋爱	True		大学期间谈了一场轰轰烈烈的恋爱。	谈恋爱	Verb-Object	SPLIT	谈	恋爱	谈恋爱+Lemma+Verb-Object+SPLIT+Head:谈+Tail:恋爱	了ASPECT一NUM场CLF轰轰烈烈的DE	了:ASPECT+一:NUM+场:CLF+的:DE	ASPECT_QUANT	True	0.5
+43	分手	True		因为性格不合，他们分了一次手。	分手	Verb-Object	SPLIT	分	手	分手+Lemma+Verb-Object+SPLIT+Head:分+Tail:手	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+44	伤心	True		这件事真是让他伤透了心。	伤心	Verb-Object	SPLIT	伤	心	伤心+Lemma+Verb-Object+SPLIT+Head:伤+Tail:心	透了ASPECT	了:ASPECT	ASPECT	False	0.5
+45	吃醋	True		看到男朋友和别人说话，她吃谁的醋？	吃醋	Verb-Object	SPLIT	吃	醋	吃醋+Lemma+Verb-Object+SPLIT+Head:吃+Tail:醋	谁的DE	的:DE	UNKNOWN	True	0.5
+45	吃醋	True		看到男朋友和别人说话，她吃谁的醋？	说话	Verb-Object	WHOLE	说	话	说话+Lemma+Verb-Object+WHOLE+Head:说+Tail:话			EMPTY	False	0.5
+46	放心	True		你就放一百个心吧。	放心	Verb-Object	SPLIT	放	心	放心+Lemma+Verb-Object+SPLIT+Head:放+Tail:心	一NUM百NUM个CLF	一:NUM+百:NUM+个:CLF	QUANTIFIER	False	1.0
+47	灰心	True		失败了不要紧，千万别灰了心。	灰心	Verb-Object	SPLIT	灰	心	灰心+Lemma+Verb-Object+SPLIT+Head:灰+Tail:心	了ASPECT	了:ASPECT	ASPECT	False	1.0
+48	操心	True		为了这个家，由于操碎了心。	操心	Verb-Object	SPLIT	操	心	操心+Lemma+Verb-Object+SPLIT+Head:操+Tail:心	碎了ASPECT	了:ASPECT	ASPECT	False	0.5
+49	动心	True		面对诱惑，很难不动凡心。	动心	Verb-Object	SPLIT	动	心	动心+Lemma+Verb-Object+SPLIT+Head:动+Tail:心	凡		EMPTY	False	0.0
+50	上班	True		即使生病了，她还是上了一天班。	上班	Verb-Object	SPLIT	上	班	上班+Lemma+Verb-Object+SPLIT+Head:上+Tail:班	了ASPECT一NUM天CLF	了:ASPECT+一:NUM+天:CLF	ASPECT_QUANT	False	1.0
+50	上班	True		即使生病了，她还是上了一天班。	生病	Verb-Object	WHOLE	生	病	生病+Lemma+Verb-Object+WHOLE+Head:生+Tail:病			EMPTY	False	0.5
+51	下班	True		还没下班，老板就走了。	下班	Verb-Object	WHOLE	下	班	下班+Lemma+Verb-Object+WHOLE+Head:下+Tail:班			EMPTY	False	0.5
+52	下班	True		下了班之后我们去逛街。	下班	Verb-Object	SPLIT	下	班	下班+Lemma+Verb-Object+SPLIT+Head:下+Tail:班	了ASPECT	了:ASPECT	ASPECT	False	1.0
+53	上学	True		他在这个城市上了六年学。	上学	Verb-Object	SPLIT	上	学	上学+Lemma+Verb-Object+SPLIT+Head:上+Tail:学	了ASPECT六NUM年CLF	了:ASPECT+六:NUM+年:CLF	ASPECT_QUANT	False	1.0
+54	上课	True		今天上午上了两节课。	上课	Verb-Object	SPLIT	上	课	上课+Lemma+Verb-Object+SPLIT+Head:上+Tail:课	午上了ASPECT两NUM节	了:ASPECT+两:NUM	ASPECT	False	0.4
+55	下课	True		下了课我们就去食堂。	下课	Verb-Object	SPLIT	下	课	下课+Lemma+Verb-Object+SPLIT+Head:下+Tail:课	了ASPECT	了:ASPECT	ASPECT	False	1.0
+56	请假	True		身体不舒服，请了三天假。	请假	Verb-Object	SPLIT	请	假	请假+Lemma+Verb-Object+SPLIT+Head:请+Tail:假	了ASPECT三NUM天CLF	了:ASPECT+三:NUM+天:CLF	ASPECT_QUANT	False	1.0
+57	放假	True		五一劳动节放了三天假。	放假	Verb-Object	SPLIT	放	假	放假+Lemma+Verb-Object+SPLIT+Head:放+Tail:假	了ASPECT三NUM天CLF	了:ASPECT+三:NUM+天:CLF	ASPECT_QUANT	False	1.0
+58	考试	True		为了准备考这场试，他通宵复习。	考试	Verb-Object	SPLIT	考	试	考试+Lemma+Verb-Object+SPLIT+Head:考+Tail:试	这场CLF	场:CLF	QUANTIFIER	False	0.5
+59	毕业	True		毕了业以后打算去哪里？	毕业	Verb-Object	SPLIT	毕	业	毕业+Lemma+Verb-Object+SPLIT+Head:毕+Tail:业	了ASPECT	了:ASPECT	ASPECT	False	1.0
+60	留学	True		他在英国留了三年学。	留学	Verb-Object	SPLIT	留	学	留学+Lemma+Verb-Object+SPLIT+Head:留+Tail:学	了ASPECT三NUM年CLF	了:ASPECT+三:NUM+年:CLF	ASPECT_QUANT	False	1.0
+61	报名	True		想参加比赛，得先报一个名。	报名	Verb-Object	SPLIT	报	名	报名+Lemma+Verb-Object+SPLIT+Head:报+Tail:名	一NUM个CLF	一:NUM+个:CLF	QUANTIFIER	False	1.0
+62	辞职	True		受不了老板的脾气，他辞了职。	辞职	Verb-Object	SPLIT	辞	职	辞职+Lemma+Verb-Object+SPLIT+Head:辞+Tail:职	了ASPECT	了:ASPECT	ASPECT	False	1.0
+63	开会	True		下午在公司开了一个长会。	开会	Verb-Object	SPLIT	开	会	开会+Lemma+Verb-Object+SPLIT+Head:开+Tail:会	了ASPECT一NUM个CLF长MOD	了:ASPECT+一:NUM+个:CLF+长:MOD	ASPECT_QUANT	False	1.0
+64	发言	True		作为代表，他在会上发了一次言。	发言	Verb-Object	SPLIT	发	言	发言+Lemma+Verb-Object+SPLIT+Head:发+Tail:言	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+65	值班	True		昨天晚上轮到我值了一个夜班。	上班	Verb-Object	SPLIT	上	班	上班+Lemma+Verb-Object+SPLIT+Head:上+Tail:班	轮到RES我PRO值了ASPECT一NUM个CLF夜	到:RES+我:PRO+了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	0.625
+65	值班	True		昨天晚上轮到我值了一个夜班。	值班	Verb-Object	SPLIT	值	班	值班+Lemma+Verb-Object+SPLIT+Head:值+Tail:班	了ASPECT一NUM个CLF夜	了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	0.75
+66	加班	True		项目上线前，大家加了三个小时班。	加班	Verb-Object	SPLIT	加	班	加班+Lemma+Verb-Object+SPLIT+Head:加+Tail:班	了ASPECT三NUM个CLF小MOD时	了:ASPECT+三:NUM+个:CLF+小:MOD	ASPECT_QUANT	False	0.8
+67	出差	True		下周要去上海出了一趟差。	出差	Verb-Object	SPLIT	出	差	出差+Lemma+Verb-Object+SPLIT+Head:出+Tail:差	了ASPECT一NUM趟CLF	了:ASPECT+一:NUM+趟:CLF	ASPECT_QUANT	False	1.0
+68	生病	True		去年冬天生了一场大病。	生病	Verb-Object	SPLIT	生	病	生病+Lemma+Verb-Object+SPLIT+Head:生+Tail:病	了ASPECT一NUM场CLF大MOD	了:ASPECT+一:NUM+场:CLF+大:MOD	ASPECT_QUANT	False	1.0
+69	住院	True		因为骨折，他在医院住了半个月院。	住院	Verb-Object	SPLIT	住	院	住院+Lemma+Verb-Object+SPLIT+Head:住+Tail:院	了ASPECT半NUM个CLF月CLF	了:ASPECT+半:NUM+个:CLF+月:CLF	ASPECT_QUANT	False	1.0
+70	打针	True		护士轻轻地给他打了一针。	打针	Verb-Object	SPLIT	打	针	打针+Lemma+Verb-Object+SPLIT+Head:打+Tail:针	了ASPECT一NUM	了:ASPECT+一:NUM	ASPECT	False	1.0
+71	输液	True		发烧不退，只能去输了两瓶液。	输液	Verb-Object	SPLIT	输	液	输液+Lemma+Verb-Object+SPLIT+Head:输+Tail:液	了ASPECT两NUM瓶	了:ASPECT+两:NUM	ASPECT	False	0.6666666666666666
+72	挂号	True		好不容易挂了一个专家号。	挂号	Verb-Object	SPLIT	挂	号	挂号+Lemma+Verb-Object+SPLIT+Head:挂+Tail:号	了ASPECT一NUM个CLF专家	了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	0.6
+73	把脉	True		老中医给他把了把脉。	把脉	Verb-Object	REDUP	把	脉	把脉+Lemma+Verb-Object+REDUP+Head:把+Tail:脉			REDUP_SKIP	False	1.0
+74	减肥	True		坚持运动，终于减了十斤肥。	减肥	Verb-Object	SPLIT	减	肥	减肥+Lemma+Verb-Object+SPLIT+Head:减+Tail:肥	了ASPECT十NUM斤	了:ASPECT+十:NUM	ASPECT	False	0.6666666666666666
+75	鞠躬	True		表演结束，演员向观众鞠了一个躬。	鞠躬	Verb-Object	SPLIT	鞠	躬	鞠躬+Lemma+Verb-Object+SPLIT+Head:鞠+Tail:躬	了ASPECT一NUM个CLF	了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	1.0
+76	敬礼	True		士兵向国旗敬了一个礼。	敬礼	Verb-Object	SPLIT	敬	礼	敬礼+Lemma+Verb-Object+SPLIT+Head:敬+Tail:礼	了ASPECT一NUM个CLF	了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	1.0
+77	站岗	True		无论风雨，都要站好这一班岗。	站岗	Verb-Object	SPLIT	站	岗	站岗+Lemma+Verb-Object+SPLIT+Head:站+Tail:岗	好MOD这一NUM班	好:MOD+一:NUM	MODIFIER	False	0.5
+78	吃苦	True		年轻的时候多吃一点苦没关系。	吃苦	Verb-Object	SPLIT	吃	苦	吃苦+Lemma+Verb-Object+SPLIT+Head:吃+Tail:苦	一NUM点	一:NUM	UNKNOWN	False	0.5
+79	吃亏	True		虽然吃了个大亏，但也长了记性。	吃亏	Verb-Object	SPLIT	吃	亏	吃亏+Lemma+Verb-Object+SPLIT+Head:吃+Tail:亏	了ASPECT个CLF大MOD	了:ASPECT+个:CLF+大:MOD	ASPECT	False	1.0
+80	受罪	True		这趟旅行简直是花钱受了老大的罪。	受罪	Verb-Object	SPLIT	受	罪	受罪+Lemma+Verb-Object+SPLIT+Head:受+Tail:罪	了ASPECT老大MOD的DE	了:ASPECT+大:MOD+的:DE	ASPECT	True	0.75
+81	看病	True		去医院挂号看个病真难。	挂号	Verb-Object	WHOLE	挂	号	挂号+Lemma+Verb-Object+WHOLE+Head:挂+Tail:号			EMPTY	False	0.5
+81	看病	True		去医院挂号看个病真难。	看病	Verb-Object	SPLIT	看	病	看病+Lemma+Verb-Object+SPLIT+Head:看+Tail:病	个CLF	个:CLF	QUANTIFIER	False	1.0
+82	跳舞	True		她在晚会上跳了一支优美的舞。	跳舞	Verb-Object	SPLIT	跳	舞	跳舞+Lemma+Verb-Object+SPLIT+Head:跳+Tail:舞	了ASPECT一NUM支CLF优美的DE	了:ASPECT+一:NUM+支:CLF+的:DE	ASPECT_QUANT	True	0.6666666666666666
+83	唱歌	True		他很高兴，就唱了一首歌。	唱歌	Verb-Object	SPLIT	唱	歌	唱歌+Lemma+Verb-Object+SPLIT+Head:唱+Tail:歌	了ASPECT一NUM首CLF	了:ASPECT+一:NUM+首:CLF	ASPECT_QUANT	False	1.0
+84	出院	True		等出了院就可以回家了。	出院	Verb-Object	SPLIT	出	院	出院+Lemma+Verb-Object+SPLIT+Head:出+Tail:院	了ASPECT	了:ASPECT	ASPECT	False	1.0
+84	出院	True		等出了院就可以回家了。	回家	Verb-Object	WHOLE	回	家	回家+Lemma+Verb-Object+WHOLE+Head:回+Tail:家			EMPTY	False	0.5
+85	游泳	True		夏天去海边游了一次泳。	游泳	Verb-Object	SPLIT	游	泳	游泳+Lemma+Verb-Object+SPLIT+Head:游+Tail:泳	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+86	划船	True		我们在湖上划了一会儿船。	划船	Verb-Object	SPLIT	划	船	划船+Lemma+Verb-Object+SPLIT+Head:划+Tail:船	了ASPECT一NUM会儿	了:ASPECT+一:NUM	ASPECT	False	0.5
+87	钓鱼	True		周末去水库钓了一天鱼。	钓鱼	Verb-Object	SPLIT	钓	鱼	钓鱼+Lemma+Verb-Object+SPLIT+Head:钓+Tail:鱼	了ASPECT一NUM天CLF	了:ASPECT+一:NUM+天:CLF	ASPECT_QUANT	False	1.0
+88	滑冰	True		冬天去什刹海滑了一次冰。	滑冰	Verb-Object	SPLIT	滑	冰	滑冰+Lemma+Verb-Object+SPLIT+Head:滑+Tail:冰	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+89	签名	True		明星给粉丝签了一个名。	签名	Verb-Object	SPLIT	签	名	签名+Lemma+Verb-Object+SPLIT+Head:签+Tail:名	了ASPECT一NUM个CLF	了:ASPECT+一:NUM+个:CLF	ASPECT_QUANT	False	1.0
+90	排队	True		买网红奶茶排了半天队。	排队	Verb-Object	SPLIT	排	队	排队+Lemma+Verb-Object+SPLIT+Head:排+Tail:队	了ASPECT半NUM天CLF	了:ASPECT+半:NUM+天:CLF	ASPECT_QUANT	False	1.0
+91	打工	True		辛苦打了一辈子工，终于退休了。	打工	Verb-Object	SPLIT	打	工	打工+Lemma+Verb-Object+SPLIT+Head:打+Tail:工	了ASPECT一NUM辈子	了:ASPECT+一:NUM	ASPECT	False	0.5
+91	打工	True		辛苦打了一辈子工，终于退休了。	退休	Verb-Object	WHOLE	退	休	退休+Lemma+Verb-Object+WHOLE+Head:退+Tail:休			EMPTY	False	0.5
+92	戒烟	True		为了健康，他彻底戒了烟。	戒烟	Verb-Object	SPLIT	戒	烟	戒烟+Lemma+Verb-Object+SPLIT+Head:戒+Tail:烟	了ASPECT	了:ASPECT	ASPECT	False	1.0
+93	回家	True		春节一定要回了一趟家。	回家	Verb-Object	SPLIT	回	家	回家+Lemma+Verb-Object+SPLIT+Head:回+Tail:家	了ASPECT一NUM趟CLF	了:ASPECT+一:NUM+趟:CLF	ASPECT_QUANT	False	1.0
+94	死心	True		既然不可能，你就死了这条心吧。	死心	Verb-Object	SPLIT	死	心	死心+Lemma+Verb-Object+SPLIT+Head:死+Tail:心	了ASPECT这条	了:ASPECT	ASPECT	False	0.3333333333333333
+95	挑水	True		和尚下山挑了一担水。	挑水	Verb-Object	SPLIT	挑	水	挑水+Lemma+Verb-Object+SPLIT+Head:挑+Tail:水	了ASPECT一NUM担	了:ASPECT+一:NUM	ASPECT	False	0.6666666666666666
+96	受伤	True		他在比赛中受了很重的伤。	受伤	Verb-Object	SPLIT	受	伤	受伤+Lemma+Verb-Object+SPLIT+Head:受+Tail:伤	了ASPECT很MOD重MOD的DE	了:ASPECT+很:MOD+重:MOD+的:DE	ASPECT	True	1.0
+97	散心	True		她心情不好，想出去散散心。	散心	Verb-Object	REDUP	散	心	散心+Lemma+Verb-Object+REDUP+Head:散+Tail:心			REDUP_SKIP	False	1.0
+98	扫兴	True		突然下好大的雨，真是扫了大家的兴。	下雨	Verb-Object	SPLIT	下	雨	下雨+Lemma+Verb-Object+SPLIT+Head:下+Tail:雨	好MOD大MOD的DE	好:MOD+大:MOD+的:DE	MODIFIER_DE	True	1.0
+98	扫兴	True		突然下好大的雨，真是扫了大家的兴。	扫兴	Verb-Object	SPLIT	扫	兴	扫兴+Lemma+Verb-Object+SPLIT+Head:扫+Tail:兴	了ASPECT大MOD家的DE	了:ASPECT+大:MOD+的:DE	ASPECT	True	0.75
+99	领情	True		我好心帮你，你却不领我的情。	领情	Verb-Object	SPLIT	领	情	领情+Lemma+Verb-Object+SPLIT+Head:领+Tail:情	我PRO的DE	我:PRO+的:DE	PRONOUN_DE	True	1.0
+100	送礼	True		过节去亲戚家送了一份厚礼。	送礼	Verb-Object	SPLIT	送	礼	送礼+Lemma+Verb-Object+SPLIT+Head:送+Tail:礼	了ASPECT一NUM份厚MOD	了:ASPECT+一:NUM+厚:MOD	ASPECT	False	0.75
+101	拌嘴	True		小两口经常拌几句嘴，床头吵架床尾和。	吵架	Verb-Object	WHOLE	吵	架	吵架+Lemma+Verb-Object+WHOLE+Head:吵+Tail:架			EMPTY	False	0.5
+101	拌嘴	True		小两口经常拌几句嘴，床头吵架床尾和。	拌嘴	Verb-Object	SPLIT	拌	嘴	拌嘴+Lemma+Verb-Object+SPLIT+Head:拌+Tail:嘴	几NUM句	几:NUM	UNKNOWN	False	0.5
+102	叹气	True		遇到困难，他无奈地叹了一口气。	叹气	Verb-Object	SPLIT	叹	气	叹气+Lemma+Verb-Object+SPLIT+Head:叹+Tail:气	了ASPECT一NUM口	了:ASPECT+一:NUM	ASPECT	False	0.6666666666666666
+103	丢脸	True	MISSING_DE	在这么多人面前摔倒，真是丢尽了脸。	丢脸	Verb-Object	SPLIT	丢	脸	丢脸+Lemma+Verb-Object+SPLIT+Head:丢+Tail:脸	尽了ASPECT	了:ASPECT	ASPECT	False	0.15
+104	接吻	True		他们当街接了个法式湿吻。	接吻	Verb-Object	SPLIT	接	吻	接吻+Lemma+Verb-Object+SPLIT+Head:接+Tail:吻	了ASPECT个CLF法式湿	了:ASPECT+个:CLF	ASPECT	False	0.4
+105	开枪	True		嫌疑人对着沙滩上聚集的人群开了三枪。	开枪	Verb-Object	SPLIT	开	枪	开枪+Lemma+Verb-Object+SPLIT+Head:开+Tail:枪	了ASPECT三NUM	了:ASPECT+三:NUM	ASPECT	False	1.0
+106	受骗	True		因为贪小便宜，老人受了一次骗。	受骗	Verb-Object	SPLIT	受	骗	受骗+Lemma+Verb-Object+SPLIT+Head:受+Tail:骗	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+106	受骗	True		因为贪小便宜，老人受了一次骗。	小便	Modifier-Head	WHOLE	小	便	小便+Lemma+Modifier-Head+WHOLE+Head:小+Tail:便			EMPTY	False	0.5
+107	挨批	True		工作没做好，挨了一顿批。	挨批	Verb-Object	SPLIT	挨	批	挨批+Lemma+Verb-Object+SPLIT+Head:挨+Tail:批	了ASPECT一NUM顿	了:ASPECT+一:NUM	ASPECT	False	0.6666666666666666
+108	干杯	True		为了我们的友谊，干了这杯！	干杯	Verb-Object	SPLIT	干	杯	干杯+Lemma+Verb-Object+SPLIT+Head:干+Tail:杯	了ASPECT这	了:ASPECT	ASPECT	False	0.5
+109	革命	True		如果再不改革，就是革自己的命。	革命	Verb-Object	SPLIT	革	命	革命+Lemma+Verb-Object+SPLIT+Head:革+Tail:命	，就是革自己的DE	的:DE	UNKNOWN	True	0.14285714285714285
+110	造反	True		这孩子真不听话，是要造谁的反？	造反	Verb-Object	SPLIT	造	反	造反+Lemma+Verb-Object+SPLIT+Head:造+Tail:反	谁的DE	的:DE	UNKNOWN	True	0.5
+111	退休	True		还没到年纪，他就退了休。	退休	Verb-Object	SPLIT	退	休	退休+Lemma+Verb-Object+SPLIT+Head:退+Tail:休	了ASPECT	了:ASPECT	ASPECT	False	1.0
+112	出事	True		他们家出了点事。	出事	Verb-Object	SPLIT	出	事	出事+Lemma+Verb-Object+SPLIT+Head:出+Tail:事	了ASPECT点	了:ASPECT	ASPECT	False	0.5
+113	把关	True		质量问题一定要把好关。	把关	Verb-Object	SPLIT	把	关	把关+Lemma+Verb-Object+SPLIT+Head:把+Tail:关	好MOD	好:MOD	MODIFIER	False	1.0
+114	施肥	True		春天到了，给庄稼施了一遍肥。	施肥	Verb-Object	SPLIT	施	肥	施肥+Lemma+Verb-Object+SPLIT+Head:施+Tail:肥	了ASPECT一NUM遍CLF	了:ASPECT+一:NUM+遍:CLF	ASPECT_QUANT	False	1.0
+115	倒霉	True		出门踩到泥，真是倒了大霉。	倒霉	Verb-Object	SPLIT	倒	霉	倒霉+Lemma+Verb-Object+SPLIT+Head:倒+Tail:霉	了ASPECT大MOD	了:ASPECT+大:MOD	ASPECT	False	1.0
+116	提醒	True		谢谢你，真是给我提了个醒。	提醒	PseudoV-O	SPLIT	提	醒	提醒+Lemma+PseudoV-O+SPLIT+Head:提+Tail:醒	了ASPECT个CLF	了:ASPECT+个:CLF	ASPECT	False	1.0
+117	出恭	True		皇帝上朝前出了一次恭。	出恭	PseudoV-O	SPLIT	出	恭	出恭+Lemma+PseudoV-O+SPLIT+Head:出+Tail:恭	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+118	将军	True		这一步棋真是将了他一军。	将军	PseudoV-O	SPLIT	将	军	将军+Lemma+PseudoV-O+SPLIT+Head:将+Tail:军	了ASPECT他PRO一NUM	了:ASPECT+他:PRO+一:NUM	ASPECT	False	1.0
+119	学习	True		周末准备在家学三小时习。	学习	PseudoV-O	SPLIT	学	习	学习+Lemma+PseudoV-O+SPLIT+Head:学+Tail:习	三NUM小MOD时	三:NUM+小:MOD	MODIFIER	False	0.6666666666666666
+120	慷慨	True		这些贪官都是在慷国家之慨。	慷慨	SimplexWord	SPLIT	慷	慨	慷慨+Lemma+SimplexWord+SPLIT+Head:慷+Tail:慨	国家之		EMPTY	False	0.0
+121	慷慨	True		你这是慷他人之慨。	慷慨	SimplexWord	SPLIT	慷	慨	慷慨+Lemma+SimplexWord+SPLIT+Head:慷+Tail:慨	他PRO人之	他:PRO	PRONOUN	False	0.3333333333333333
+122	幽默	True		人生苦短，何不幽他一默。	幽默	SimplexWord	SPLIT	幽	默	幽默+Lemma+SimplexWord+SPLIT+Head:幽+Tail:默	他PRO一NUM	他:PRO+一:NUM	PRONOUN	False	1.0
+123	滑稽	True		这种说法简直是滑天下之大稽。	滑稽	SimplexWord	SPLIT	滑	稽	滑稽+Lemma+SimplexWord+SPLIT+Head:滑+Tail:稽	天CLF下CLF之大MOD	天:CLF+下:CLF+大:MOD	QUANTIFIER	False	0.75
+124	小便	True		刚刚去厕所小了一次便。	小便	Modifier-Head	SPLIT	小	便	小便+Lemma+Modifier-Head+SPLIT+Head:小+Tail:便	了ASPECT一NUM次CLF	了:ASPECT+一:NUM+次:CLF	ASPECT_QUANT	False	1.0
+125	大便	True		如果不舒服，可能大不出来便。	大便	Modifier-Head	SPLIT	大	便	大便+Lemma+Modifier-Head+SPLIT+Head:大+Tail:便	不出来		EMPTY	False	0.0
+126	军训	True		大一新生刚军完了训就要上课了。	上课	Verb-Object	WHOLE	上	课	上课+Lemma+Verb-Object+WHOLE+Head:上+Tail:课			EMPTY	False	0.5
+126	军训	True		大一新生刚军完了训就要上课了。	军训	Modifier-Head	SPLIT	军	训	军训+Lemma+Modifier-Head+SPLIT+Head:军+Tail:训	完RES了ASPECT	完:RES+了:ASPECT	ASPECT	False	1.0
+127	体检	True		入职前体了个检，所幸一切正常。	体检	Modifier-Head	SPLIT	体	检	体检+Lemma+Modifier-Head+SPLIT+Head:体+Tail:检	了ASPECT个CLF	了:ASPECT+个:CLF	ASPECT	False	1.0
+128	同学	True		我和他虽然同过三年学，但不熟。	同学	Modifier-Head	SPLIT	同	学	同学+Lemma+Modifier-Head+SPLIT+Head:同+Tail:学	过ASPECT三NUM年CLF	过:ASPECT+三:NUM+年:CLF	ASPECT_QUANT	False	1.0
+129	散步	True		晚饭后我们去散散步。	散步	Verb-Object	REDUP	散	步	散步+Lemma+Verb-Object+REDUP+Head:散+Tail:步			REDUP_SKIP	False	1.0
+130	见面	True		好久不见，咱们见一见面吧。	见面	Verb-Object	REDUP	见	面	见面+Lemma+Verb-Object+REDUP+Head:见+Tail:面			REDUP_SKIP	False	1.0
+131	聊天	True		周末找个咖啡馆聊聊天。	聊天	Verb-Object	REDUP	聊	天	聊天+Lemma+Verb-Object+REDUP+Head:聊+Tail:天			REDUP_SKIP	False	1.0
+132	睡觉	True		困了就去睡一睡觉休息一下。	睡觉	Verb-Object	REDUP	睡	觉	睡觉+Lemma+Verb-Object+REDUP+Head:睡+Tail:觉			REDUP_SKIP	False	1.0
+133	把脉	True		医生给他把把脉。	把脉	Verb-Object	REDUP	把	脉	把脉+Lemma+Verb-Object+REDUP+Head:把+Tail:脉			REDUP_SKIP	False	1.0
+134	洗澡	True		身上脏了，去洗洗澡。	洗澡	Verb-Object	REDUP	洗	澡	洗澡+Lemma+Verb-Object+REDUP+Head:洗+Tail:澡			REDUP_SKIP	False	1.0
+135	鼓掌	True		观众为精彩的表演鼓了鼓掌。	鼓掌	Verb-Object	REDUP	鼓	掌	鼓掌+Lemma+Verb-Object+REDUP+Head:鼓+Tail:掌			REDUP_SKIP	False	1.0
+136	敲门	True		狼外婆敲了敲门。	敲门	Verb-Object	REDUP	敲	门	敲门+Lemma+Verb-Object+REDUP+Head:敲+Tail:门			REDUP_SKIP	False	1.0
+221	看病	True		我们要带奶奶去看看病。	看病	Verb-Object	REDUP	看	病	看病+Lemma+Verb-Object+REDUP+Head:看+Tail:病			REDUP_SKIP	False	1.0
+203	开会	True		我们来开开会商讨一下。	开会	Verb-Object	REDUP	开	会	开会+Lemma+Verb-Object+REDUP+Head:开+Tail:会			REDUP_SKIP	False	1.0
+211	输液	True		只是要输输液而已。	输液	Verb-Object	REDUP	输	液	输液+Lemma+Verb-Object+REDUP+Head:输+Tail:液			REDUP_SKIP	False	1.0
+226	游泳	True		他等下要去游游泳。	游泳	Verb-Object	REDUP	游	泳	游泳+Lemma+Verb-Object+REDUP+Head:游+Tail:泳			REDUP_SKIP	False	1.0
+281	请客	True		该你请请客了。	请客	Verb-Object	REDUP	请	客	请客+Lemma+Verb-Object+REDUP+Head:请+Tail:客			REDUP_SKIP	False	1.0
+140	睡觉	False		他睡在床上觉得很冷。	睡觉	Verb-Object	SPLIT	睡	觉	睡觉+Lemma+Verb-Object+SPLIT+Head:睡+Tail:觉	在床上		EMPTY	False	0.0
+141	洗澡	False		她用洗衣机洗了好几澡盆的衣服。	洗澡	Verb-Object	SPLIT	洗	澡	洗澡+Lemma+Verb-Object+SPLIT+Head:洗+Tail:澡	衣机洗了ASPECT好MOD几NUM	了:ASPECT+好:MOD+几:NUM	ASPECT	False	0.5
+142	吃饭	False		这些人真是吃软饭的。	吃饭	Verb-Object	SPLIT	吃	饭	吃饭+Lemma+Verb-Object+SPLIT+Head:吃+Tail:饭	软		EMPTY	False	0.0
+145	走路	False		我走在乡间的小路上。	走路	Verb-Object	SPLIT	走	路	走路+Lemma+Verb-Object+SPLIT+Head:走+Tail:路	在乡间的DE小MOD	的:DE+小:MOD	MODIFIER_DE	True	0.4
+146	跑步	False		他跑完了这一步棋。	跑步	Verb-Object	SPLIT	跑	步	跑步+Lemma+Verb-Object+SPLIT+Head:跑+Tail:步	完RES了ASPECT这一NUM	完:RES+了:ASPECT+一:NUM	ASPECT	False	0.75
+148	上网	False		蜘蛛爬上了高高的网架。	上网	Verb-Object	SPLIT	上	网	上网+Lemma+Verb-Object+SPLIT+Head:上+Tail:网	了ASPECT高MOD高MOD的DE	了:ASPECT+高:MOD+高:MOD+的:DE	ASPECT	True	1.0
+149	理发	False		经理发现了问题。	理发	Verb-Object	WHOLE	理	发	理发+Lemma+Verb-Object+WHOLE+Head:理+Tail:发			EMPTY	False	0.5
+150	搬家	False		搬运工把家具都搬走了。	搬家	Verb-Object	SPLIT	搬	家	搬家+Lemma+Verb-Object+SPLIT+Head:搬+Tail:家	运工把PREPCLF	把:PREP	UNKNOWN	False	0.3333333333333333
+153	写字	False		请在纸上写下你的名字。	写字	Verb-Object	SPLIT	写	字	写字+Lemma+Verb-Object+SPLIT+Head:写+Tail:字	下CLF你PRO的DE名	下:CLF+你:PRO+的:DE	QUANTIFIER	True	0.75
+154	开门	False		会议刚开了个头，门外就响起了敲门声。	敲门	Verb-Object	WHOLE	敲	门	敲门+Lemma+Verb-Object+WHOLE+Head:敲+Tail:门			EMPTY	False	0.5
+155	关灯	False		这事关系重大，他们灯火通明地开会到深夜。	开会	Verb-Object	WHOLE	开	会	开会+Lemma+Verb-Object+WHOLE+Head:开+Tail:会			EMPTY	False	0.5
+157	打球	False		昨天打了一场激烈的比赛，球队有人受伤了。	受伤	Verb-Object	WHOLE	受	伤	受伤+Lemma+Verb-Object+WHOLE+Head:受+Tail:伤			EMPTY	False	0.5
+160	帮忙	False		丐帮的人都很忙。	帮忙	Verb-Object	SPLIT	帮	忙	帮忙+Lemma+Verb-Object+SPLIT+Head:帮+Tail:忙	的DE人都很MOD	的:DE+很:MOD	MODIFIER_DE	True	0.5
+161	聊天	False		英国的人喜欢聊天气。	聊天	Verb-Object	WHOLE	聊	天	聊天+Lemma+Verb-Object+WHOLE+Head:聊+Tail:天			EMPTY	False	0.5
+166	生气	False		他生了一场大病，气色很差。	生病	Verb-Object	SPLIT	生	病	生病+Lemma+Verb-Object+SPLIT+Head:生+Tail:病	了ASPECT一NUM场CLF大MOD	了:ASPECT+一:NUM+场:CLF+大:MOD	ASPECT_QUANT	False	1.0
+168	道歉	False	PP_POS	她最终道向我歉了。	道歉	Verb-Object	SPLIT	道	歉	道歉+Lemma+Verb-Object+SPLIT+Head:道+Tail:歉	向PREP我PRO	向:PREP+我:PRO	PRONOUN	False	0.2
+169	道谢	False	PP_POS	她道向老师谢。	道谢	Verb-Object	SPLIT	道	谢	道谢+Lemma+Verb-Object+SPLIT+Head:道+Tail:谢	向PREP老师	向:PREP	UNKNOWN	False	0.06666666666666667
+170	拜年	False		礼拜天年轻人都在休息。	拜年	Verb-Object	SPLIT	拜	年	拜年+Lemma+Verb-Object+SPLIT+Head:拜+Tail:年	天CLF	天:CLF	QUANTIFIER	False	1.0
+173	捣乱	False	MISSING_DE	别在他工作的时候捣他乱。	捣乱	Verb-Object	SPLIT	捣	乱	捣乱+Lemma+Verb-Object+SPLIT+Head:捣+Tail:乱	他PRO	他:PRO	PRONOUN	False	0.3
+178	告状	False		他详细报告了目前的状况。	告状	Verb-Object	SPLIT	告	状	告状+Lemma+Verb-Object+SPLIT+Head:告+Tail:状	了ASPECT目前的DE	了:ASPECT+的:DE	ASPECT	True	0.5
+184	吃醋	False		你吃饺子不配醋吗？	吃醋	Verb-Object	SPLIT	吃	醋	吃醋+Lemma+Verb-Object+SPLIT+Head:吃+Tail:醋	饺子不配		EMPTY	False	0.0
+193	上学	False		往上瞧就是学校建筑。	上学	Verb-Object	SPLIT	上	学	上学+Lemma+Verb-Object+SPLIT+Head:上+Tail:学	瞧就是		EMPTY	False	0.0
+194	上课	False		桌上放着课本。	上课	Verb-Object	SPLIT	上	课	上课+Lemma+Verb-Object+SPLIT+Head:上+Tail:课	放着ASPECT	着:ASPECT	ASPECT	False	0.5
+197	放假	False		放放假多开心。	放假	Verb-Object	REDUP	放	假	放假+Lemma+Verb-Object+REDUP+Head:放+Tail:假			REDUP_SKIP	False	1.0
+197	放假	False		放放假多开心。	放心	Verb-Object	SPLIT	放	心	放心+Lemma+Verb-Object+SPLIT+Head:放+Tail:心	放假多开		EMPTY	False	0.0
+201	报名	False		报纸上有他的名字。	报名	Verb-Object	SPLIT	报	名	报名+Lemma+Verb-Object+SPLIT+Head:报+Tail:名	纸上有他PRO的DE	他:PRO+的:DE	PRONOUN_DE	True	0.4
+205	值班	False		他值得全班的表扬。	值班	Verb-Object	SPLIT	值	班	值班+Lemma+Verb-Object+SPLIT+Head:值+Tail:班	得全		EMPTY	False	0.0
+206	加班	False		加加班很辛苦。	加班	Verb-Object	REDUP	加	班	加班+Lemma+Verb-Object+REDUP+Head:加+Tail:班			REDUP_SKIP	False	1.0
+213	把脉	False		他把门关上，递给我一瓶脉动。	把关	Verb-Object	SPLIT	把	关	把关+Lemma+Verb-Object+SPLIT+Head:把+Tail:关	门		EMPTY	False	0.0
+218	吃苦	False		他吃了一口苦瓜。	吃苦	Verb-Object	SPLIT	吃	苦	吃苦+Lemma+Verb-Object+SPLIT+Head:吃+Tail:苦	了ASPECT一NUM口	了:ASPECT+一:NUM	ASPECT	False	0.6666666666666666
+229	滑冰	False		她滑倒在冰面上。	滑冰	Verb-Object	SPLIT	滑	冰	滑冰+Lemma+Verb-Object+SPLIT+Head:滑+Tail:冰	倒在		EMPTY	False	0.0
+232	打工	False		你为什么打工地上的人？	打工	Verb-Object	WHOLE	打	工	打工+Lemma+Verb-Object+WHOLE+Head:打+Tail:工			EMPTY	False	0.5
+243	丢脸	False	MISSING_DE	这次真的丢你脸了。	丢脸	Verb-Object	SPLIT	丢	脸	丢脸+Lemma+Verb-Object+SPLIT+Head:丢+Tail:脸	你PRO	你:PRO	PRONOUN	False	0.3
+249	革命	False	MISSING_DE	他们这是要革你命啊。	革命	Verb-Object	SPLIT	革	命	革命+Lemma+Verb-Object+SPLIT+Head:革+Tail:命	你PRO	你:PRO	PRONOUN	False	0.3
+250	造反	False	MISSING_DE	造他反就是找死。	造反	Verb-Object	SPLIT	造	反	造反+Lemma+Verb-Object+SPLIT+Head:造+Tail:反	他PRO	他:PRO	PRONOUN	False	0.3
+253	把关	False		他一把把门关上了。	把关	Verb-Object	SPLIT	把	关	把关+Lemma+Verb-Object+SPLIT+Head:把+Tail:关	把PREPCLF门	把:PREP	UNKNOWN	False	0.5
+258	将军	False		我们将军法处置，严惩不贷。	将军	PseudoV-O	WHOLE	将	军	将军+Lemma+PseudoV-O+WHOLE+Head:将+Tail:军			EMPTY	False	0.5
+263	小便	False		贪小便宜吃大亏。	吃亏	Verb-Object	SPLIT	吃	亏	吃亏+Lemma+Verb-Object+SPLIT+Head:吃+Tail:亏	大MOD	大:MOD	MODIFIER	False	1.0
+263	小便	False		贪小便宜吃大亏。	小便	Modifier-Head	WHOLE	小	便	小便+Lemma+Modifier-Head+WHOLE+Head:小+Tail:便			EMPTY	False	0.5
+264	大便	False		父亲18岁大的时候便去广东打工了。	大便	Modifier-Head	SPLIT	大	便	大便+Lemma+Modifier-Head+SPLIT+Head:大+Tail:便	的DE时候	的:DE	UNKNOWN	True	0.3333333333333333
+264	大便	False		父亲18岁大的时候便去广东打工了。	打工	Verb-Object	WHOLE	打	工	打工+Lemma+Verb-Object+WHOLE+Head:打+Tail:工			EMPTY	False	0.5
+269	见面	False	PP_POS	见跟他面很困难。	见面	Verb-Object	SPLIT	见	面	见面+Lemma+Verb-Object+SPLIT+Head:见+Tail:面	跟PREP他PRO	跟:PREP+他:PRO	PRONOUN	False	0.2
+270	吵架	False	PP_POS	吵跟她架没有意义。	吵架	Verb-Object	SPLIT	吵	架	吵架+Lemma+Verb-Object+SPLIT+Head:吵+Tail:架	跟PREP她PRO	跟:PREP+她:PRO	PRONOUN	False	0.2
+271	打架	False		打跟同学架是不好的。	同学	Modifier-Head	WHOLE	同	学	同学+Lemma+Modifier-Head+WHOLE+Head:同+Tail:学			EMPTY	False	0.5
+271	打架	False	PP_POS	打跟同学架是不好的。	打架	Verb-Object	SPLIT	打	架	打架+Lemma+Verb-Object+SPLIT+Head:打+Tail:架	跟PREP同学	跟:PREP	UNKNOWN	False	0.06666666666666667
+272	打仗	False	PP_POS	打与日军仗非常艰辛。	打仗	Verb-Object	SPLIT	打	仗	打仗+Lemma+Verb-Object+SPLIT+Head:打+Tail:仗	与PREP日CLF军	与:PREP+日:CLF	QUANTIFIER	False	0.13333333333333333
+273	道歉	False	PP_POS	道向她歉就能解决问题。	道歉	Verb-Object	SPLIT	道	歉	道歉+Lemma+Verb-Object+SPLIT+Head:道+Tail:歉	向PREP她PRO	向:PREP+她:PRO	PRONOUN	False	0.2
+274	道谢	False	PP_POS	道对他谢是应该的。	道谢	Verb-Object	SPLIT	道	谢	道谢+Lemma+Verb-Object+SPLIT+Head:道+Tail:谢	对PREP他PRO	对:PREP+他:PRO	PRONOUN	False	0.2
+275	拜年	False	PP_POS	拜给长辈年是传统习俗。	拜年	Verb-Object	SPLIT	拜	年	拜年+Lemma+Verb-Object+SPLIT+Head:拜+Tail:年	给PREP长MOD辈	给:PREP+长:MOD	MODIFIER	False	0.13333333333333333
+276	开玩笑	False	PP_POS	开跟他玩笑只是为了逗他开心。	开玩笑	Verb-Object	SPLIT	开	玩笑	开玩笑+Lemma+Verb-Object+SPLIT+Head:开+Tail:玩笑	跟PREP他PRO	跟:PREP+他:PRO	PRONOUN	False	0.2
+277	下雨	False		他在下午泪如雨下。	下雨	Verb-Object	SPLIT	下	雨	下雨+Lemma+Verb-Object+SPLIT+Head:下+Tail:雨	午泪如		EMPTY	False	0.0

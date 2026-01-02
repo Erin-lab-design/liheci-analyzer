@@ -113,9 +113,9 @@ def generate_xfst_script(lemmas, output_path):
         combined_pat = f"{lemma_id}RedupPat"
         lines.append(f"define {combined_pat} {redup_pat1_name} | {redup_pat2_name} | {redup_pat3_name} ;")
         
-        # Create transducer with morphological analysis
+        # Create transducer with morphological analysis including Head and Tail
         trans_name = f"{lemma_id}Redup"
-        upper = f"{lemma}+Lemma+{type_tag}+REDUP"
+        upper = f"{lemma}+Lemma+{type_tag}+REDUP+Head:{a_char}+Tail:{b_char}"
         lines.append(f'define {trans_name} "{upper}" : {combined_pat} ;')
         lines.append("")
         

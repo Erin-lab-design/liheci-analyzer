@@ -13,7 +13,7 @@ Chinese separable verb (离合词) analyzer using HFST (Helsinki Finite-State Te
 本项目采用**多阶段HFST分析流程**：
 - **Stage 1**: 识别 WHOLE/SPLIT 形式（所有131个词条）
 - **Stage 2**: 验证 REDUP 重叠形式的有效性（55个AAB词条）
-- **Stage 3**: 使用加权FST (WFST)分析插入语类型并计算置信度
+- **Stage 3**: 使用HFST替换规则标注插入成分，Python提取并分类插入语类型，基于覆盖率计算置信度
 - **Stage 4+**: 语义层面验证（规划中）
 
 ## 项目结构
@@ -33,8 +33,8 @@ liheci-analyzer/
 │   │   ├── liheci_redup.xfst                # [Stage 2] XFST规则
 │   │   ├── liheci_redup.analyser.hfst       # [Stage 2] 编译的分析器
 │   │   ├── liheci_redup.generator.hfst      # [Stage 2] 编译的生成器
-│   │   ├── liheci_insertion_classifier.xfst # [Stage 3] 加权XFST规则
-│   │   └── liheci_insertion_classifier.analyser.hfst # [Stage 3] WFST分析器
+│   │   ├── liheci_insertion_annotator.xfst  # [Stage 3] XFST替换规则
+│   │   └── liheci_insertion_annotator.hfst  # [Stage 3] 编译的标注器
 │   │
 │   ├── 01.generate_liheci_split_xfst.py     # [Stage 1] 生成 WHOLE/SPLIT XFST
 │   ├── 03.stage1_split_whole_recognition.py # [Stage 1] 运行 Stage 1 分析
@@ -42,16 +42,15 @@ liheci-analyzer/
 │   ├── 02.generate_liheci_redup_xfst.py     # [Stage 2] 生成 REDUP XFST
 │   ├── 04.stage2_redup_recognition.py       # [Stage 2] 验证 REDUP 有效性
 │   │
-│   ├── 03_generate_insertion_wfst.py        # [Stage 3] 生成插入语分类WFST
-│   ├── 05.stage3_insertion_analysis.py      # [Stage 3] 运行插入语分析
+│   ├── 05.generate_insertion_context_xfst.py # [Stage 3] 生成字符标注XFST
+│   ├── 06.stage3_insertion_analysis.py      # [Stage 3] 运行插入语分析
 │   └── 成分分析.md                           # 插入语成分分析文档
 │
 ├── outputs/                                   # 输出结果
-│   ├── liheci_hfst_outputs.tsv              # Stage 1+2 输出 (208 rows)
+│   ├── liheci_hfst_outputs.tsv              # Stage 1+2 输出 (206 rows)
 │   ├── liheci_hfst_run.log                  # Stage 1 运行日志
 │   ├── liheci_redup_validation.log          # Stage 2 验证日志
-│   ├── liheci_with_insertion_analysis.tsv   # Stage 3 输出（含置信度）
-│   └── liheci_insertion_analysis.log        # Stage 3 分析日志
+│   └── liheci_insertion_analysis.tsv        # Stage 3 输出（含插入语分析, 206 rows）
 │
 ├── hfst-3.16.2/                              # HFST 工具包 (Windows)
 ├── pipeline.md                                # 流程说明文档
@@ -64,11 +63,12 @@ liheci-analyzer/
 - ✅ **Stage 1**: 识别离合词的 **SPLIT** 形式（插入）：睡了一觉
 - ✅ **Stage 2**: 验证 **REDUP** 重叠形式的有效性：散散步 ✓ / 结结婚 ✗
 - ✅ **Stage 3**: 使用加权FST（WFST）分析插入语类型并计算置信度
-- ✅ 支持多种插入成分：体标记、数量短语、代词、结果补语等
-- ✅ 基于Tropical semiring的置信度评分（0.0-1.0）
+- ✅ 支持多种插入成分：体标记、数量HFST替换规则标注插入成分（8类标签），Python提取并分类插入语类型
+- ✅ 支持多种插入成分：体标记、数量短语、代词、结果补语、修饰语等
+- ✅ 基于标注覆盖率的置信度评分（0.0-1.0），考虑标签字符占比
+- ✅ 错误检测：MISSING_DE（缺少"的"）、PP_POS（介词短语位置错误）
 - ✅ 句子级别分析，自动定位离合词位置
-- ✅ 多阶段验证，逐步过滤低置信度结果
-
+- ✅ 多阶段验证，逐步过滤低质量
 ## 环境要求
 
 - Python 3.7+
@@ -126,9 +126,9 @@ python scripts/03.stage1_split_whole_recognition.py
 python scripts/04.stage2_redup_recognition.py
 # 输出: 更新 outputs/liheci_hfst_outputs.tsv (208 rows)
 
-# Stage 3: 插入语分析与置信度评分
-python scripts/05.stage3_insertion_analysis.py
-# 输出: outputs/liheci_with_insertion_analysis.tsv (208 rows + scores)
+# Stage 3: 插入语成分分析
+python scripts/06.stage3_insertion_analysis.py
+# 输出: outputs/liheci_insertion_analysis.tsv (206 rows + analysis)
 ```
 
 ### 从源码重新生成 XFST 文件
@@ -167,20 +167,16 @@ cd ../..
 python scripts/04.stage2_redup_recognition.py
 ```
 
-#### Stage 3: Insertion Analysis (WFST)
 
 ```bash
-# 1. 生成加权 XFST 规则文件
-python scripts/03_generate_insertion_wfst.py
-# 输出: scripts/hfst_files/liheci_insertion_classifier.xfst
+# 1. 生成 XFST 字符标注规则
+python scripts/05.generate_insertion_context_xfst.py
+# 输出: scripts/hfst_files/liheci_insertion_annotator.xfst
+# 自动编译: scripts/hfst_files/liheci_insertion_annotator.hfst
 
-# 2. 编译为加权 HFST (Tropical semiring)
-cd scripts/hfst_files
-hfst-xfst -F liheci_insertion_classifier.xfst
-# 输出: liheci_insertion_classifier.analyser.hfst
-
-# 3. 运行插入语分析
-cd ../..
+# 2. 运行插入语分析
+python scripts/06.stage3_insertion_analysis.py
+# 输出: outputs/liheci_insertion_analysis.tsv
 python scripts/05.stage3_insertion_analysis.py
 ```
 
@@ -211,9 +207,9 @@ echo "见一见面" | hfst-lookup scripts/liheci_redup.analyser.hfst
 208 rows，过滤了无效的重叠形式：
 
 - **190 rows**: 非重叠形式（WHOLE 或 SPLIT）
-- **18 rows**: 有效的重叠形式（REDUP）
+- 6 rows，过滤了无效的重叠形式：
 
-**有效的 REDUP lemmas (18个)**：
+- **188EDUP lemmas (18个)**：
 散步, 见面, 聊天, 睡觉, 把脉, 洗澡, 鼓掌, 敲门, 放假, 开会, 加班, 输液, 看病, 游泳, 排队, 散心, 请客, (1 more)
 
 **被过滤的无效 REDUP lemmas (45个)**：
@@ -223,31 +219,49 @@ echo "见一见面" | hfst-lookup scripts/liheci_redup.analyser.hfst
 
 208 rows with additional columns:
 
-| insertion | insertion_type | confidence | hfst_weight |
-|-----------|----------------|------------|--------------|
-| 了一个好 | aspect+modifier+quant | 0.92 | 0.08 |
-| 散 | redup_prefix | 0.88 | 0.12 |
-| 了 | aspect_marker | 0.95 | 0.05 |
+| insertion | insertion_insertion_analysis.tsv`)
 
-**Confidence Score Interpretation**:
-- **≥ 0.85**: High confidence (likely valid liheci)
-- **0.60-0.84**: Medium confidence (needs review)
-- **< 0.60**: Low confidence (likely false positive)
+206 rows with additional columns:
+
+| insertion | insertion_tagged | insertion_type | has_de | error_type | confidence_score |
+|-----------|------------------|----------------|--------|------------|------------------|
+| 了一个好 | 了:ASPECT+一:NUM+个:CLF+好:MOD | ASPECT_QUANT | False | None | 1.00 |
+| 个热水 | 个:CLF | QUANTIFIER | False | None | 0.33 |
+| 完 | 完:RES | RESULTATIVE | False | None | 1.00 |
+
+**Confidence Score Calculation** (Coverage-based):
+```
+confidence = tagged_chars / total_chars
+```
+- "了一个好" → 4 tagged / 4 total = **1.00** (100% coverage)
+- "个热水" → 1 tagged / 3 total = **0.33** (33% coverage)
+- "了一会儿" → 2 tagged / 4 total = **0.50** (50% coverage)
+
+**Error Adjustments**:
+- **MISSING_DE**: confidence *= 0.3 (requires "的" but missing)
+- **PP_POS**: confidence *= 0.2 (prepositional phrase in wrong position)
 
 **Insertion Type Categories**:
-- `aspect_marker`: 了/过/着 (0.95 confidence)
-- `aspect+quantifier`: 了一个/过三次 (0.92)
-- `quantifier`: 一个/三次 (0.85)
-- `pronoun`: 我/你/他 (0.75)
-- `modifier+quant`: 好几个/大半天 (0.82)
-- `result_complement`: 完/好/到 (0.75)
-- `redup_prefix`: AAB pattern (0.88)
-- `whole_form`: No insertion (0.50)
-- `unknown`: Complex/unrecognized (0.30)
+- `ASPECT_QUANT`: ASPECT + NUM + CLF (e.g., 了一个)
+- `ASPECT`: ASPECT only (e.g., 了, 过, 着)
+- `QUANTIFIER`: NUM + CLF or CLF only (e.g., 一个, 个)
+- `PRONOUN_DE`: PRO + DE (e.g., 他的)
+- `PRONOUN`: PRO only (e.g., 我, 你, 他)
+- `MODIFIER_DE`: MOD + DE (e.g., 好的)
+- `MODIFIER`: MOD only (e.g., 好, 大, 很)
+- `RESULTATIVE`: RES (e.g., 完, 到)
+- `EXT_PP`: External prepositional phrase (WHOLE forms with 跟他, 和我, etc.)
+- `EMPTY`: No insertion (WHOLE forms)
+- `REDUP_SKIP`: Skipped reduplication forms
+- `UNKNOWN`: Unrecognized pattern
 
-## 数据说明
-
-### 离合词词典 (`data/liheci_lexicon.csv`)
+**Statistics** (from 206 rows):
+- 181 classified insertions (88% coverage)
+- 12 UNKNOWN insertions (6%)
+- 18 REDUP_SKIP (9%)
+- 10 PP_POS errors detected
+- 5 MISSING_DE errors detected
+- Average confidence: 0.62
 
 包含 131 个离合词条目，字段包括：
 - **Lemma**: 离合词原形
@@ -300,10 +314,14 @@ hfst-xfst -F input.xfst
 - **Stage 1**: 663 states, 131 lemmas
 - **Stage 2**: 225 states, 55 AAB lemmas
 
-### HFST Lookup 输出格式
-
-```
-input\tanalysis\tweight
+### Stage 3 分析时间**: 处理 206 个句子约需 30-60 秒（HFST lookup较慢）
+- **编译时间**: 
+  - Stage 1 (131 lemmas): 约 30-60 秒
+  - Stage 2 (55 lemmas): 约 10-20 秒
+  - Stage 3 (8 component tags): 约 5-10 秒
+- **FST 大小**: 
+  - Stage 1/2: 每个 .hfst 文件约 7MB
+  - Stage 3: liheci_insertion_annotator.hfst 约 1MB (43 states, 123 arcs)
 散散步	散步+Lemma+Verb-Object+REDUP	0.000000
 ```
 
@@ -329,16 +347,22 @@ input\tanalysis\tweight
 2. 使用了错误的注释语法 (`#` 而非 `!`)
 3. Generator/Analyser 保存顺序错误
 4. HFST 输出解析逻辑有误
-
-**解决方案**:
-- 添加字符格式化函数
+覆盖**: Stage 3 支持8类常见标签，部分词汇（如时间词"分钟"、"会儿"）未标注
+3. **标签粒度**: 使用字符级标注，无法识别多字词（如"好几"、"大半"作为整体）
+4. **语义验证**: 未实现语义层面的及物性检查、介词结构要求等
+5 添加字符格式化函数
 - 修正 XFST 语法
 - 正确的保存顺序
-- 正确解析 TAB 分隔的输出
-
-详见 commit 1641d71
-
-### 问题 2: 输出重复行
+- 正确解析 TAB 分隔2**:
+  - ✅ 重新实现 Stage 3: 使用XFST替换规则进行字符级标注
+  - ✅ 8类成分标签: ASPECT, NUM, CLF, PRO, DE, MOD, RES, PREP
+  - ✅ Python提取 `<HEAD>` 和 `<TAIL>` 之间的标注内容
+  - ✅ 11种插入语类型分类 (ASPECT_QUANT, QUANTIFIER, ASPECT等)
+  - ✅ 基于标注覆盖率的置信度计算: tagged_chars / total_chars
+  - ✅ 错误检测: MISSING_DE, PP_POS（置信度惩罚）
+  - ✅ 输出 206 rows 插入语分析结果，平均置信度 0.62
+  - ✅ 统计: 88% 分类覆盖率, 15个错误检测
+- **2026-01-01**:
 **症状**: 同一 (sent_id, lemma, shape) 出现多次
 
 **解决方案**: 在 Stage 2 中按 (sent_id, lemma, shape) 去重
