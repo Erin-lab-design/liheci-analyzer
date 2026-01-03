@@ -1,0 +1,32 @@
+2026-01-03 20:26:38,543 [INFO] === Stage 4: POS Validation starts ===
+2026-01-03 20:26:38,546 [INFO] Loaded 155 lemmas from lexicon: D:\Erin\liheci-analyzer\data\liheci_lexicon.csv
+2026-01-03 20:26:38,546 [INFO] Loading HanLP models...
+2026-01-03 20:26:57,711 [INFO] HanLP models ready.
+2026-01-03 20:26:57,712 [INFO] Loaded 178 rows from D:\Erin\liheci-analyzer\outputs\liheci_insertion_analysis.tsv
+2026-01-03 20:27:00,263 [INFO] === Stage 4: POS Validation complete ===
+2026-01-03 20:27:00,264 [INFO] Total rows processed: 178
+2026-01-03 20:27:00,264 [INFO] Validated (passed):   167
+2026-01-03 20:27:00,264 [INFO] Rejected (failed):    11
+2026-01-03 20:27:00,264 [INFO] 
+2026-01-03 20:27:00,264 [INFO] Rejection reasons breakdown:
+2026-01-03 20:27:00,265 [INFO]   head_pos_invalid: 11
+2026-01-03 20:27:00,265 [INFO] 
+2026-01-03 20:27:00,265 [INFO] Output files:
+2026-01-03 20:27:00,265 [INFO]   Validated: D:\Erin\liheci-analyzer\outputs\liheci_pos_validated.tsv
+2026-01-03 20:27:00,265 [INFO]   Rejected:  D:\Erin\liheci-analyzer\outputs\liheci_pos_rejected.tsv
+2026-01-03 21:28:14,644 [INFO] === Stage 4: POS Validation starts ===
+2026-01-03 21:28:14,647 [INFO] Loaded 155 lemmas from lexicon: D:\Erin\liheci-analyzer\data\liheci_lexicon.csv
+2026-01-03 21:28:14,648 [INFO] Loading HanLP models...
+2026-01-03 21:28:33,600 [INFO] HanLP models ready.
+2026-01-03 21:28:33,601 [INFO] Loaded 170 rows from D:\Erin\liheci-analyzer\outputs\liheci_insertion_analysis.tsv
+2026-01-03 21:28:36,382 [INFO] === Stage 4: POS Validation complete ===
+2026-01-03 21:28:36,382 [INFO] Total rows processed: 170
+2026-01-03 21:28:36,383 [INFO] Validated (passed):   160
+2026-01-03 21:28:36,383 [INFO] Rejected (failed):    10
+2026-01-03 21:28:36,383 [INFO] 
+2026-01-03 21:28:36,383 [INFO] Rejection reasons breakdown:
+2026-01-03 21:28:36,383 [INFO]   head_pos_invalid: 10
+2026-01-03 21:28:36,383 [INFO] 
+2026-01-03 21:28:36,383 [INFO] Output files:
+2026-01-03 21:28:36,384 [INFO]   Validated: D:\Erin\liheci-analyzer\outputs\liheci_pos_validated.tsv
+2026-01-03 21:28:36,384 [INFO]   Rejected:  D:\Erin\liheci-analyzer\outputs\liheci_pos_rejected.tsv

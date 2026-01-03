@@ -1,0 +1,88 @@
+Reading Stage 1 output...
+  Read 301 rows, 301 unique after dedup
+  Duplicates removed: 0
+
+Identified 66 potential reduplication patterns
+
+Validating reduplication with HFST...
+  ✓ Valid REDUP: sent_id=8, lemma=散步, sentence='晚饭后我们去河边散散步。...'
+  ✓ Valid REDUP: sent_id=75, lemma=把脉, sentence='老中医给他把了把脉。...'
+  ✓ Valid REDUP: sent_id=99, lemma=散心, sentence='她心情不好，想出去散散心。...'
+  ✓ Valid REDUP: sent_id=131, lemma=散步, sentence='晚饭后我们去散散步。...'
+  ✓ Valid REDUP: sent_id=132, lemma=见面, sentence='好久不见，咱们见一见面吧。...'
+  ✓ Valid REDUP: sent_id=133, lemma=聊天, sentence='周末找个咖啡馆聊聊天。...'
+  ✓ Valid REDUP: sent_id=134, lemma=睡觉, sentence='困了就去睡一睡觉休息一下。...'
+  ✓ Valid REDUP: sent_id=135, lemma=把脉, sentence='医生给他把把脉。...'
+  ✓ Valid REDUP: sent_id=136, lemma=洗澡, sentence='身上脏了，去洗洗澡。...'
+  ✓ Valid REDUP: sent_id=137, lemma=鼓掌, sentence='观众为精彩的表演鼓了鼓掌。...'
+  ✓ Valid REDUP: sent_id=138, lemma=敲门, sentence='狼外婆敲了敲门。...'
+  ✓ Valid REDUP: sent_id=139, lemma=把关, sentence='你可得好好给咱们女儿把把关呐。...'
+  ✓ Valid REDUP: sent_id=140, lemma=拌嘴, sentence='小两口偶尔拌拌嘴很正常。...'
+  ✓ Valid REDUP: sent_id=141, lemma=打球, sentence='他周末喜欢打打球。...'
+  ✓ Valid REDUP: sent_id=142, lemma=看病, sentence='我们要带奶奶去看看病。...'
+  ✓ Valid REDUP: sent_id=143, lemma=开会, sentence='我们来开开会商讨一下。...'
+  ✓ Valid REDUP: sent_id=144, lemma=输液, sentence='只是要输输液而已。...'
+  ✓ Valid REDUP: sent_id=145, lemma=游泳, sentence='他等下要去游游泳。...'
+  ✓ Valid REDUP: sent_id=146, lemma=请客, sentence='该你请请客了。...'
+  ✓ Valid REDUP: sent_id=147, lemma=放假, sentence='给孩子们放放假吧。...'
+  ✓ Valid REDUP: sent_id=148, lemma=加班, sentence='要辛苦你加加班了。...'
+
+Valid reduplication found: 21
+  ✗ Filtered invalid REDUP: sent_id=41, lemma=结婚
+  ✗ Filtered invalid REDUP: sent_id=189, lemma=结婚
+  ✗ Filtered invalid REDUP: sent_id=190, lemma=离婚
+  ✗ Filtered invalid REDUP: sent_id=191, lemma=订婚
+  ✗ Filtered invalid REDUP: sent_id=192, lemma=分手
+  ✗ Filtered invalid REDUP: sent_id=195, lemma=放心
+  ✗ Filtered invalid REDUP: sent_id=196, lemma=担心
+  ✗ Filtered invalid REDUP: sent_id=197, lemma=灰心
+  ✗ Filtered invalid REDUP: sent_id=198, lemma=操心
+  ✗ Filtered invalid REDUP: sent_id=199, lemma=动心
+  ✗ Filtered invalid REDUP: sent_id=204, lemma=下课
+  ✗ Filtered invalid REDUP: sent_id=205, lemma=请假
+  ✗ Filtered invalid REDUP: sent_id=206, lemma=考试
+  ✗ Filtered invalid REDUP: sent_id=208, lemma=留学
+  ✗ Filtered invalid REDUP: sent_id=210, lemma=辞职
+  ✗ Filtered invalid REDUP: sent_id=214, lemma=生病
+  ✗ Filtered invalid REDUP: sent_id=215, lemma=住院
+  ✗ Filtered invalid REDUP: sent_id=220, lemma=鞠躬
+  ✗ Filtered invalid REDUP: sent_id=221, lemma=敬礼
+  ✗ Filtered invalid REDUP: sent_id=222, lemma=站岗
+  ✗ Filtered invalid REDUP: sent_id=225, lemma=受罪
+  ✗ Filtered invalid REDUP: sent_id=228, lemma=出院
+  ✗ Filtered invalid REDUP: sent_id=229, lemma=回家
+  ✗ Filtered invalid REDUP: sent_id=233, lemma=签名
+  ✗ Filtered invalid REDUP: sent_id=234, lemma=排队
+  ✗ Filtered invalid REDUP: sent_id=236, lemma=戒烟
+  ✗ Filtered invalid REDUP: sent_id=239, lemma=受伤
+  ✗ Filtered invalid REDUP: sent_id=241, lemma=扫兴
+  ✗ Filtered invalid REDUP: sent_id=247, lemma=接吻
+  ✗ Filtered invalid REDUP: sent_id=248, lemma=开枪
+  ✗ Filtered invalid REDUP: sent_id=249, lemma=受骗
+  ✗ Filtered invalid REDUP: sent_id=250, lemma=挨批
+  ✗ Filtered invalid REDUP: sent_id=251, lemma=干杯
+  ✗ Filtered invalid REDUP: sent_id=254, lemma=退休
+  ✗ Filtered invalid REDUP: sent_id=255, lemma=出事
+  ✗ Filtered invalid REDUP: sent_id=259, lemma=提醒
+  ✗ Filtered invalid REDUP: sent_id=260, lemma=出恭
+  ✗ Filtered invalid REDUP: sent_id=262, lemma=学习
+  ✗ Filtered invalid REDUP: sent_id=263, lemma=慷慨
+  ✗ Filtered invalid REDUP: sent_id=264, lemma=幽默
+  ✗ Filtered invalid REDUP: sent_id=265, lemma=滑稽
+  ✗ Filtered invalid REDUP: sent_id=268, lemma=军训
+  ✗ Filtered invalid REDUP: sent_id=269, lemma=体检
+  ✗ Filtered invalid REDUP: sent_id=270, lemma=同学
+  ✗ Filtered invalid REDUP: sent_id=283, lemma=告状
+
+============================================================
+Stage 2 Validation Results:
+  Original rows: 301
+  After deduplication: 301
+  Potential reduplication patterns: 132 rows
+    Valid reduplication kept: 21 lemmas
+    Invalid reduplication filtered: 90 rows
+  Non-reduplication kept: 169 rows
+  Total output rows: 190
+
+Output written to: D:\Erin\liheci-analyzer\outputs\liheci_hfst_outputs.tsv
+============================================================
