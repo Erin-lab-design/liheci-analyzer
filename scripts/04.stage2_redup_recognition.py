@@ -20,7 +20,9 @@ from collections import defaultdict
 
 def setup_logging():
     """Configure logging."""
-    log_file = Path(__file__).parent.parent / "outputs" / "liheci_redup_validation.log"
+    log_dir = Path(__file__).parent.parent / "outputs" / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_file = log_dir / "liheci_redup_validation.log"
     logging.basicConfig(
         level=logging.INFO,
         format="%(message)s",

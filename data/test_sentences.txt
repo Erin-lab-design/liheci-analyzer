@@ -19,157 +19,152 @@ sent_id	gold_stem	gold_label	sentence
 9	上网	True	为了查资料，我上了两个小时网。
 10	理发	True	过年前要去理一次发。
 11	搬家	True	这几年北漂搬了三次家。
-12	起床	True	生病了，难受得起不来床。
+12	起床	True	他难受得起不来床。
 13	看书	True	他在图书馆安静地看了半天书。
 14	写字	True	练习了十年，终于写了一手好字。
-15	开门	True	他敲了半天门，快去开一下门。
-15	敲门	True	他敲了半天门，快去开一下门。
-16	关灯	True	记得关了灯再睡觉。
-16	睡觉	True	记得关了灯再睡觉。
-17	做饭	True	今天妈妈做了一顿丰盛的晚饭。
-18	打球	True	周末约朋友去打了一场球。
-19	抽烟	True	压力大的时候他抽了一根烟。
-20	见面	True	我们虽然同城，但也只见过一面。
-21	帮忙	True	你真是帮了我一个大忙。
-22	聊天	True	和老朋友见面，聊了一整天。
-23	说话	True	请你帮我说两句好话。
-24	吵架	True	因为一点小事，他们吵了一架。
-25	打架	True	两只猫在屋顶上打了一架。
-26	打仗	True	俄罗斯和乌克兰还要打多久的仗呢？
-27	生气	True	别再生他的气了。
-28	发火	True	领导在会上发了一通火。
-29	道歉	True	做错事就该给人家道一个歉。
-30	道谢	True	临走时，他特意向主人道了一声谢。
-31	拜年	True	大年初一去给长辈拜个年。
-32	握手	True	大家见面互相握了一下手。
-33	捣乱	True	别在他工作的时候捣他的乱。
-34	开玩笑	True	我只是跟你开了一个玩笑。
-35	撒谎	True	他脸红了，显然是撒了一个谎。
-36	吹牛	True	别听他瞎说，他又在吹牛。
-37	告状	True	他去老师那里告了你一状。
-38	请客	True	为了庆祝升职，他请了一次客。
-39	结婚	True	不知道他结没结婚。
-40	离婚	True	听说邻居离了两次婚。
-41	订婚	True	他们刚刚订完婚。
-42	谈恋爱	True	大学期间谈了一场轰轰烈烈的恋爱。
-43	分手	True	因为性格不合，他们分了一次手。
-44	伤心	True	这件事真是让他伤透了心。
-45	吃醋	True	看到男朋友和别人说话，她吃谁的醋？
-45	说话	True	看到男朋友和别人说话，她吃谁的醋？
-46	放心	True	你就放一百个心吧。
-47	灰心	True	失败了不要紧，千万别灰了心。
-48	操心	True	为了这个家，由于操碎了心。
-49	动心	True	面对诱惑，很难不动凡心。
-50	上班	True	即使生病了，她还是上了一天班。
-51	下班	True	还没下班，老板就走了。
-52	下班	True	下了班之后我们去逛街。
-53	上学	True	他在这个城市上了六年学。
-54	上课	True	今天上午上了两节课。
-55	下课	True	下了课我们就去食堂。
-56	请假	True	身体不舒服，请了三天假。
-57	放假	True	五一劳动节放了三天假。
-58	考试	True	为了准备考这场试，他通宵复习。
-59	毕业	True	毕了业以后打算去哪里？
-60	留学	True	他在英国留了三年学。
-61	报名	True	想参加比赛，得先报一个名。
-62	辞职	True	受不了老板的脾气，他辞了职。
-63	开会	True	下午在公司开了一个长会。
-64	发言	True	作为代表，他在会上发了一次言。
-65	值班	True	昨天晚上轮到我值了一个夜班。
-66	加班	True	项目上线前，大家加了三个小时班。
-67	出差	True	下周要去上海出了一趟差。
-68	生病	True	去年冬天生了一场大病。
-69	住院	True	因为骨折，他在医院住了半个月院。
-70	打针	True	护士轻轻地给他打了一针。
-71	输液	True	发烧不退，只能去输了两瓶液。
-72	挂号	True	好不容易挂了一个专家号。
-73	把脉	True	老中医给他把了把脉。
-74	减肥	True	坚持运动，终于减了十斤肥。
-75	鞠躬	True	表演结束，演员向观众鞠了一个躬。
-76	敬礼	True	士兵向国旗敬了一个礼。
-77	站岗	True	无论风雨，都要站好这一班岗。
-78	吃苦	True	年轻的时候多吃一点苦没关系。
-79	吃亏	True	虽然吃了个大亏，但也长了记性。
-80	受罪	True	这趟旅行简直是花钱受了老大的罪。
-81	看病	True	去医院挂号看个病真难。
-81	挂号	True	去医院挂号看个病真难。
-82	跳舞	True	她在晚会上跳了一支优美的舞。
-83	唱歌	True	他很高兴，就唱了一首歌。
-84	出院	True	等出了院就可以回家了。
-84	回家	True	等出了院就可以回家了。
-85	游泳	True	夏天去海边游了一次泳。
-86	划船	True	我们在湖上划了一会儿船。
-87	钓鱼	True	周末去水库钓了一天鱼。
-88	滑冰	True	冬天去什刹海滑了一次冰。
-89	签名	True	明星给粉丝签了一个名。
-90	排队	True	买网红奶茶排了半天队。
-91	打工	True	辛苦打了一辈子工，终于退休了。
-92	戒烟	True	为了健康，他彻底戒了烟。
-93	回家	True	春节一定要回了一趟家。
-94	死心	True	既然不可能，你就死了这条心吧。
-95	挑水	True	和尚下山挑了一担水。
-96	受伤	True	他在比赛中受了很重的伤。
-97	散心	True	她心情不好，想出去散散心。
-98	扫兴	True	突然下好大的雨，真是扫了大家的兴。
-98	下雨	True	突然下好大的雨，真是扫了大家的兴。
-99	领情	True	我好心帮你，你却不领我的情。
-100	送礼	True	过节去亲戚家送了一份厚礼。
-101	拌嘴	True	小两口经常拌几句嘴，床头吵架床尾和。
-102	叹气	True	遇到困难，他无奈地叹了一口气。
-103	丢脸	True	在这么多人面前摔倒，真是丢尽了脸。
-104	接吻	True	他们当街接了个法式湿吻。
-105	开枪	True	嫌疑人对着沙滩上聚集的人群开了三枪。
-106	受骗	True	因为贪小便宜，老人受了一次骗。
-107	挨批	True	工作没做好，挨了一顿批。
-108	干杯	True	为了我们的友谊，干了这杯！
-109	革命	True	如果再不改革，就是革自己的命。
-110	造反	True	这孩子真不听话，是要造谁的反？
-111	退休	True	还没到年纪，他就退了休。
-112	出事	True	他们家出了点事。
-113	把关	True	质量问题一定要把好关。
-114	施肥	True	春天到了，给庄稼施了一遍肥。
-115	倒霉	True	出门踩到泥，真是倒了大霉。
+15	开门	True	你快去开一下门。
+16	敲门	True	他敲了半天门。
+17	关灯	True	记得关了灯再睡。
+18	睡觉	True	太累了，他睡了一个好觉。
+19	做饭	True	今天妈妈做了一顿丰盛的晚饭。
+20	打球	True	周末约朋友去打了一场球。
+21	抽烟	True	压力大的时候他抽了一根烟。
+22	见面	True	我们虽然同城，但也只见过一面。
+23	帮忙	True	你真是帮了我一个大忙。
+24	聊天	True	和老朋友聊了一整天。
+25	说话	True	请你帮我说两句好话。
+26	吵架	True	因为一点小事，他们吵了一架。
+27	打架	True	两只猫在屋顶上打了一架。
+28	打仗	True	俄罗斯和乌克兰还要打多久的仗呢？
+29	生气	True	别再生他的气了。
+30	发火	True	领导在会上发了一通火。
+31	道歉	True	做错事就该给人家道一个歉。
+32	道谢	True	临走时，他特意向主人道了一声谢。
+33	拜年	True	大年初一去给长辈拜个年。
+34	握手	True	大家互相握了一下手。
+35	捣乱	True	别在他工作的时候捣他的乱。
+36	开玩笑	True	我只是跟你开了一个玩笑。
+37	撒谎	True	他脸红了，显然是撒了一个谎。
+38	吹牛	True	别听他瞎说，他又在吹牛。
+39	告状	True	他去老师那里告了你一状。
+40	请客	True	为了庆祝升职，他请了一次客。
+41	结婚	True	不知道他结没结婚。
+42	离婚	True	听说邻居离了两次婚。
+43	订婚	True	他们刚刚订完婚。
+44	谈恋爱	True	大学期间谈了一场轰轰烈烈的恋爱。
+45	分手	True	因为性格不合，他们分了一次手。
+46	伤心	True	这件事真是让他伤透了心。
+47	吃醋	True	她到底在吃谁的醋？
+48	放心	True	你就放一百个心吧。
+49	灰心	True	失败了不要紧，千万别灰了心。
+50	操心	True	为了这个家，由于操碎了心。
+51	动心	True	面对诱惑，他动了一点点心。
+52	上班	True	即使不舒服，她还是上了一天班。
+53	下班	True	还没下班，老板就走了。
+54	下班	True	下了班之后我们去逛街。
+55	上学	True	他在这个城市上了六年学。
+56	上课	True	今天上午上了两节课。
+57	下课	True	下了课我们就去食堂。
+58	请假	True	身体不舒服，请了三天假。
+59	放假	True	五一劳动节放了三天假。
+60	考试	True	为了准备考这场试，他通宵复习。
+61	毕业	True	毕了业以后打算去哪里？
+62	留学	True	他在英国留了三年学。
+63	报名	True	想参加比赛，得先报一个名。
+64	辞职	True	受不了老板的脾气，他辞了职。
+65	开会	True	下午在公司开了一个长会。
+66	发言	True	作为代表，他在会上发了一次言。
+67	值班	True	昨天晚上轮到我值了一个夜班。
+68	加班	True	项目上线前，大家加了三个小时班。
+69	出差	True	下周要去上海出了一趟差。
+70	生病	True	去年冬天生了一场大病。
+71	住院	True	因为骨折，他在医院住了半个月院。
+72	打针	True	护士轻轻地给他打了一针。
+73	输液	True	发烧不退，只能去输了两瓶液。
+74	挂号	True	好不容易挂了一个专家号。
+75	把脉	True	老中医给他把了把脉。
+76	减肥	True	坚持运动，终于减了十斤肥。
+77	鞠躬	True	表演结束，演员向观众鞠了一个躬。
+78	敬礼	True	士兵向国旗敬了一个礼。
+79	站岗	True	无论风雨，都要站好这一班岗。
+80	吃苦	True	年轻的时候多吃一点苦没关系。
+81	吃亏	True	虽然吃了个大亏，但也长了记性。
+82	受罪	True	这趟旅行简直是花钱受了老大的罪。
+83	看病	True	去医院看个病真难。
+84	跳舞	True	她在晚会上跳了一支优美的舞。
+85	唱歌	True	他很高兴，就唱了一首歌。
+86	出院	True	等出了院就好了。
+87	游泳	True	夏天去海边游了一次泳。
+88	划船	True	我们在湖上划了一会儿船。
+89	钓鱼	True	周末去水库钓了一天鱼。
+90	滑冰	True	冬天去什刹海滑了一次冰。
+91	签名	True	明星给粉丝签了一个名。
+92	排队	True	买网红奶茶排了半天队。
+93	打工	True	辛苦了一辈子，终于退休了。
+94	戒烟	True	为了健康，他彻底戒了烟。
+95	回家	True	春节一定要回了一趟家。
+96	死心	True	既然不可能，你就死了这条心吧。
+97	挑水	True	和尚下山挑了一担水。
+98	受伤	True	他在比赛中受了很重的伤。
+99	散心	True	她心情不好，想出去散散心。
+100	扫兴	True	这件事真是扫了大家的兴。
+101	领情	True	我好心帮你，你却不领我的情。
+102	送礼	True	过节去亲戚家送了一份厚礼。
+103	拌嘴	True	小两口经常拌几句嘴。
+104	叹气	True	遇到困难，他无奈地叹了一口气。
+105	丢脸	True	在这么多人面前摔倒，真是丢尽了脸。
+106	接吻	True	他们当街接了个法式湿吻。
+107	开枪	True	嫌疑人对着沙滩上聚集的人群开了三枪。
+108	受骗	True	因为贪便宜，老人受了一次骗。
+109	挨批	True	工作没做好，挨了一顿批。
+110	干杯	True	为了我们的友谊，干了这杯！
+111	革命	True	如果再不改革，就是革自己的命。
+112	造反	True	这孩子真不听话，是要造谁的反？
+113	退休	True	还没到年纪，他就退了休。
+114	出事	True	他们家出了点事。
+115	把关	True	质量问题一定要把好关。
+116	施肥	True	春天到了，给庄稼施了一遍肥。
+117	倒霉	True	出门踩到泥，真是倒了大霉。
 
 # ------------------------------------------------------------
 # [PART 2] Pseudo-VO or simple words (Type B/C)
 # ------------------------------------------------------------
-116	提醒	True	谢谢你，真是给我提了个醒。
-117	出恭	True	皇帝上朝前出了一次恭。
-118	将军	True	这一步棋真是将了他一军。
-119	学习	True	周末准备在家学三小时习。
-120	慷慨	True	这些贪官都是在慷国家之慨。
-121	慷慨	True	你这是慷他人之慨。
-122	幽默	True	人生苦短，何不幽他一默。
-123	滑稽	True	这种说法简直是滑天下之大稽。
-124	小便	True	刚刚去厕所小了一次便。
-125	大便	True	如果不舒服，可能大不出来便。
-126	军训	True	大一新生刚军完了训就要上课了。
-127	体检	True	入职前体了个检，所幸一切正常。
-128	同学	True	我和他虽然同过三年学，但不熟。
+118	提醒	True	谢谢你，真是给我提了个醒。
+119	出恭	True	皇帝上朝前出了一次恭。
+120	将军	True	这一步棋真是将了他一军。
+121	学习	True	周末准备在家学三小时习。
+122	慷慨	True	这些贪官都是在慷国家之慨。
+123	慷慨	True	你这是慷他人之慨。
+124	幽默	True	人生苦短，何不幽他一默。
+125	滑稽	True	这种说法简直是滑天下之大稽。
+126	小便	True	刚刚去厕所小了一次便。
+127	大便	True	如果不舒服，可能大不出来便。
+128	军训	True	大一新生刚军完了训。
+129	体检	True	入职前体了个检，所幸一切正常。
+130	同学	True	我和他虽然同过三年学，但不熟。
 
 # ------------------------------------------------------------
 # [PART 3] Reduplication - AAB / A一AB
 # ------------------------------------------------------------
-129	散步	True	晚饭后我们去散散步。
-130	见面	True	好久不见，咱们见一见面吧。
-131	聊天	True	周末找个咖啡馆聊聊天。
-132	睡觉	True	困了就去睡一睡觉休息一下。
-133	把脉	True	医生给他把把脉。
-134	洗澡	True	身上脏了，去洗洗澡。
-135	鼓掌	True	观众为精彩的表演鼓了鼓掌。
-136	敲门	True	狼外婆敲了敲门。
-137 把关    True    你可得好好给咱们女儿把把关呐。
-138 拌嘴    True    小夫妻吵吵架，拌拌嘴，都是很正常的。
-138 吵架    True    小夫妻吵吵架，拌拌嘴，都是很正常的。
-139 打球    True    他平时生活很规律，就看看书，打打球，吃吃饭，睡睡觉
-139 看书    True    他平时生活很规律，就看看书，打打球，吃吃饭，睡睡觉
-139 吃饭    True    他平时生活很规律，就看看书，打打球，吃吃饭，睡睡觉
-139 睡觉    True    他平时生活很规律，就看看书，打打球，吃吃饭，睡睡觉
-221	看病	True	我们要带奶奶去看看病。
-203	开会	True	我们来开开会商讨一下。
-211	输液	True	只是要输输液而已。
-226	游泳	True	他等下要去游游泳。
-281	请客	True	该你请请客了。
+131	散步	True	晚饭后我们去散散步。
+132	见面	True	好久不见，咱们见一见面吧。
+133	聊天	True	周末找个咖啡馆聊聊天。
+134	睡觉	True	困了就去睡一睡觉休息一下。
+135	把脉	True	医生给他把把脉。
+136	洗澡	True	身上脏了，去洗洗澡。
+137	鼓掌	True	观众为精彩的表演鼓了鼓掌。
+138	敲门	True	狼外婆敲了敲门。
+139	把关	True	你可得好好给咱们女儿把把关呐。
+140	拌嘴	True	小两口偶尔拌拌嘴很正常。
+141	打球	True	他周末喜欢打打球。
+142	看病	True	我们要带奶奶去看看病。
+143	开会	True	我们来开开会商讨一下。
+144	输液	True	只是要输输液而已。
+145	游泳	True	他等下要去游游泳。
+146	请客	True	该你请请客了。
+147	放假	True	给孩子们放放假吧。
+148	加班	True	要辛苦你加加班了。
+151	吃饭	True	这些人真是吃软饭的。
 # ------------------------------------------------------------
 # [PART 4] False Positives - need to be recognised as False
 # Error Types:
@@ -183,141 +178,138 @@ sent_id	gold_stem	gold_label	sentence
 # [missing head]
 
 # ------------------------------------------------------------
-140	睡觉	False	[COINCIDENCE] 他睡在床上觉得很冷。
-141	洗澡	False	[CROSS_CONST] 她用洗衣机洗了好几澡盆的衣服。
-142	吃饭	False	[COINCIDENCE] 这些人真是吃软饭的。
-143	刷牙	False	[COINCIDENCE] 这把刷子是刷锅用的，牙刷在卫生间。
-144	洗脸	False	[CROSS_CONST] 护士给病人洗了洗手，擦了擦脸。
-145	走路	False	[COINCIDENCE] 我走在乡间的小路上。
-146	跑步	False	[CROSS_CONST] 他跑完了这一步棋。
-147	散步	False	[CROSS_CONST] 他急着把文件散发给大家，走快了几步。
-148	上网	False	[COINCIDENCE] 蜘蛛爬上了高高的网架。
-149	理发	False	[COINCIDENCE] 经理发现了问题。
-150	搬家	False	[CROSS_CONST] 搬运工把家具都搬走了。
-151	起床	False	[CROSS_CONST] 他从床上起来。
-152	看书	False	[CROSS_CONST] 他看了看周围，发现书包不见了。
-153	写字	False	[CROSS_CONST] 请在纸上写下你的名字。
-154	开门	False	[CROSS_CONST] 会议刚开了个头，门外就响起了敲门声。
-155	关灯	False	[COINCIDENCE] 这事关系重大，他们灯火通明地开会到深夜。
-156	做饭	False	[CROSS_CONST] 木匠做了一套家具，饭店老板很满意。
-157	打球	False	[CROSS_CONST] 昨天打了一场激烈的比赛，球队有人受伤了。
-158	抽烟	False	[CROSS_CONST] 蒸汽机抽风了，冒那么大烟。
-159	见面	False	[REVERSED_ORDER] 他们约定了在面包店门口相见。
-160	帮忙	False	[COINCIDENCE] 丐帮的人都很忙。
-161	聊天	False	[COINCIDENCE] 英国的人喜欢聊天气。
-162	说话	False	[CROSS_CONST] 他说了几句就走了，话筒还在桌上。
-163	吵架	False	[CROSS_CONST] 吵什么吵，把架子放好。
-164	打架	False	[CROSS_CONST] 她和项目组打了几个电话，谈论目前的架构设计。
-165	打仗	False	[COINCIDENCE] 他们开打了，好大的阵仗。
-166	生气	False	[CROSS_CONST] 他生了一场大病，气色很差。
-167	发火	False	[CROSS_CONST] 她给我发消息：火车就要开了。
-168	道歉	False	[PP_POS] 她最终道向我歉了。
-169	道谢	False	[PP_POS] 她道向老师谢。
-170	拜年	False	[COINCIDENCE] 礼拜天年轻人都在休息。
-171	握手	False	[CROSS_CONST] 他握着笔，手在发抖。
-172	鼓掌	False	[REVERSED_ORDER] 这是真正的掌声，不是鼓励性质的。
-173	捣乱	False	[MISSING_DE] 别在他工作的时候捣他乱。
-174	开玩笑	False	[REVERSED_ORDER] 他的玩笑话刚开了个头。
-175	谈恋爱	False	[CROSS_CONST] 他谈的是什么，恋爱心得吗？
-176	撒谎	False	[CROSS_CONST] 你撒了一地的纸，还谎称不是自己弄的。
-177	吹牛	False	[CROSS_CONST] 吹一口气，牛皮就破了。
-178	告状	False	[COINCIDENCE] 他详细报告了目前的状况。
-179	请客	False	[CROSS_CONST] 他没说“请”，客人很不满意。
-180	结婚	False	[INVALID_REDUP] 结结婚有什么难的。
-181	离婚	False	[INVALID_REDUP] 离离婚很简单。
-182	订婚	False	[INVALID_REDUP] 订订婚不就行了。
-183	分手	False	[INVALID_REDUP] 分分手也很正常。
-184	吃醋	False	[COINCIDENCE] 你吃饺子不配醋吗？
-185	伤心	False	[CROSS_CONST] 他伤了手臂，心里很难受。
-186	放心	False	[INVALID_REDUP] 你就放放心吧。
-187	担心	False	[INVALID_REDUP] 担担心也没用。
-188	灰心	False	[INVALID_REDUP] 别灰灰心了。
-189	操心	False	[INVALID_REDUP] 操操心是父母的责任。
-190	动心	False	[INVALID_REDUP] 动动心也可以理解。
-191	上班	False	[CROSS_CONST] 你上哪去了，怎么没在班上。
-192	下班	False	[CROSS_CONST] 他下了楼，看见班长还在等
-193	上学	False	[CROSS_CONST] 往上瞧就是学校建筑。
-194	上课	False	[COINCIDENCE] 桌上放着课本。
-195	下课	False	[INVALID_REDUP] 下下课就去玩。
-196	请假	False	[INVALID_REDUP] 请请假很容易。
-197	放假	False	[INVALID_REDUP] 放放假多开心。
-198	考试	False	[INVALID_REDUP] 考考试很紧张。
-199	毕业	False	[CROSS_CONST] 我毕竟已经工作了，业余时间很少。
-200	留学	False	[INVALID_REDUP] 留留学很贵。
-201	报名	False	[COINCIDENCE] 报纸上有他的名字。
-202	辞职	False	[INVALID_REDUP] 辞辞职很简单。
-204	发言	False	[CROSS_CONST] 他头发很长，不擅言语。
-205	值班	False	[COINCIDENCE] 他值得全班的表扬。
-206	加班	False	[INVALID_REDUP] 加加班很辛苦。
-207	出差	False	[CROSS_CONST] 可惜出了问题，不然差点就成功了。
-208	生病	False	[INVALID_REDUP] 生生病很难受。
-209	住院	False	[INVALID_REDUP] 住住院很花钱。
-210	打针	False	[missing tail] 打没打孩子你自己心里清楚。
-212	挂号	False	[CROSS_CONST] 他挂了电话，问我是几号病人。
-213	把脉	False	[CROSS_CONST] 他把门关上，递给我一瓶脉动。
-214	减肥	False	[CROSS_CONST] 这样虽然减少了开支，但降低了肥料品质。
-215	鞠躬	False	[INVALID_REDUP] 门口服务员向我们鞠鞠躬。
-216	敬礼	False	[INVALID_REDUP] 你来像领导敬敬礼。
-217	站岗	False	[INVALID_REDUP] 站站岗很辛苦。
-218	吃苦	False	[COINCIDENCE]他吃了一口苦瓜。
-219	吃亏	False	[CROSS_CONST] 吃自助光吃菜干嘛，不亏吗。
-220	受罪	False	[INVALID_REDUP] 受受罪也值得。
-222	跳舞	False	[REVERSED_ORDER] 她看舞蹈看得她兴奋地跳起来。
-223	唱歌	False	[missing head]这首曲子歌词很美。
-224	出院	False	[INVALID_REDUP] 等出出院就好了。
-225	回家	False	[INVALID_REDUP] 回回家就安全了。
-227	划船	False	[CROSS_CONST] 船在海中划开波浪，片刻之后开走了。
-228	钓鱼	False	[CROSS_CONST] 钓了半天，鱼竿断了。
-229	滑冰	False	[COINCIDENCE] 她滑倒在冰面上。
-230	签名	False	[INVALID_REDUP] 签签名很酷。
-231	排队	False	[INVALID_REDUP] 排排队很无聊。
-232	打工	False	[COINCIDENCE] 你为什么打工地上的人？
-233	戒烟	False	[INVALID_REDUP] 戒戒烟很难。
-234	死心	False	[CROSS_CONST] 她养的鱼死了，心情不好。
-235	挑水	False	[CROSS_CONST] 别挑剔了，随便拿瓶水喝吧。
-236	受伤	False	[INVALID_REDUP] 受受伤很疼。
-237	散心	False	[CROSS_CONST] 他散发完了传单，心里感到很轻松。
-238	扫兴	False	[INVALID_REDUP] 这有点扫扫兴了。
-239	领情	False	[CROSS_CONST] 您就领了吧，这是代表对方情谊的礼物，
-240	送礼	False	[CROSS_CONS] 他送你东西，你也要还礼吧。
-241	拌嘴	False	[CROSS_CONST] 拌了沙拉，嘴巴很甜。
-242	叹气	False	[CROSS_CONST] 他哀叹道，真是气煞我也。
-243	丢脸	False	[MISSING_DE] 这次真的丢你脸了。
-244	接吻	False	[INVALID_REDUP] 他们在街头接接吻。
-245	开枪	False	[INVALID_REDUP] 他突然对着人群开开枪。
-246	受骗	False	[INVALID_REDUP] 年轻人不要上当受受骗。
-247	挨批	False	[INVALID_REDUP] 挨挨批是常事。
-248	干杯	False	[INVALID_REDUP] 干干杯很痛快。
-249	革命	False	[MISSING_DE] 他们这是要革你命啊。
-250	造反	False	[MISSING_DE] 造他反就是找死。
-251	退休	False	[INVALID_REDUP] 退退休就轻松了。
-252	出事	False	[INVALID_REDUP] 出出事很麻烦。
-253	把关	False	[COINCIDENCE] 他一把把门关上了。
-254	施肥	False	[REVERSED_ORDER] 她拖着肥胖的身子施施然走过来。
-255	倒霉	False	[CROSS_CONST] 她倒了一杯水进去，为了冲走发霉的部分。
-256	提醒	False	[INVALID_REDUP] 提提醒很必要。
-257	出恭	False	[INVALID_REDUP] 出出恭很着急。
-258	将军	False	[COINCIDENCE] 我们将军法处置，严惩不贷。
-259	学习	False	[COINCIDENCE] 我们这学期要学习近平思想。
-260	慷慨	False	[INVALID_REDUP] 你稍微慷慷慨嘛。
-261	幽默	False	[INVALID_REDUP] 别以为自己很幽幽默。
-262	滑稽	False	[INVALID_REDUP] 这有点滑滑稽了。
-263	小便	False	[CROSS_CONST] 贪小便宜吃大亏。
-264	大便	False	[COINCIDENCE] 父亲18岁大的时候便去广东打工了。
-265	军训	False	[INVALID_REDUP] 学生们开学要军军训。
-266	体检	False	[INVALID_REDUP] 医生给你体体检。
-267	同学	False	[INVALID_REDUP] 能和你同同学很开心。
-268	敲门	False	[CROSS_CONST] 他敲了敲桌子，发现门是开着的。
-269	见面	False	[PP_POS] 见跟他面很困难。
-270	吵架	False	[PP_POS] 吵跟她架没有意义。
-271	打架	False	[PP_POS] 打跟同学架是不好的。
-272	打仗	False	[PP_POS] 打与日军仗非常艰辛。
-273	道歉	False	[PP_POS] 道向她歉就能解决问题。
-274	道谢	False	[PP_POS] 道对他谢是应该的。
-275	拜年	False	[PP_POS] 拜给长辈年是传统习俗。
-276	开玩笑	False	[PP_POS] 开跟他玩笑只是为了逗他开心。
-277	下雨	False	[COINCIDENCE] 他在下午泪如雨下。
-278	撒谎	False	[CROSS_CONST] 你撒了一地的纸，还谎称不是自己弄的。
-279	吹牛	False	[CROSS_CONST] 看我吹的气球，牛不牛？
-280	告状	False	[INVALID_REDUP] 我想去告告状。
-282	写作业	False	[CROSS_CONST] 写完了作文，作业还没交。
+149	睡觉	False	[COINCIDENCE] 他睡在床上觉得很冷。
+150	洗澡	False	[COINCIDENCE] 她用洗衣机洗了好几澡盆的衣服。
+152	刷牙	False	[CROSS_CONST] 这把刷子是刷锅用的，牙刷在卫生间。
+153	洗脸	False	[CROSS_CONST] 护士给病人洗了洗手，擦了擦脸。
+154	走路	False	[COINCIDENCE] 我走在乡间的小路上。
+155	跑步	False	[COINCIDENCE] 他跑完了这一步棋。
+156	散步	False	[CROSS_CONST] 他急着把文件散发给大家，走快了几步。
+157	上网	False	[COINCIDENCE] 蜘蛛爬上了高高的网架。
+158	理发	False	[COINCIDENCE] 经理发现了问题。
+159	搬家	False	[COINCIDENCE] 搬运工把家具都搬走了。
+160	起床	False	[REVERSED_ORDER] 他从床上起来。
+161	看书	False	[CROSS_CONST] 他看了看周围，发现书包不见了。
+162	写字	False	[COINCIDENCE] 请在纸上写下你的名字。
+163	开门	False	[CROSS_CONST] 会议刚开了个头，门外就响起了爆炸声。
+164	关灯	False	[CROSS_CONST] 这事关系重大，他们灯火通明地聊到深夜。
+165	做饭	False	[CROSS_CONST] 木匠做了一套家具，饭店老板很满意。
+166	打球	False	[CROSS_CONST] 昨天打了一场激烈的比赛，球队的人非常兴奋。
+167	抽烟	False	[CROSS_CONST] 蒸汽机抽风了，冒那么大烟。
+168	见面	False	[REVERSED_ORDER] 他们约定了在面包店门口相见。
+169	帮忙	False	[COINCIDENCE] 丐帮的人都很忙。
+170	聊天	False	[COINCIDENCE] 英国的人喜欢聊天气。
+171	说话	False	[CROSS_CONST] 他说了几句就走了，话筒还在桌上。
+172	吵架	False	[CROSS_CONST] 吵什么吵，把架子放好。
+173	打架	False	[CROSS_CONST] 她和项目组打了几个电话，谈论目前的架构设计。
+174	打仗	False	[CROSS_CONST] 他们开打了，好大的阵仗。
+175	生气	False	[CROSS_CONST] 她生了孩子之后，气色很差。
+176	发火	False	[CROSS_CONST] 她给我发消息说，火车就要开了。
+177	道歉	False	[PP_POS] 她最终道向我歉了。
+178	道谢	False	[PP_POS] 她道向老师谢。
+179	拜年	False	[COINCIDENCE] 礼拜天年轻人都在休息。
+180	握手	False	[CROSS_CONST] 他握着笔，手在发抖。
+181	鼓掌	False	[REVERSED_ORDER] 这是真正的掌声，不是鼓励性质的。
+182	捣乱	False	[MISSING_DE] 别在他工作的时候捣他乱。
+183	开玩笑	False	[REVERSED_ORDER] 他的玩笑话刚开了个头。
+184	谈恋爱	False	[CROSS_CONST] 他谈的是什么，恋爱心得吗？
+185	撒谎	False	[CROSS_CONST] 你撒了一地的纸，还谎称不是自己弄的。
+186	吹牛	False	[CROSS_CONST] 吹一口气，牛皮就破了。
+187	告状	False	[COINCIDENCE] 他详细报告了目前的状况。
+188	请客	False	[CROSS_CONST] 他没说“请”，客人很不满意。
+189	结婚	False	[INVALID_REDUP] 结结婚有什么难的。
+190	离婚	False	[INVALID_REDUP] 离离婚很简单。
+191	订婚	False	[INVALID_REDUP] 订订婚不就行了。
+192	分手	False	[INVALID_REDUP] 分分手也很正常。
+193	吃醋	False	[COINCIDENCE] 你吃饺子不配醋吗？
+194	伤心	False	[CROSS_CONST] 他伤了手臂，心里很难受。
+195	放心	False	[INVALID_REDUP] 你就放放心吧。
+196	担心	False	[INVALID_REDUP] 担担心也没用。
+197	灰心	False	[INVALID_REDUP] 别灰灰心了。
+198	操心	False	[INVALID_REDUP] 操操心是父母的责任。
+199	动心	False	[INVALID_REDUP] 动动心也可以理解。
+200	上班	False	[CROSS_CONST] 你上哪去了，怎么没在班上。
+201	下班	False	[CROSS_CONST] 他下了楼，看见班长还在等
+202	上学	False	[CROSS_CONST] 往上瞧就是学校建筑。
+203	上课	False	[COINCIDENCE] 桌上放着课本。
+204	下课	False	[INVALID_REDUP] 下下课就去玩。
+205	请假	False	[INVALID_REDUP] 请请假很容易。
+206	考试	False	[INVALID_REDUP] 考考试很紧张。
+207	毕业	False	[CROSS_CONST] 我毕竟已经工作了，业余时间很少。
+208	留学	False	[INVALID_REDUP] 留留学很贵。
+209	报名	False	[COINCIDENCE] 报纸上有他的名字。
+210	辞职	False	[INVALID_REDUP] 辞辞职很简单。
+211	发言	False	[CROSS_CONST] 他头发很长，不擅言语。
+212	值班	False	[COINCIDENCE] 他值得全班的表扬。
+213	出差	False	[CROSS_CONST] 可惜出了问题，不然差点就成功了。
+214	生病	False	[INVALID_REDUP] 生生病很难受。
+215	住院	False	[INVALID_REDUP] 住住院很花钱。
+216	打针	False	[missing tail] 打没打孩子你自己心里清楚。
+217	挂号	False	[CROSS_CONST] 他挂了电话，问我是几号病人。
+218	把脉	False	[CROSS_CONST] 他把门关上，递给我一瓶脉动。
+219	减肥	False	[CROSS_CONST] 这样虽然减少了开支，但降低了肥料品质。
+220	鞠躬	False	[INVALID_REDUP] 门口服务员向我们鞠鞠躬。
+221	敬礼	False	[INVALID_REDUP] 你来像领导敬敬礼。
+222	站岗	False	[INVALID_REDUP] 站站岗很辛苦。
+223	吃苦	False	[COINCIDENCE]他吃了一口苦瓜。
+224	吃亏	False	[CROSS_CONST] 吃自助光吃菜干嘛，不亏吗。
+225	受罪	False	[INVALID_REDUP] 受受罪也值得。
+226	跳舞	False	[REVERSED_ORDER] 她看舞蹈看得她兴奋地跳起来。
+227	唱歌	False	[missing head]这首曲子歌词很美。
+228	出院	False	[INVALID_REDUP] 等出出院就好了。
+229	回家	False	[INVALID_REDUP] 回回家就安全了。
+230	划船	False	[CROSS_CONST] 船在海中划开波浪，片刻之后开走了。
+231	钓鱼	False	[CROSS_CONST] 钓了半天，鱼竿断了。
+232	滑冰	False	[COINCIDENCE] 她滑倒在冰面上。
+233	签名	False	[INVALID_REDUP] 签签名很酷。
+234	排队	False	[INVALID_REDUP] 排排队很无聊。
+235	打工	False	[COINCIDENCE] 你为什么打工地上的人？
+236	戒烟	False	[INVALID_REDUP] 戒戒烟很难。
+237	死心	False	[CROSS_CONST] 她养的鱼死了，心情不好。
+238	挑水	False	[CROSS_CONST] 别挑剔了，随便拿瓶水喝吧。
+239	受伤	False	[INVALID_REDUP] 受受伤很疼。
+240	散心	False	[CROSS_CONST] 他散发完了传单，心里感到很轻松。
+241	扫兴	False	[INVALID_REDUP] 这有点扫扫兴了。
+242	领情	False	[CROSS_CONST] 您就领了吧，这是代表对方情谊的礼物，
+243	送礼	False	[CROSS_CONS] 他送你东西，你也要还礼吧。
+244	拌嘴	False	[CROSS_CONST] 拌了沙拉，嘴巴很甜。
+245	叹气	False	[CROSS_CONST] 他哀叹道，真是气煞我也。
+246	丢脸	False	[MISSING_DE] 这次真的丢你脸了。
+247	接吻	False	[INVALID_REDUP] 他们在街头接接吻。
+248	开枪	False	[INVALID_REDUP] 他突然对着人群开开枪。
+249	受骗	False	[INVALID_REDUP] 年轻人不要上当受受骗。
+250	挨批	False	[INVALID_REDUP] 挨挨批是常事。
+251	干杯	False	[INVALID_REDUP] 干干杯很痛快。
+252	革命	False	[MISSING_DE] 他们这是要革你命啊。
+253	造反	False	[MISSING_DE] 造他反就是找死。
+254	退休	False	[INVALID_REDUP] 退退休就轻松了。
+255	出事	False	[INVALID_REDUP] 出出事很麻烦。
+256	把关	False	[COINCIDENCE] 他一把把门关上了。
+257	施肥	False	[REVERSED_ORDER] 她拖着肥胖的身子施施然走过来。
+258	倒霉	False	[CROSS_CONST] 她倒了一杯水进去，为了冲走发霉的部分。
+259	提醒	False	[INVALID_REDUP] 提提醒很必要。
+260	出恭	False	[INVALID_REDUP] 出出恭很着急。
+261	将军	False	[COINCIDENCE] 我们将军法处置，严惩不贷。
+262	学习	False	[COINCIDENCE] 我们这学期要学习近平思想。
+263	慷慨	False	[INVALID_REDUP] 你稍微慷慷慨嘛。
+264	幽默	False	[INVALID_REDUP] 别以为自己很幽幽默。
+265	滑稽	False	[INVALID_REDUP] 这有点滑滑稽了。
+266	小便	False	[CROSS_CONST] 贪小便宜吃大亏。
+267	大便	False	[COINCIDENCE] 父亲18岁大的时候便去广东了。
+268	军训	False	[INVALID_REDUP] 学生们开学要军军训。
+269	体检	False	[INVALID_REDUP] 医生给你体体检。
+270	同学	False	[INVALID_REDUP] 能和你同同学很开心。
+271	敲门	False	[CROSS_CONST] 他敲了敲桌子，发现门是开着的。
+272	见面	False	[PP_POS] 见跟他面很困难。
+273	吵架	False	[PP_POS] 吵跟她架没有意义。
+274	打架	False	[PP_POS] 打跟人架是不好的。
+275	打仗	False	[PP_POS] 打与日军仗非常艰辛。
+276	道歉	False	[PP_POS] 道向她歉就能解决问题。
+277	道谢	False	[PP_POS] 道对他谢是应该的。
+278	拜年	False	[PP_POS] 拜给长辈年是传统习俗。
+279	开玩笑	False	[PP_POS] 开跟他玩笑只是为了逗他开心。
+280	下雨	False	[COINCIDENCE] 他在下午泪如雨下。
+281	撒谎	False	[CROSS_CONST] 你撒了一地的纸，还谎称不是自己弄的。
+282	吹牛	False	[CROSS_CONST] 看我吹的气球，牛不牛？
+283	告状	False	[INVALID_REDUP] 我想去告告状。
+284	写作业	False	[CROSS_CONST] 写完了作文，作业还没交。

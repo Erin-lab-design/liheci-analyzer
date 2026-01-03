@@ -20,6 +20,7 @@ Output tag examples:
 """
 
 import csv
+import subprocess
 from pathlib import Path
 
 INPUT_CSV = "data/liheci_lexicon.csv"
@@ -178,6 +179,22 @@ def main():
 
     Path(OUTPUT_XFST).write_text("\n".join(lines), encoding="utf-8")
     print(f"[OK] Generated {OUTPUT_XFST}, total {len(rows)} lemmas")
+
+    # Compile XFST to HFST
+    xfst_dir = Path(OUTPUT_XFST).parent
+    xfst_file = Path(OUTPUT_XFST).name
+    print(f"[...] Compiling {xfst_file} with hfst-xfst...")
+    result = subprocess.run(
+        ["hfst-xfst", "-F", xfst_file],
+        cwd=xfst_dir,
+        capture_output=True,
+        text=True
+    )
+    if result.returncode == 0:
+        print(f"[OK] Compiled to liheci_split.analyser.hfst and liheci_split.generator.hfst")
+    else:
+        print(f"[ERROR] Compilation failed:")
+        print(result.stderr)
 
 
 if __name__ == "__main__":

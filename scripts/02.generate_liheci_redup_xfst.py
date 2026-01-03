@@ -12,6 +12,7 @@ Strategy:
 """
 
 import csv
+import subprocess
 from pathlib import Path
 
 
@@ -157,9 +158,20 @@ def main():
     # Generate XFST script
     generate_xfst_script(lemmas, output_path)
     
-    print("\nNext steps:")
-    print("  1. Compile: hfst-xfst -F liheci_redup.xfst")
-    print("  2. Run Stage 2 validation script")
+    # Compile XFST to HFST
+    xfst_file = output_path.name
+    print(f"\n[...] Compiling {xfst_file} with hfst-xfst...")
+    result = subprocess.run(
+        ["hfst-xfst", "-F", xfst_file],
+        cwd=output_path.parent,
+        capture_output=True,
+        text=True
+    )
+    if result.returncode == 0:
+        print(f"[OK] Compiled to liheci_redup.analyser.hfst and liheci_redup.generator.hfst")
+    else:
+        print(f"[ERROR] Compilation failed:")
+        print(result.stderr)
 
 
 if __name__ == "__main__":

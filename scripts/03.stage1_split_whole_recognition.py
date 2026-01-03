@@ -36,7 +36,7 @@ HFST_FST_PATH = os.environ.get("LIHECI_SPLIT_FST", "scripts/hfst_files/liheci_sp
 OUTPUT_TSV = "outputs/liheci_hfst_outputs.tsv"
 
 # 详细 log
-LOG_FILE = "outputs/liheci_hfst_run.log"
+LOG_FILE = "outputs/logs/liheci_hfst_run.log"
 
 # Timeout setting (seconds)
 HFST_TIMEOUT = 30
@@ -45,6 +45,8 @@ HFST_TIMEOUT = 30
 # ======================= 日志配置 =======================
 
 def setup_logging():
+    # Ensure log directory exists
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     logging.basicConfig(
         filename=LOG_FILE,
         filemode="w",

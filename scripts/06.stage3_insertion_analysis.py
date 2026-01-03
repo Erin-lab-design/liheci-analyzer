@@ -4,12 +4,15 @@
 Stage 3: Insertion Analysis with WFST
 - Annotates insertion components using HFST
 - Classifies insertion types
-- Detects errors (MISSING_DE, PP_POS)
+- Detects errors (MISSING_DE, PP_POS, INVALID_PRONOUN)
 - Assigns confidence scores based on tag coverage
+- Validates pronoun + DE constraints from lexicon
+- Validates PP position constraints from lexicon
 """
 
 import subprocess
 import re
+import csv
 import pandas as pd
 from pathlib import Path
 
@@ -19,12 +22,66 @@ HFST_LOOKUP = BASE_DIR.parent / 'hfst-3.16.2' / 'hfst' / 'bin' / 'hfst-lookup.ex
 ANNOTATOR_HFST = BASE_DIR / 'hfst_files' / 'liheci_insertion_annotator.hfst'
 INPUT_TSV = BASE_DIR.parent / 'outputs' / 'liheci_hfst_outputs.tsv'
 OUTPUT_TSV = BASE_DIR.parent / 'outputs' / 'liheci_insertion_analysis.tsv'
+LEXICON_CSV = BASE_DIR.parent / 'data' / 'liheci_lexicon.csv'
 
-# Words that require "的" (de) in insertion (otherwise MISSING_DE error)
-REQUIRE_DE_WORDS = {'捣乱', '丢脸', '造反', '革命'}
+# ============================================================
+# Confidence Threshold
+# ============================================================
+CONFIDENCE_THRESHOLD = 0.3  # 低于此阈值的结果将被过滤掉
 
-# Words that cannot have PP in insertion (prepositional phrase must be external)
-NO_PP_INSERT_WORDS = {'道歉', '道谢', '拜年', '见面', '吵架', '打架', '打仗', '开玩笑'}
+
+def load_lexicon_rules():
+    """
+    Load pronoun and PP rules from lexicon CSV
+    Returns:
+        - PRON_POSS_REQUIRED: set of lemmas where pronoun needs 的
+        - PRON_POSS_PREFERRED: set of lemmas where 的 is preferred
+        - PRON_OBJ_OK: set of lemmas where bare pronoun is OK
+        - NO_DIRECT_NP: set of lemmas that don't allow pronoun insertion
+        - NO_PP_INSERT_WORDS: set of lemmas where PP should be external
+    """
+    pron_poss_required = set()
+    pron_poss_preferred = set()
+    pron_obj_ok = set()
+    no_direct_np = set()
+    no_pp_insert_words = set()
+    
+    if not LEXICON_CSV.exists():
+        print(f"Warning: Lexicon CSV not found: {LEXICON_CSV}")
+        return pron_poss_required, pron_poss_preferred, pron_obj_ok, no_direct_np, no_pp_insert_words
+    
+    with open(LEXICON_CSV, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            lemma = row.get('Lemma', '').strip()
+            if not lemma or lemma.startswith('#'):
+                continue
+            
+            pron_rule = row.get('PronounInsertion', '').strip()
+            pp_rule = row.get('PPRequirement', '').strip()
+            
+            # Parse PronounInsertion column
+            if pron_rule == 'PRON_POSS_REQUIRED':
+                pron_poss_required.add(lemma)
+            elif pron_rule == 'PRON_POSS_PREFERRED':
+                pron_poss_preferred.add(lemma)
+            elif pron_rule == 'PRON_OBJ_OK':
+                pron_obj_ok.add(lemma)
+            elif pron_rule == 'NO_DIRECT_NP':
+                no_direct_np.add(lemma)
+            
+            # Parse PPRequirement column for NO_DIRECT_NP
+            if 'INT:NO_DIRECT_NP' in pp_rule:
+                no_pp_insert_words.add(lemma)
+    
+    print(f"Loaded lexicon rules:")
+    print(f"  PRON_POSS_REQUIRED: {len(pron_poss_required)} lemmas")
+    print(f"  PRON_POSS_PREFERRED: {len(pron_poss_preferred)} lemmas")
+    print(f"  PRON_OBJ_OK: {len(pron_obj_ok)} lemmas")
+    print(f"  NO_DIRECT_NP: {len(no_direct_np)} lemmas")
+    print(f"  NO_PP_INSERT_WORDS: {len(no_pp_insert_words)} lemmas")
+    
+    return pron_poss_required, pron_poss_preferred, pron_obj_ok, no_direct_np, no_pp_insert_words
 
 
 def call_hfst_annotator(sentence):
@@ -53,6 +110,7 @@ def extract_tags(annotated_text, start_marker='<HEAD>', end_marker='<TAIL>'):
     """
     Extract tags between markers from annotated text
     Returns: (insertion_text, tags_list, has_de)
+    Note: has_de is used internally for validation, not output
     """
     # Extract content between <HEAD>...<TAIL>
     match = re.search(rf'{re.escape(start_marker)}(.*?){re.escape(end_marker)}', annotated_text)
@@ -199,6 +257,10 @@ def main():
     print("Stage 3: Insertion Analysis with WFST")
     print("="*60)
     
+    # Load lexicon rules from CSV
+    print("\nLoading lexicon rules...")
+    PRON_POSS_REQUIRED, PRON_POSS_PREFERRED, PRON_OBJ_OK, NO_DIRECT_NP, NO_PP_INSERT_WORDS = load_lexicon_rules()
+    
     # Read Stage 2 output
     df = pd.read_csv(INPUT_TSV, sep='\t')
     print(f"\nRead {len(df)} rows")
@@ -220,8 +282,7 @@ def main():
                 'insertion': '',
                 'insertion_tagged': '',
                 'insertion_type': 'REDUP_SKIP',
-                'has_de': False,
-                'error_type': None,
+                'detected_error': None,
                 'confidence_score': 1.0
             })
             continue
@@ -256,19 +317,49 @@ def main():
             # Calculate base confidence from tag coverage
             confidence = calculate_coverage(insertion_text, tags)
             
-            # Check MISSING_DE error
-            error_type = None
-            if lemma in REQUIRE_DE_WORDS and not has_de:
-                error_type = 'MISSING_DE'
-                confidence *= 0.3  # Lower confidence
+            # Get tag set for checking
+            tag_set = {tag for _, tag in tags}
+            has_pronoun = 'PRO' in tag_set
+            has_prep = 'PREP' in tag_set
             
-            # Check PP_POS error
-            if lemma in NO_PP_INSERT_WORDS:
-                # Check if PREP exists in insertion
-                tag_set = {tag for _, tag in tags}
-                if 'PREP' in tag_set:
-                    error_type = 'PP_POS'
-                    confidence *= 0.2
+            detected_error = None
+            
+            # ============================================================
+            # Rule 1: Pronoun + DE Validation (Complete Rules)
+            # ============================================================
+            if has_pronoun:
+                # 1a. PRON_POSS_REQUIRED: 代词后必须有"的"
+                if lemma in PRON_POSS_REQUIRED:
+                    if not has_de:
+                        detected_error = 'MISSING_REQUIRED_DE'
+                        confidence = 0.0  # Strict reject
+                
+                # 1b. PRON_POSS_PREFERRED: 代词后建议有"的"
+                elif lemma in PRON_POSS_PREFERRED:
+                    if not has_de:
+                        detected_error = 'MISSING_PREFERRED_DE'
+                        confidence *= 0.7  # Penalty but not reject
+                
+                # 1c. PRON_OBJ_OK: 代词可做直接宾语，不需要"的"
+                elif lemma in PRON_OBJ_OK:
+                    pass  # No penalty, direct object is OK
+                
+                # 1d. NO_DIRECT_NP: 不允许代词直接插入
+                elif lemma in NO_DIRECT_NP:
+                    detected_error = 'INVALID_PRONOUN_INSERTION'
+                    confidence = 0.0  # Strict reject - should use external PP
+            
+            # ============================================================
+            # Rule 2: PP Position Validation
+            # ============================================================
+            # PP in insertion is invalid for certain words (should be external)
+            if has_prep and lemma in NO_PP_INSERT_WORDS:
+                detected_error = 'PP_IN_INSERTION'
+                confidence = 0.0  # Strict reject (changed from *= 0.2)
+            
+            # Note: REQUIRE_DE_WORDS (PRON_POSS_REQUIRED) only applies when
+            # a pronoun is present (handled in Rule 1a above).
+            # Cases like "开了一个玩笑" (quantifier without pronoun) are valid.
         
         elif shape == 'WHOLE':
             # Check for external prepositional phrase
@@ -280,20 +371,19 @@ def main():
                 ins_type = 'EMPTY'
                 confidence = 0.5
             
-            error_type = None
+            detected_error = None
         
         else:
             ins_type = 'UNKNOWN'
             confidence = 0.5
-            error_type = None
+            detected_error = None
         
         results.append({
             **row.to_dict(),
             'insertion': insertion_text.replace('<HEAD>', '').replace('<TAIL>', '').replace('+', '').replace(':', ''),
             'insertion_tagged': insertion_tagged,
             'insertion_type': ins_type,
-            'has_de': has_de,
-            'error_type': error_type,
+            'detected_error': detected_error,
             'confidence_score': confidence
         })
         
@@ -302,20 +392,29 @@ def main():
             print(f"  Insertion: {insertion_text}")
             print(f"  Tagged: {insertion_tagged}")
             print(f"  Type: {ins_type}")
-            print(f"  Error: {error_type}")
+            print(f"  Detected Error: {detected_error}")
             print(f"  Confidence: {confidence:.2f}")
     
     # Save results
     result_df = pd.DataFrame(results)
+    
+    # Filter by confidence threshold
+    original_count = len(result_df)
+    result_df = result_df[result_df['confidence_score'] >= CONFIDENCE_THRESHOLD]
+    filtered_count = original_count - len(result_df)
+    
     result_df.to_csv(OUTPUT_TSV, sep='\t', index=False)
     print(f"\n✓ Results saved to: {OUTPUT_TSV}")
+    print(f"  Original: {original_count} rows")
+    print(f"  Filtered (confidence < {CONFIDENCE_THRESHOLD}): {filtered_count} rows")
+    print(f"  Final: {len(result_df)} rows")
     
     # Statistics
     print(f"\nInsertion type distribution:")
     print(result_df['insertion_type'].value_counts())
     
     print(f"\nError type distribution:")
-    print(result_df['error_type'].value_counts())
+    print(result_df['detected_error'].value_counts())
     
     print(f"\nAverage confidence: {result_df['confidence_score'].mean():.2f}")
 

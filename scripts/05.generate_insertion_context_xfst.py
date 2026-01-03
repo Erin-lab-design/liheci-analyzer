@@ -55,10 +55,22 @@ define MarkNum 一 -> 一 %: N U M %+ ,
                几 -> 几 %: N U M %+ ,
                半 -> 半 %: N U M %+ ;
 
-! Classifiers
+! Time words (时间词: 小时、分钟、会儿、辈子等)
+define MarkTime 时 -> 时 %: T I M E %+ ,
+                分 -> 分 %: T I M E %+ ,
+                秒 -> 秒 %: T I M E %+ ,
+                钟 -> 钟 %: T I M E %+ ,
+                刻 -> 刻 %: T I M E %+ ,
+                会 -> 会 %: T I M E %+ ,
+                儿 -> 儿 %: T I M E %+ ,
+                辈 -> 辈 %: T I M E %+ ,
+                子 -> 子 %: T I M E %+ ;
+
+! Classifiers (expanded: add more liheci-specific classifiers)
 define MarkClf 个 -> 个 %: C L F %+ ,
                次 -> 次 %: C L F %+ ,
                天 -> 天 %: C L F %+ ,
+               句 -> 句 %: C L F %+ ,
                把 -> 把 %: C L F %+ ,
                场 -> 场 %: C L F %+ ,
                声 -> 声 %: C L F %+ ,
@@ -73,19 +85,59 @@ define MarkClf 个 -> 个 %: C L F %+ ,
                月 -> 月 %: C L F %+ ,
                日 -> 日 %: C L F %+ ,
                周 -> 周 %: C L F %+ ,
-               回 -> 回 %: C L F %+ ;
+               回 -> 回 %: C L F %+ ,
+               顿 -> 顿 %: C L F %+ ,
+               架 -> 架 %: C L F %+ ,
+               针 -> 针 %: C L F %+ ,
+               瓶 -> 瓶 %: C L F %+ ,
+               斤 -> 斤 %: C L F %+ ,
+               面 -> 面 %: C L F %+ ,
+               口 -> 口 %: C L F %+ ,
+               班 -> 班 %: C L F %+ ,
+               份 -> 份 %: C L F %+ ,
+               通 -> 通 %: C L F %+ ,
+               军 -> 军 %: C L F %+ ,
+               躬 -> 躬 %: C L F %+ ,
+               礼 -> 礼 %: C L F %+ ,
+               条 -> 条 %: C L F %+ ,
+               担 -> 担 %: C L F %+ ,
+               枪 -> 枪 %: C L F %+ ,
+               杯 -> 杯 %: C L F %+ ;
 
-! Pronouns
+! Pronouns (expanded: include 们, 谁, 自己, 大家, etc.)
+! Note: Multi-char words use space-separated chars in XFST
 define MarkPro 我 -> 我 %: P R O %+ ,
                你 -> 你 %: P R O %+ ,
                他 -> 他 %: P R O %+ ,
                她 -> 她 %: P R O %+ ,
-               它 -> 它 %: P R O %+ ;
+               它 -> 它 %: P R O %+ ,
+               们 -> 们 %: P R O %+ ,
+               谁 -> 谁 %: P R O %+ ,
+               自 -> 自 %: P R O %+ ,
+               己 -> 己 %: P R O %+ ,
+               您 -> 您 %: P R O %+ ;
 
-! 的
-define MarkDe 的 -> 的 %: D E %+ ;
+! 的 (DE marker for possessive/attributive)
+define MarkDe 的 -> 的 %: D E %+ ,
+              之 -> 之 %: D E %+ ;
 
-! Modifiers
+! Demonstratives (指示代词/冠词: 这个、那个、etc.)
+define MarkDem 这 -> 这 %: D E M %+ ,
+               那 -> 那 %: D E M %+ ,
+               这个 -> 这个 %: D E M %+ ,
+               那个 -> 那个 %: D E M %+ ,
+               这些 -> 这些 %: D E M %+ ,
+               那些 -> 那些 %: D E M %+ ,
+               某 -> 某 %: D E M %+ ,
+               某个 -> 某个 %: D E M %+ ,
+               每 -> 每 %: D E M %+ ,
+               各 -> 各 %: D E M %+ ,
+               哪 -> 哪 %: D E M %+ ,
+               哪个 -> 哪个 %: D E M %+ ,
+               哪些 -> 哪些 %: D E M %+ ,
+               什么 -> 什么 %: D E M %+ ;
+
+! Modifiers (expanded: add more common modifiers)
 define MarkMod 好 -> 好 %: M O D %+ ,
                大 -> 大 %: M O D %+ ,
                小 -> 小 %: M O D %+ ,
@@ -96,13 +148,38 @@ define MarkMod 好 -> 好 %: M O D %+ ,
                高 -> 高 %: M O D %+ ,
                厚 -> 厚 %: M O D %+ ,
                很 -> 很 %: M O D %+ ,
-               整 -> 整 %: M O D %+ ;
+               整 -> 整 %: M O D %+ ,
+               多 -> 多 %: M O D %+ ,
+               少 -> 少 %: M O D %+ ,
+               老 -> 老 %: M O D %+ ,
+               远 -> 远 %: M O D %+ ,
+               久 -> 久 %: M O D %+ ,
+               热 -> 热 %: M O D %+ ,
+               冷 -> 冷 %: M O D %+ ,
+               快 -> 快 %: M O D %+ ,
+               慢 -> 慢 %: M O D %+ ,
+               紧 -> 紧 %: M O D %+ ,
+               深 -> 深 %: M O D %+ ,
+               透 -> 透 %: M O D %+ ,
+               碎 -> 碎 %: M O D %+ ,
+               丰 -> 丰 %: M O D %+ ,
+               盛 -> 盛 %: M O D %+ ,
+               优 -> 优 %: M O D %+ ,
+               美 -> 美 %: M O D %+ ,
+               烈 -> 烈 %: M O D %+ ,
+               尽 -> 尽 %: M O D %+ ;
 
-! Resultatives
+! Resultatives (expanded)
 define MarkRes 完 -> 完 %: R E S %+ ,
-               到 -> 到 %: R E S %+ ;
+               到 -> 到 %: R E S %+ ,
+               掉 -> 掉 %: R E S %+ ,
+               住 -> 住 %: R E S %+ ,
+               成 -> 成 %: R E S %+ ,
+               起 -> 起 %: R E S %+ ,
+               不 -> 不 %: R E S %+ ,
+               得 -> 得 %: R E S %+ ;
 
-! Prepositions
+! Prepositions (PP markers - important for PP_IN_INSERTION validation)
 define MarkPrep 跟 -> 跟 %: P R E P %+ ,
                 和 -> 和 %: P R E P %+ ,
                 与 -> 与 %: P R E P %+ ,
@@ -111,15 +188,17 @@ define MarkPrep 跟 -> 跟 %: P R E P %+ ,
                 给 -> 给 %: P R E P %+ ,
                 为 -> 为 %: P R E P %+ ,
                 被 -> 被 %: P R E P %+ ,
-                把 -> 把 %: P R E P %+ ;
+                同 -> 同 %: P R E P %+ ;
 
 ! === Compose All Annotations ===
 define Annotator [
   MarkAsp .o.
   MarkNum .o.
+  MarkTime .o.
   MarkClf .o.
   MarkPro .o.
   MarkDe .o.
+  MarkDem .o.
   MarkMod .o.
   MarkRes .o.
   MarkPrep
