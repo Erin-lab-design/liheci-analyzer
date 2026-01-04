@@ -328,23 +328,23 @@ def main():
             # Rule 1: Pronoun + DE Validation (Complete Rules)
             # ============================================================
             if has_pronoun:
-                # 1a. PRON_POSS_REQUIRED: 代词后必须有"的"
+                # 1a. PRON_POSS_REQUIRED: must have 的 after pronoun
                 if lemma in PRON_POSS_REQUIRED:
                     if not has_de:
                         detected_error = 'MISSING_REQUIRED_DE'
                         confidence = 0.0  # Strict reject
                 
-                # 1b. PRON_POSS_PREFERRED: 代词后建议有"的"
+                # 1b. PRON_POSS_PREFERRED: after pronoun, "的" is preferred
                 elif lemma in PRON_POSS_PREFERRED:
                     if not has_de:
                         detected_error = 'MISSING_PREFERRED_DE'
                         confidence *= 0.7  # Penalty but not reject
                 
-                # 1c. PRON_OBJ_OK: 代词可做直接宾语，不需要"的"
+                # 1c. PRON_OBJ_OK: pronouns can be direct objects, no "的" needed
                 elif lemma in PRON_OBJ_OK:
                     pass  # No penalty, direct object is OK
                 
-                # 1d. NO_DIRECT_NP: 不允许代词直接插入
+                # 1d. NO_DIRECT_NP: direct pronoun insertion not allowed
                 elif lemma in NO_DIRECT_NP:
                     detected_error = 'INVALID_PRONOUN_INSERTION'
                     confidence = 0.0  # Strict reject - should use external PP
