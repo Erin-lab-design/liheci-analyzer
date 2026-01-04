@@ -26,23 +26,23 @@ import logging
 
 TEST_FILE = "data/test_sentences.txt"
 
-# HFST 可执行文件
+# HFST executable
 HFST_LOOKUP_BIN = os.environ.get("HFST_LOOKUP_BIN", "hfst-lookup")
 
-# 句子级分析器
+# sentence analyser FST
 HFST_FST_PATH = os.environ.get("LIHECI_SPLIT_FST", "scripts/hfst_files/liheci_split.analyser.hfst")
 
-# 只保留识别出离合词的句子的结构化输出
+# Only keep structured output for sentences with recognized liheci
 OUTPUT_TSV = "outputs/liheci_hfst_outputs.tsv"
 
-# 详细 log
+# Detailed log
 LOG_FILE = "outputs/logs/liheci_hfst_run.log"
 
 # Timeout setting (seconds)
 HFST_TIMEOUT = 30
 
 
-# ======================= 日志配置 =======================
+# ======================= Logging Configuration =======================
 
 def setup_logging():
     # Ensure log directory exists
@@ -58,7 +58,7 @@ def setup_logging():
     return logger
 
 
-# ======================= HFST 调用 & 解析 =======================
+# ======================= HFST Call & Parsing =======================
 
 def parse_hfst_analysis(analysis: str):
     """
@@ -179,7 +179,7 @@ def hfst_analyze_sentence(sentence: str, logger):
     return parsed_unique
 
 
-# ======================= 主流程：读 test_sentences.txt =======================
+# ======================= main process: Read test_sentences.txt =======================
 
 def run_export():
     logger = setup_logging()
@@ -202,11 +202,11 @@ def run_export():
         logger.error(msg)
         sys.exit(1)
 
-    # 准备 TSV 输出
+    # Prepare TSV output
     fout = open(OUTPUT_TSV, "w", encoding="utf-8", newline="")
     writer = csv.writer(fout, delimiter="\t")
 
-    # 写 header
+    # Write header
     writer.writerow([
         "sent_id",
         "gold_stem",
@@ -232,7 +232,7 @@ def run_export():
 
         parts = [p.strip() for p in line.split("\t")]
         
-        # 跳过表头行
+        # Skip header line
         if parts[0] == "sent_id":
             continue
             
@@ -272,15 +272,15 @@ def run_export():
             logger.info("No liheci detected for this sentence.")
             continue
 
-        # 至少有一个离合词
+        # At least one liheci
         cases_with_hits += 1
         total_analyses += len(analyses)
 
-        # 打印到终端
+        # Print to terminal
         print("[HFST Analyses]:", [a["raw"] for a in analyses])
         print("[Detected Lemmas]:", sorted(set(a["lemma"] for a in analyses)))
 
-        # 写入 TSV：每个 analysis 一行
+        # Write to TSV: one row per analysis
         for a in analyses:
             writer.writerow([
                 sent_id,

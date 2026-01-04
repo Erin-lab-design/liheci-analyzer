@@ -27,7 +27,7 @@ LEXICON_CSV = BASE_DIR.parent / 'data' / 'liheci_lexicon.csv'
 # ============================================================
 # Confidence Threshold
 # ============================================================
-CONFIDENCE_THRESHOLD = 0.3  # 低于此阈值的结果将被过滤掉
+CONFIDENCE_THRESHOLD = 0.3  # filter out results below this score
 
 
 def load_lexicon_rules():

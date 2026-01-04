@@ -1,6 +1,6 @@
 ! Insertion Character Annotator
 ! Marks each character with its grammatical category
-! Output format: 字符:标签+字符:标签
+! Output format: Character:Tag+Character:Tag
 
 ! === Annotation Rules ===
 ! Use replace to add tags after each recognized character
@@ -28,7 +28,7 @@ define MarkNum 一 -> 一 %: N U M %+ ,
                几 -> 几 %: N U M %+ ,
                半 -> 半 %: N U M %+ ;
 
-! Time words (时间词: 小时、分钟、会儿、辈子等)
+! Time words (hour-小时、minute-分钟、a while-会儿、whole life-辈子 etc.)
 define MarkTime 时 -> 时 %: T I M E %+ ,
                 分 -> 分 %: T I M E %+ ,
                 秒 -> 秒 %: T I M E %+ ,
@@ -94,7 +94,7 @@ define MarkPro 我 -> 我 %: P R O %+ ,
 define MarkDe 的 -> 的 %: D E %+ ,
               之 -> 之 %: D E %+ ;
 
-! Demonstratives (指示代词/冠词: 这个、那个、etc.)
+! Demonstratives (Demonstrative pronouns/articles: 这个、那个、etc.)
 define MarkDem 这 -> 这 %: D E M %+ ,
                那 -> 那 %: D E M %+ ,
                这个 -> 这个 %: D E M %+ ,

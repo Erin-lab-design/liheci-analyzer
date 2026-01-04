@@ -66,10 +66,10 @@ logger = logging.getLogger(__name__)
 # =========================
 
 # POS tag sets
-VERB_TAGS = {"VV", "VC", "VE"}          # 动词
-NOUN_TAGS = {"NN", "NR", "NT"}          # 名词
-ADJ_TAGS = {"VA", "JJ"}                 # 形容词/形容词性动词
-FUNC_TAGS = {"AD", "P", "CS", "CC"}     # 功能词 (副词、介词、连词) - TAIL不应有这些
+VERB_TAGS = {"VV", "VC", "VE"}          # Verbs
+NOUN_TAGS = {"NN", "NR", "NT"}          # Nouns
+ADJ_TAGS = {"VA", "JJ"}                 # Adjectives/Adjective Verbs
+FUNC_TAGS = {"AD", "P", "CS", "CC"}     # Function words (adverbs, prepositions, conjunctions) - should not appear as TAIL
 
 # HEAD allowed POS by type (STRICT rules)
 # Note: For Verb-Object, HEAD should be VV (97%). The 2.1% NN in data are tagging errors.

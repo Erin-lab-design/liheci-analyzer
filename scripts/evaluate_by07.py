@@ -194,7 +194,7 @@ def main():
     log("  FALSE POSITIVE ANALYSIS")
     log("="*60)
     
-    # Get FP keys with their error types
+    # Get  FP keys with their error types
     fp_keys = result_keys & test_false_keys
     fp_test_rows = test_df[test_df['key'].isin(fp_keys)]
     
@@ -246,7 +246,6 @@ def main():
     log("  Evaluation Complete")
     log(f"{'='*60}")
     
-    # === WRITE TO FILE ===
     with open(REPORT_FILE, 'w', encoding='utf-8') as f:
         f.write('\n'.join(output_lines))
     print(f"\n[INFO] Report saved to: {REPORT_FILE}")

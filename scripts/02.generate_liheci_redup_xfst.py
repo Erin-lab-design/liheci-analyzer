@@ -17,7 +17,7 @@ from pathlib import Path
 
 
 def chars_with_space(s: str) -> str:
-    """把字符串拆成单字符并用空格隔开，供 xfst 正则使用。"""
+    """Return string with spaces between each character for XFST."""
     s = (s or "").strip()
     if not s:
         return ""

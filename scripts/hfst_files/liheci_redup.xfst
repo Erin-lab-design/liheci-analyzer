@@ -7,231 +7,231 @@
 define RedupMarker [ 一 | 了 ] ;
 define AnyChar ? ;
 
-! 1. 睡觉 (睡+觉)
+! 1. 睡觉 (睡+觉 to sleep)
 define L001RedupAAB ?* 睡 睡 觉 ?* ;
 define L001RedupAYiAB ?* 睡 一 睡 觉 ?* ;
 define L001RedupALeAB ?* 睡 了 睡 觉 ?* ;
 define L001RedupPat L001RedupAAB | L001RedupAYiAB | L001RedupALeAB ;
 define L001Redup "睡觉+Lemma+Verb-Object+REDUP+Head:睡+Tail:觉" : L001RedupPat ;
 
-! 2. 洗澡 (洗+澡)
+! 2. 洗澡 (洗+澡 to shower)
 define L002RedupAAB ?* 洗 洗 澡 ?* ;
 define L002RedupAYiAB ?* 洗 一 洗 澡 ?* ;
 define L002RedupALeAB ?* 洗 了 洗 澡 ?* ;
 define L002RedupPat L002RedupAAB | L002RedupAYiAB | L002RedupALeAB ;
 define L002Redup "洗澡+Lemma+Verb-Object+REDUP+Head:洗+Tail:澡" : L002RedupPat ;
 
-! 3. 吃饭 (吃+饭)
+! 3. 吃饭 (吃+饭 to eat)
 define L003RedupAAB ?* 吃 吃 饭 ?* ;
 define L003RedupAYiAB ?* 吃 一 吃 饭 ?* ;
 define L003RedupALeAB ?* 吃 了 吃 饭 ?* ;
 define L003RedupPat L003RedupAAB | L003RedupAYiAB | L003RedupALeAB ;
 define L003Redup "吃饭+Lemma+Verb-Object+REDUP+Head:吃+Tail:饭" : L003RedupPat ;
 
-! 4. 刷牙 (刷+牙)
+! 4. 刷牙 (刷+牙 to brush teeth)
 define L004RedupAAB ?* 刷 刷 牙 ?* ;
 define L004RedupAYiAB ?* 刷 一 刷 牙 ?* ;
 define L004RedupALeAB ?* 刷 了 刷 牙 ?* ;
 define L004RedupPat L004RedupAAB | L004RedupAYiAB | L004RedupALeAB ;
 define L004Redup "刷牙+Lemma+Verb-Object+REDUP+Head:刷+Tail:牙" : L004RedupPat ;
 
-! 5. 洗脸 (洗+脸)
+! 5. 洗脸 (洗+脸 to wash face)
 define L005RedupAAB ?* 洗 洗 脸 ?* ;
 define L005RedupAYiAB ?* 洗 一 洗 脸 ?* ;
 define L005RedupALeAB ?* 洗 了 洗 脸 ?* ;
 define L005RedupPat L005RedupAAB | L005RedupAYiAB | L005RedupALeAB ;
 define L005Redup "洗脸+Lemma+Verb-Object+REDUP+Head:洗+Tail:脸" : L005RedupPat ;
 
-! 6. 跑步 (跑+步)
+! 6. 跑步 (跑+步 to run)
 define L006RedupAAB ?* 跑 跑 步 ?* ;
 define L006RedupAYiAB ?* 跑 一 跑 步 ?* ;
 define L006RedupALeAB ?* 跑 了 跑 步 ?* ;
 define L006RedupPat L006RedupAAB | L006RedupAYiAB | L006RedupALeAB ;
 define L006Redup "跑步+Lemma+Verb-Object+REDUP+Head:跑+Tail:步" : L006RedupPat ;
 
-! 7. 散步 (散+步)
+! 7. 散步 (散+步 to walk)
 define L007RedupAAB ?* 散 散 步 ?* ;
 define L007RedupAYiAB ?* 散 一 散 步 ?* ;
 define L007RedupALeAB ?* 散 了 散 步 ?* ;
 define L007RedupPat L007RedupAAB | L007RedupAYiAB | L007RedupALeAB ;
 define L007Redup "散步+Lemma+Verb-Object+REDUP+Head:散+Tail:步" : L007RedupPat ;
 
-! 8. 上网 (上+网)
+! 8. 上网 (上+网 to surf the internet)
 define L008RedupAAB ?* 上 上 网 ?* ;
 define L008RedupAYiAB ?* 上 一 上 网 ?* ;
 define L008RedupALeAB ?* 上 了 上 网 ?* ;
 define L008RedupPat L008RedupAAB | L008RedupAYiAB | L008RedupALeAB ;
 define L008Redup "上网+Lemma+Verb-Object+REDUP+Head:上+Tail:网" : L008RedupPat ;
 
-! 9. 看书 (看+书)
+! 9. 看书 (看+书 to read)
 define L009RedupAAB ?* 看 看 书 ?* ;
 define L009RedupAYiAB ?* 看 一 看 书 ?* ;
 define L009RedupALeAB ?* 看 了 看 书 ?* ;
 define L009RedupPat L009RedupAAB | L009RedupAYiAB | L009RedupALeAB ;
 define L009Redup "看书+Lemma+Verb-Object+REDUP+Head:看+Tail:书" : L009RedupPat ;
 
-! 10. 写字 (写+字)
+! 10. 写字 (写+字 to write)
 define L010RedupAAB ?* 写 写 字 ?* ;
 define L010RedupAYiAB ?* 写 一 写 字 ?* ;
 define L010RedupALeAB ?* 写 了 写 字 ?* ;
 define L010RedupPat L010RedupAAB | L010RedupAYiAB | L010RedupALeAB ;
 define L010Redup "写字+Lemma+Verb-Object+REDUP+Head:写+Tail:字" : L010RedupPat ;
 
-! 11. 开门 (开+门)
+! 11. 开门 (开+门 to open the door)
 define L011RedupAAB ?* 开 开 门 ?* ;
 define L011RedupAYiAB ?* 开 一 开 门 ?* ;
 define L011RedupALeAB ?* 开 了 开 门 ?* ;
 define L011RedupPat L011RedupAAB | L011RedupAYiAB | L011RedupALeAB ;
 define L011Redup "开门+Lemma+Verb-Object+REDUP+Head:开+Tail:门" : L011RedupPat ;
 
-! 12. 做饭 (做+饭)
+! 12. 做饭 (做+饭 to cook)
 define L012RedupAAB ?* 做 做 饭 ?* ;
 define L012RedupAYiAB ?* 做 一 做 饭 ?* ;
 define L012RedupALeAB ?* 做 了 做 饭 ?* ;
 define L012RedupPat L012RedupAAB | L012RedupAYiAB | L012RedupALeAB ;
 define L012Redup "做饭+Lemma+Verb-Object+REDUP+Head:做+Tail:饭" : L012RedupPat ;
 
-! 13. 打球 (打+球)
+! 13. 打球 (打+球 to play any ball sports)
 define L013RedupAAB ?* 打 打 球 ?* ;
 define L013RedupAYiAB ?* 打 一 打 球 ?* ;
 define L013RedupALeAB ?* 打 了 打 球 ?* ;
 define L013RedupPat L013RedupAAB | L013RedupAYiAB | L013RedupALeAB ;
 define L013Redup "打球+Lemma+Verb-Object+REDUP+Head:打+Tail:球" : L013RedupPat ;
 
-! 14. 见面 (见+面)
+! 14. 见面 (见+面 to meet)
 define L014RedupAAB ?* 见 见 面 ?* ;
 define L014RedupAYiAB ?* 见 一 见 面 ?* ;
 define L014RedupALeAB ?* 见 了 见 面 ?* ;
 define L014RedupPat L014RedupAAB | L014RedupAYiAB | L014RedupALeAB ;
 define L014Redup "见面+Lemma+Verb-Object+REDUP+Head:见+Tail:面" : L014RedupPat ;
 
-! 15. 帮忙 (帮+忙)
+! 15. 帮忙 (帮+忙 to help)
 define L015RedupAAB ?* 帮 帮 忙 ?* ;
 define L015RedupAYiAB ?* 帮 一 帮 忙 ?* ;
 define L015RedupALeAB ?* 帮 了 帮 忙 ?* ;
 define L015RedupPat L015RedupAAB | L015RedupAYiAB | L015RedupALeAB ;
 define L015Redup "帮忙+Lemma+Verb-Object+REDUP+Head:帮+Tail:忙" : L015RedupPat ;
 
-! 16. 聊天 (聊+天)
+! 16. 聊天 (聊+天 to chat)
 define L016RedupAAB ?* 聊 聊 天 ?* ;
 define L016RedupAYiAB ?* 聊 一 聊 天 ?* ;
 define L016RedupALeAB ?* 聊 了 聊 天 ?* ;
 define L016RedupPat L016RedupAAB | L016RedupAYiAB | L016RedupALeAB ;
 define L016Redup "聊天+Lemma+Verb-Object+REDUP+Head:聊+Tail:天" : L016RedupPat ;
 
-! 17. 说话 (说+话)
+! 17. 说话 (说+话 to talk)
 define L017RedupAAB ?* 说 说 话 ?* ;
 define L017RedupAYiAB ?* 说 一 说 话 ?* ;
 define L017RedupALeAB ?* 说 了 说 话 ?* ;
 define L017RedupPat L017RedupAAB | L017RedupAYiAB | L017RedupALeAB ;
 define L017Redup "说话+Lemma+Verb-Object+REDUP+Head:说+Tail:话" : L017RedupPat ;
 
-! 18. 吵架 (吵+架)
+! 18. 吵架 (吵+架 to quarrel)
 define L018RedupAAB ?* 吵 吵 架 ?* ;
 define L018RedupAYiAB ?* 吵 一 吵 架 ?* ;
 define L018RedupALeAB ?* 吵 了 吵 架 ?* ;
 define L018RedupPat L018RedupAAB | L018RedupAYiAB | L018RedupALeAB ;
 define L018Redup "吵架+Lemma+Verb-Object+REDUP+Head:吵+Tail:架" : L018RedupPat ;
 
-! 19. 拜年 (拜+年)
+! 19. 拜年 (拜+年 to wish sb. a happy new year)
 define L019RedupAAB ?* 拜 拜 年 ?* ;
 define L019RedupAYiAB ?* 拜 一 拜 年 ?* ;
 define L019RedupALeAB ?* 拜 了 拜 年 ?* ;
 define L019RedupPat L019RedupAAB | L019RedupAYiAB | L019RedupALeAB ;
 define L019Redup "拜年+Lemma+Verb-Object+REDUP+Head:拜+Tail:年" : L019RedupPat ;
 
-! 20. 握手 (握+手)
+! 20. 握手 (握+手 to shake hands)
 define L020RedupAAB ?* 握 握 手 ?* ;
 define L020RedupAYiAB ?* 握 一 握 手 ?* ;
 define L020RedupALeAB ?* 握 了 握 手 ?* ;
 define L020RedupPat L020RedupAAB | L020RedupAYiAB | L020RedupALeAB ;
 define L020Redup "握手+Lemma+Verb-Object+REDUP+Head:握+Tail:手" : L020RedupPat ;
 
-! 21. 鼓掌 (鼓+掌)
+! 21. 鼓掌 (鼓+掌 to applause)
 define L021RedupAAB ?* 鼓 鼓 掌 ?* ;
 define L021RedupAYiAB ?* 鼓 一 鼓 掌 ?* ;
 define L021RedupALeAB ?* 鼓 了 鼓 掌 ?* ;
 define L021RedupPat L021RedupAAB | L021RedupAYiAB | L021RedupALeAB ;
 define L021Redup "鼓掌+Lemma+Verb-Object+REDUP+Head:鼓+Tail:掌" : L021RedupPat ;
 
-! 22. 开玩笑 (开+玩笑)
+! 22. 开玩笑 (开+玩笑 to crack a joke)
 define L022RedupAAB ?* 开 开 玩 笑 ?* ;
 define L022RedupAYiAB ?* 开 一 开 玩 笑 ?* ;
 define L022RedupALeAB ?* 开 了 开 玩 笑 ?* ;
 define L022RedupPat L022RedupAAB | L022RedupAYiAB | L022RedupALeAB ;
 define L022Redup "开玩笑+Lemma+Verb-Object+REDUP+Head:开+Tail:玩笑" : L022RedupPat ;
 
-! 23. 谈恋爱 (谈+恋爱)
+! 23. 谈恋爱 (谈+恋爱 to be in a relationship)
 define L023RedupAAB ?* 谈 谈 恋 爱 ?* ;
 define L023RedupAYiAB ?* 谈 一 谈 恋 爱 ?* ;
 define L023RedupALeAB ?* 谈 了 谈 恋 爱 ?* ;
 define L023RedupPat L023RedupAAB | L023RedupAYiAB | L023RedupALeAB ;
 define L023Redup "谈恋爱+Lemma+Verb-Object+REDUP+Head:谈+Tail:恋爱" : L023RedupPat ;
 
-! 24. 吹牛 (吹+牛)
+! 24. 吹牛 (吹+牛 to boast)
 define L024RedupAAB ?* 吹 吹 牛 ?* ;
 define L024RedupAYiAB ?* 吹 一 吹 牛 ?* ;
 define L024RedupALeAB ?* 吹 了 吹 牛 ?* ;
 define L024RedupPat L024RedupAAB | L024RedupAYiAB | L024RedupALeAB ;
 define L024Redup "吹牛+Lemma+Verb-Object+REDUP+Head:吹+Tail:牛" : L024RedupPat ;
 
-! 25. 请客 (请+客)
+! 25. 请客 (请+客 to treat)
 define L025RedupAAB ?* 请 请 客 ?* ;
 define L025RedupAYiAB ?* 请 一 请 客 ?* ;
 define L025RedupALeAB ?* 请 了 请 客 ?* ;
 define L025RedupPat L025RedupAAB | L025RedupAYiAB | L025RedupALeAB ;
 define L025Redup "请客+Lemma+Verb-Object+REDUP+Head:请+Tail:客" : L025RedupPat ;
 
-! 26. 上班 (上+班)
+! 26. 上班 (上+班 to go to the office)
 define L026RedupAAB ?* 上 上 班 ?* ;
 define L026RedupAYiAB ?* 上 一 上 班 ?* ;
 define L026RedupALeAB ?* 上 了 上 班 ?* ;
 define L026RedupPat L026RedupAAB | L026RedupAYiAB | L026RedupALeAB ;
 define L026Redup "上班+Lemma+Verb-Object+REDUP+Head:上+Tail:班" : L026RedupPat ;
 
-! 27. 上学 (上+学)
+! 27. 上学 (上+学 to go to school)
 define L027RedupAAB ?* 上 上 学 ?* ;
 define L027RedupAYiAB ?* 上 一 上 学 ?* ;
 define L027RedupALeAB ?* 上 了 上 学 ?* ;
 define L027RedupPat L027RedupAAB | L027RedupAYiAB | L027RedupALeAB ;
 define L027Redup "上学+Lemma+Verb-Object+REDUP+Head:上+Tail:学" : L027RedupPat ;
 
-! 28. 上课 (上+课)
+! 28. 上课 (上+课 to attend classes)
 define L028RedupAAB ?* 上 上 课 ?* ;
 define L028RedupAYiAB ?* 上 一 上 课 ?* ;
 define L028RedupALeAB ?* 上 了 上 课 ?* ;
 define L028RedupPat L028RedupAAB | L028RedupAYiAB | L028RedupALeAB ;
 define L028Redup "上课+Lemma+Verb-Object+REDUP+Head:上+Tail:课" : L028RedupPat ;
 
-! 29. 写作业 (写+作业)
+! 29. 写作业 (写+作业 to finish homework)
 define L029RedupAAB ?* 写 写 作 业 ?* ;
 define L029RedupAYiAB ?* 写 一 写 作 业 ?* ;
 define L029RedupALeAB ?* 写 了 写 作 业 ?* ;
 define L029RedupPat L029RedupAAB | L029RedupAYiAB | L029RedupALeAB ;
 define L029Redup "写作业+Lemma+Verb-Object+REDUP+Head:写+Tail:作业" : L029RedupPat ;
 
-! 30. 放假 (放+假)
+! 30. 放假 (放+假 to have a vacation)
 define L030RedupAAB ?* 放 放 假 ?* ;
 define L030RedupAYiAB ?* 放 一 放 假 ?* ;
 define L030RedupALeAB ?* 放 了 放 假 ?* ;
 define L030RedupPat L030RedupAAB | L030RedupAYiAB | L030RedupALeAB ;
 define L030Redup "放假+Lemma+Verb-Object+REDUP+Head:放+Tail:假" : L030RedupPat ;
 
-! 31. 开会 (开+会)
+! 31. 开会 (开+会 to have a meeting)
 define L031RedupAAB ?* 开 开 会 ?* ;
 define L031RedupAYiAB ?* 开 一 开 会 ?* ;
 define L031RedupALeAB ?* 开 了 开 会 ?* ;
 define L031RedupPat L031RedupAAB | L031RedupAYiAB | L031RedupALeAB ;
 define L031Redup "开会+Lemma+Verb-Object+REDUP+Head:开+Tail:会" : L031RedupPat ;
 
-! 32. 发言 (发+言)
+! 32. 发言 (发+言 to give a speech)
 define L032RedupAAB ?* 发 发 言 ?* ;
 define L032RedupAYiAB ?* 发 一 发 言 ?* ;
 define L032RedupALeAB ?* 发 了 发 言 ?* ;
 define L032RedupPat L032RedupAAB | L032RedupAYiAB | L032RedupALeAB ;
 define L032Redup "发言+Lemma+Verb-Object+REDUP+Head:发+Tail:言" : L032RedupPat ;
 
-! 33. 加班 (加+班)
+! 33. 加班 (加+班 to work overtime)
 define L033RedupAAB ?* 加 加 班 ?* ;
 define L033RedupAYiAB ?* 加 一 加 班 ?* ;
 define L033RedupALeAB ?* 加 了 加 班 ?* ;
