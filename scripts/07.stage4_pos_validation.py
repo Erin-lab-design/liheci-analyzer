@@ -243,10 +243,8 @@ def validate_pos(
     
     return True, "pos_valid"
 
-# =========================
-# Main Processing
-# =========================
 
+# Main Processing
 def main():
     logger.info("=== Stage 4: POS Validation starts ===")
     

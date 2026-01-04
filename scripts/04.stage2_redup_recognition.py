@@ -150,7 +150,6 @@ def validate_reduplication(stage1_output, stage2_output, hfst_path):
         
         if is_potential_redup:
             if (sent_id, lemma) in valid_redup:
-                # Valid reduplication - keep one entry as REDUP
                 for row in group_rows:
                     if row['shape'] == 'SPLIT':
                         row['shape'] = 'REDUP'

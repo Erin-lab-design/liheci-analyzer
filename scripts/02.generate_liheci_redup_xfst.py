@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate XFST script for recognizing valid reduplication patterns (AAB, A一AB, A了AB).
+Generate XFST script for recognizing valid reduplication patterns.
 
 This script generates an XFST file that ONLY recognizes lemmas with RedupPattern='AAB'.
 Used in Stage 2 to validate reduplication detected in Stage 1.

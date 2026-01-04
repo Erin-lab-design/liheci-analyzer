@@ -22,7 +22,7 @@ import csv
 import subprocess
 import logging
 
-# ======================= 配置 =======================
+# ======================= Configuration =======================
 
 TEST_FILE = "data/test_sentences.txt"
 

@@ -61,6 +61,7 @@ scripts/hfst_files/: Contains all compiled FSTs and annotators.&#x20;
 
 liheci_lexicon.csv: Main lexicon with detailed linguistic features.&#x20;
 
+
 test_sentences.txt: Annotated test set with gold labels and error types. outputs/: Contains all intermediate and final results, as well as evaluation reports.
 
 3. Testing and Evaluation

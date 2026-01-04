@@ -154,7 +154,7 @@ def main():
         all_transducer_names.extend(transducers_for_this)
 
     # =======================
-    # 3) Union + save
+    # 3) Union+save
     # =======================
     lines.append("! Combine all lemma transducers")
     if all_transducer_names:

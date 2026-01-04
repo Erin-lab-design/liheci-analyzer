@@ -246,7 +246,6 @@ def main():
     log("  Evaluation Complete")
     log(f"{'='*60}")
     
-    # === WRITE TO FILE ===
     with open(REPORT_FILE, 'w', encoding='utf-8') as f:
         f.write('\n'.join(output_lines))
     print(f"\n[INFO] Report saved to: {REPORT_FILE}")

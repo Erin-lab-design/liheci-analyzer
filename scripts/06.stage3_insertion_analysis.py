@@ -359,7 +359,6 @@ def main():
             
             # Note: REQUIRE_DE_WORDS (PRON_POSS_REQUIRED) only applies when
             # a pronoun is present (handled in Rule 1a above).
-            # Cases like "开了一个玩笑" (quantifier without pronoun) are valid.
         
         elif shape == 'WHOLE':
             # Check for external prepositional phrase

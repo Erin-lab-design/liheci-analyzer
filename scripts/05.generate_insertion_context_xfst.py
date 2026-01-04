@@ -243,6 +243,5 @@ def main():
     print(f"✓ Successfully compiled: {OUTPUT_HFST}")
     print(f"\nSTDOUT:\n{result.stdout}")
 
-
 if __name__ == '__main__':
     main()

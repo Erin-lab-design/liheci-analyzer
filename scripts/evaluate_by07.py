@@ -218,7 +218,6 @@ def main():
     else:
         log("\n  No false negatives! All true positives were detected.")
     
-    # === SUMMARY TABLE ===
     log("\n" + "="*60)
     log("  SUMMARY TABLE")
     log("="*60)
